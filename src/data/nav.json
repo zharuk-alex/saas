@@ -1,0 +1,14 @@
+
+  [{
+    "href": "/",
+    "displayName": "Home"
+  }, {
+    "href": "/about",
+    "displayName": "About"
+  }, {
+    "href": "/contacts",
+    "displayName": "Contacts"
+  }, {
+    "href": "/blog",
+    "displayName": "Blog"
+  }]

@@ -35,9 +35,9 @@ var libs = {
   mdb_modules_scrolling_navbar:{
     js: 'node_modules/mdbootstrap/js/modules/scrolling-navbar.js'
   },
-  mdb_modules_velocity:{
-    js: 'node_modules/mdbootstrap/js/modules/velocity.min.js'
-  },
+  // mdb_modules_velocity:{
+  //   js: 'node_modules/mdbootstrap/js/modules/velocity.min.js'
+  // },
   mdb_modules_waves:{
     js: 'node_modules/mdbootstrap/js/modules/waves.js'
   },
