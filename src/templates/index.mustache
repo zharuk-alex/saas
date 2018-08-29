@@ -1,13 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
 {{> ./partials/head }}
 
 <body>
-    {{> ./partials/header }}
+  <header>
+    {{> ./partials/navbar }}
+    {{> ./sections/full-intro }}
+  </header>
 
+
+  <main>
     <div class="container">
-
-        <div class="content">
-            <h1>Test</h1>
-        </div>
+      {{> ./sections/hero }}
     </div>
+  </main>
+
+  {{> ./partials/footer }}
 </body>
+
 </html>

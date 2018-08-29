@@ -50,7 +50,8 @@ gulp.task('html', function() {
 gulp.task('watch', ['clean-html','sass', 'scripts', 'libs', 'mustache', 'browser-sync'], function() {
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
-  gulp.watch('src/templates/**/*.mustache', ['mustache'], reload);
+  // gulp.watch('src/templates/**/*.mustache', ['mustache'], reload);
+  gulp.watch('src/templates/**/*.mustache', ['mustache']);
 	// gulp.watch('src/**/*.html', ['html'], reload);
 });
 

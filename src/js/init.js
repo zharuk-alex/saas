@@ -1,1 +1,4 @@
-console.log('its work');
+$(document).ready(function () {
+  console.log("init");
+  new WOW().init();
+})
