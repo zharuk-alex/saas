@@ -1,0 +1,53 @@
+<section class="mt-5 clients">
+  <div class="container">
+      <!--  -->
+      <!-- Grid row -->
+      <div class="row pt-5 d-flex justify-content-center">
+
+        <!-- Grid column -->
+        <div class="col-md-2 pl-5 pl-md-0 pb-5">
+
+          <!-- Stepper -->
+          <div class="steps-form-3 wow fadeInLeft">
+            <div class="steps-row-3 setup-panel-3 d-flex justify-content-between">
+              {{#capabilities}}
+              <div class="steps-step-3">
+                <a href="#step-{{id}}" class="btn btn-info btn-circle-3 waves-effect" data-toggle="tooltip" data-placement="top" title="Basic Information"><i class="fa {{icon}}" aria-hidden="true"></i></a>
+              </div>
+              {{/capabilities}}
+            </div>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-7">
+
+          <form role="form" action="" method="post" class="wow fadeInRight">
+            {{#capabilities}}
+
+            <!-- Section -->
+            <div class="row setup-content-3" id="step-{{id}}">
+              <div class="col-md-12">
+
+                <h3 class="font-weight-bold pl-0 my-4"><strong>{{title}}</strong></h3>
+                <ul>
+                  {{#list}}
+                  <li>{{description}}</li>
+                  {{/list}}
+                </ul>
+              </div>
+            </div>
+            <!-- / Section -->
+            {{/capabilities}}
+          </form>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+      <!--  -->
+  </div>
+</section>

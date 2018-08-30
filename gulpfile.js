@@ -36,7 +36,8 @@ gulp.task('browser-sync', getTask('browser-sync'));
 gulp.task('fonts', getTask('fonts'));
 gulp.task('scripts', getTask('scripts'));
 gulp.task('sass', getTask('sass'));
-gulp.task('image', getTask('image'));
+gulp.task('image-build', getTask('image-build'));
+gulp.task('image-copy', getTask('image-copy'));
 gulp.task('clean-html', getTask('clean-html'));
 gulp.task('db-json', getTask('db-json'));
 gulp.task('mustache', ['clean-html','db-json'], getTask('mustache'));
@@ -49,7 +50,7 @@ gulp.task('create-dist', function() {
     fs.mkdirSync('./dist')
 });
 
-gulp.task('watch', ['fonts','sass', 'scripts', 'libs', 'mustache', 'browser-sync'], function() {
+gulp.task('watch', ['fonts', 'image-copy', 'sass', 'scripts', 'libs', 'mustache', 'browser-sync'], function() {
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('src/data/**/*.json', ['mustache']);

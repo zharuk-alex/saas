@@ -9,9 +9,9 @@ var libs = {
     css: 'node_modules/bootstrap/dist/css/bootstrap.css',
     js: 'node_modules/bootstrap/dist/js/bootstrap.js'
   },
-  font_awesome: {
-    css: 'node_modules/font-awesome/css/font-awesome.css',
-  },
+  // font_awesome: {
+  //   css: 'node_modules/font-awesome/css/font-awesome.css',
+  // },
   mdb: {
     css: 'node_modules/mdbootstrap/css/mdb.css',
     js: 'node_modules/mdbootstrap/js/mdb.js'
@@ -44,6 +44,19 @@ var libs = {
   mdb_modules_wow:{
     js: 'node_modules/mdbootstrap/js/modules/wow.js'
   },
+  jquery_counterup:{
+    js: 'node_modules/jquery.counterup/jquery.counterup.js'
+  },
+  jquery_waypoints:{
+    js: 'node_modules/waypoints/lib/jquery.waypoints.js'
+  },
+  owl_carousel:{
+    css: 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+    js: 'node_modules/owl.carousel/dist/owl.carousel.js'
+  },
+  owl_carousel_theme:{
+    css: 'node_modules/owl.carousel/dist/assets/owl.theme.default.css'
+  }
 };
 
 var js_libs = Object.keys(libs).map(function(key, index) {

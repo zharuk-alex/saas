@@ -1,0 +1,16 @@
+<section class="mt-5 wow slideInUp clients">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h2 mt-5">Наши клиенты</h1>
+        <div id="clients-carousel" class="owl-carousel owl-theme mt-4">
+          {{#clients}}
+          <div class="item">
+            <img src="/img/{{ id }}-logo.jpg" alt="{{ name }}" class="img-fluid z-depth-1">
+          </div>
+          {{/clients}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
