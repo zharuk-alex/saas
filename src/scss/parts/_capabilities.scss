@@ -62,6 +62,10 @@
   border-radius: 50% !important;
   padding: 18px 18px 15px 15px;
   margin-top: -22px;
+  //
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .steps-form-3 .steps-row-3 .steps-step-3 .btn-circle-3:hover {
