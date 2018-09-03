@@ -66,6 +66,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.active{
+    border: 2px solid darken(#4285F4, 20%);
+    color: darken(#4285F4, 20%) !important;
+    background-color: white !important;
+  }
 }
 
 .steps-form-3 .steps-row-3 .steps-step-3 .btn-circle-3:hover {
@@ -76,4 +82,20 @@
 
 .steps-form-3 .steps-row-3 .steps-step-3 .btn-circle-3 .fa {
   font-size: 1.7rem;
+}
+
+.setup-content-3{
+  font-size: 1.25rem
+}
+#capabilities-wrapper{
+  li{
+    padding-left: 1.75rem;
+  };
+  li:before {
+    content: "\f00c"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+  }
 }

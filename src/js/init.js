@@ -10,8 +10,6 @@ $(document).ready(function() {
     $('body,html').animate({
       scrollTop: top
     }, 1500);
-    console.log(cont.css('padding-top'));
-    console.log(cont);
   }
 
   $("#menu").on("click", "a", function(e) {
@@ -44,6 +42,12 @@ $(document).ready(function() {
     autoplayTimeout: 3000,
     navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
     autoWidth:false,
+  })
+
+  // Web-tabs
+  $('#web-section').on('click', '.nav-link', function () {
+    $('#web-section').find('.active').removeClass('active');
+    $(this).parent('.nav-item').addClass('active');
   })
   // Close $
 })

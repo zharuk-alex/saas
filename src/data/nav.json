@@ -3,12 +3,11 @@
     "href": "#about-project",
     "displayName": "О проекте"
   }, {
-    "href": "#clients",
-    "displayName": "Наши клиенты"
-  }, {
-  }, {
     "href": "#usage",
     "displayName": "Возможности"
+  }, {
+    "href": "#clients",
+    "displayName": "Наши клиенты"
   }, {
     "href": "#contacts",
     "displayName": "Контакты"
