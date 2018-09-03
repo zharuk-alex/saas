@@ -1,12 +1,12 @@
-<section class="mt-5 mb-5 wow slideInUp clients blue lighten-5">
+<section id="clients" class="pt-5 pb-5 wow slideInUp clients">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h2 class="h2 mt-5">Наши клиенты</h2>
-        <div id="clients-carousel" class="owl-carousel owl-theme mt-4">
+        <div id="clients-carousel" class="owl-carousel owl-theme mt-2 mb-5">
           {{#clients}}
           <div class="item">
-            <img src="/img/{{ id }}-logo.jpg" alt="{{ name }}" class="img-fluid z-depth-1">
+            <img src="/img/clients/{{ id }}-logo.jpg" alt="{{ name }}" class="img-fluid">
           </div>
           {{/clients}}
         </div>

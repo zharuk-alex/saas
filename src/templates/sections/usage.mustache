@@ -1,107 +1,42 @@
-<section class="mt-5 mb-5 wow fadeIn reports blue lighten-1">
+<section id="usage" class="pt-5 pb-5 wow fadeIn parallax-window" data-parallax="scroll" data-image-src="img/backgrounds/chart-infographics-abstract_2.png">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="h2 mt-5">ОБЛАСТИ ПРИМЕНЕНИЯ</h2>
+        <h2 class="h2 mt-5 white-text">ОБЛАСТИ ПРИМЕНЕНИЯ</h2>
       </div>
+    </div>
+    <div class="row">
       <!-- block -->
-      <div class="col-sm-6 col-lg-3">
-        <div class="usage-title">
-          <h4 class="h4">МЕРЧЕНДАЙЗИНГ</h4>
-        </div>
-        <div class="usage-icon">
-          <i class="fa fa-list fa-5x"></i>
-        </div>
-        <div class="usage-description">
-          <ul>
-            <li>ВЫПОЛНЕНИЕ РАБОТ ПО ГРАФИКУ И ЗАПОЛНЕНИЕ ОТЧЕТА ПО КАЖДОЙ ТТ</li>
-
-            <li>ФОТООТЧЕТЫ</li>
-
-            <li>КОММЕНТАРИИ К ОТЧЕТАМ И ФОТООТЧЕТАМ</li>
-
-            <li>ПЕРЕДАЧА ДАННЫХ В РЕЖИМЕ РЕАЛЬНОГО ВРЕМЕНИ</li>
-          </ul>
-        </div>
-      </div>
-      <!-- block -->
-      <!-- block -->
-      <div class="col-sm-6 col-lg-3">
-        <div class="usage-title">
-          <h4 class="h4">Аудит</h4>
-        </div>
-        <div class="usage-icon">
-          <i class="fa fa-list fa-5x"></i>
-        </div>
-        <div class="usage-description">
-          <ul>
-            <li>ПОЛЕВЫЕ АУДИТЫ ДЛЯ КОНТРОЛЯ КАЧЕСТВА ВЫПОЛНЕННЫХ РАБОТ ПО ТТ</li>
-
-            <li>ONLINE АУДИТЫ ИЗ ПРОСМОТРА ОТЧЕТОВ И ФОТООТЧЕТОВ</li>
-
-            <li>ГИБКИЕ КРИТЕРИИ ОЦЕНИВАНИЯ</li>
-
-            <li>ПРОЗРАЧНАЯ СИСТЕМА ОЦЕНКИ И БОНУСИРОВАНИЯ ПОЛЕВЫХ КОМАНД</li>
-          </ul>
-        </div>
-      </div>
-      <!-- block -->
-      <!-- block -->
-      <div class="col-sm-6 col-lg-3">
-        <div class="usage-title">
-          <h4 class="h4">РОЗНИЧНЫЙ АУДИТ</h4>
-        </div>
-        <div class="usage-icon">
-          <i class="fa fa-list fa-5x"></i>
-        </div>
-        <div class="usage-description">
-          <ul>
-            <li>MUST STOCK LIST</li>
-
-            <li>КОНТРОЛЬ СТАНДАРТОВ ВЫКЛАДКИ</li>
-
-            <li>ИНДЕКС ЦЕН</li>
-
-            <li>МОНИТОРИНГ КОНКУРЕНТОВ</li>
-
-            <li>ЗАМЕР ДОЛЕЙ ПОЛКИ</li>
-          </ul>
-        </div>
-      </div>
-      <!-- block -->
-      <!-- block -->
-      <div class="col-sm-6 col-lg-3">
-        <div class="usage-title">
-          <h4 class="h4">Отчетность</h4>
-        </div>
-        <div class="usage-icon">
-          <i class="fa fa-list fa-5x"></i>
-        </div>
-        <div class="usage-description">
-          <ul>
-            <li>
-              РЕГЛАМЕНТИРОВАННЫЕ ОТЧЕТЫ
-              <ul>
-                <li>OUT OF STOCK</li>
-                <li>ТЕКУЩИЕ ОТЧЕТЫ</li>
-                <li>ФЕЙСИНГ</li>
+      {{#usage}}
+        {{#item}}
+      <div class="col-6 col-sm-6 col-lg-3 mb-4 white-text">
+        <div class="usage-item-wrapper wow slideInUp">
+          <div class="usage-title">
+            <h4 class="h4 white-text my-4">{{title}}</h4>
+          </div>
+          <div class="usage-item-card mdb-color z-depth-2 p-2">
+            <div class="usage-icon">
+              <i class="fa {{icon}} fa-5x"></i>
+            </div>
+            <div class="usage-description">
+              <ul class="list-unstyled">
+                {{#usage_item}}
+                <li class="my-2">
+                  {{title}}
+                  <ul>
+                  {{#sub_usage_item}}
+                    <li>{{sub_usage_item_title}}</li>
+                  {{/sub_usage_item}}
+                  </ul>
+                </li>
+                {{/usage_item}}
               </ul>
-            </li>
-            <li>АНАЛИТИЧЕСКИЕ ОТЧЕТЫ
-            <ul>
-              <li>ДИНАМИКА OOS</li>
-              <li>ДИНАМИКА MSL</li>
-              <li>PRICE INDEX</li>
-            </ul>
-          </li>
-
-          <li>ФОТООТЧЕТЫ</li>
-
-          <li>ОТЧЕТ ПО ПЕРСОНАЛУ</li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- block -->
+      {{/item}}
+    {{/usage}}
     </div>
   </div>
 </section>

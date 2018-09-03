@@ -4,4 +4,55 @@
     display: flex;
     align-items: center;
   }
+
+  .owl-carousel .owl-item img {
+    width: auto;
+    max-height: 100px;
+    // height: 100px;
+    margin: 0 auto;
+  }
+
+  .owl-prev {
+    width: 25px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    margin-left: -20px!important;
+    display: block!important;
+    // border: 0 solid black;
+    &:hover{
+      outline: none!important;
+      border: none!important;
+    }
+  }
+
+  .owl-theme .owl-nav [class*=owl-]:hover {
+    background: Transparent;
+    color: #1c2331;
+    text-decoration: none;
+  }
+
+  .owl-next {
+    width: 25px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: -20px!important;
+    display: block!important;
+    // border: 0 solid black;
+    &:hover{
+      outline: none!important;
+      border: none!important;
+    }
+  }
+
+  .owl-next i,
+  .owl-prev i {
+    transform: scale(1,6);
+    color: lighten(#1c2331, 10%);
+    &:hover{
+      color: darken(#1c2331, 10%);
+    }
+  }
+
 }

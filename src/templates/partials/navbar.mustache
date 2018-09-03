@@ -1,10 +1,10 @@
 <!-- Navbar -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+<nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
 
     <!-- Brand -->
-    <a class="navbar-brand" href="/" target="_blank">
-      <strong>MMCS</strong>
+    <a class="navbar-brand" href="#intro" target="_blank">
+      <img src="/img/logo.png" alt="" class="logo">
     </a>
 
     <!-- Collapse -->
@@ -20,7 +20,7 @@
       <ul class="navbar-nav ml-auto">
         {{#nav}}
           <li class="nav-item">
-            <a class="nav-link" href="#">{{displayName}}</a>
+            <a class="nav-link" href="{{ href }}">{{displayName}}</a>
           </li>
         {{/nav}}
       </ul>

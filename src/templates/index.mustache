@@ -5,20 +5,22 @@
 <body>
   <header>
     {{> ./partials/navbar }}
-    {{> ./sections/full-intro }}
+    {{> ./sections/intro }}
   </header>
 
 
   <main>
 
-      {{> ./sections/hero }}
+      {{> ./sections/about }}
       {{> ./sections/counterup }}
-      {{> ./sections/clients-carousel }}
       {{> ./sections/capabilities }}
       {{> ./sections/usage }}
+      {{> ./sections/clients-carousel }}
+      <a id="scrollToTop" class="btn-lg"><i class="fa fa-angle-up fa-2x"></i></a>
 
   </main>
-
+  <!-- ScrollToTop -->
+  <!--  -->
   {{> ./partials/footer }}
 </body>
 

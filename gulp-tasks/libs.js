@@ -56,6 +56,9 @@ var libs = {
   },
   owl_carousel_theme:{
     css: 'node_modules/owl.carousel/dist/assets/owl.theme.default.css'
+  },
+  parallax:{
+    js: 'node_modules/jquery-parallax.js/parallax.js'
   }
 };
 

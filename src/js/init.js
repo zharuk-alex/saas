@@ -1,6 +1,23 @@
 $(document).ready(function() {
-  console.log("init");
   new WOW().init();
+
+  //
+  //scrollTop
+  function scrollToElements(cont, event) {
+    event.preventDefault();
+    var id = cont.attr('href'),
+      top = $(id).offset().top - $('#menu').height();
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+    console.log(cont.css('padding-top'));
+    console.log(cont);
+  }
+
+  $("#menu").on("click", "a", function(e) {
+    scrollToElements($(this), e)
+  });
+  //
 
   // counterup
   $('.counter').counterUp({delay: 10, time: 1000});
@@ -24,7 +41,9 @@ $(document).ready(function() {
     },
     dots: false,
     autoplay: true,
-    autoplayTimeout: 3000
+    autoplayTimeout: 3000,
+    navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    autoWidth:false,
   })
   // Close $
 })

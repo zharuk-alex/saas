@@ -3,8 +3,7 @@ $(document).ready(function() {
     allWells = $('.setup-content-3'),
     allNextBtn = $('.nextBtn-3'),
     allPrevBtn = $('.prevBtn-3');
-    navListItems.first().addClass('active');
-  allWells.hide();
+    allWells.hide();
 
   navListItems.click(function(e) {
     e.preventDefault();
@@ -17,10 +16,7 @@ $(document).ready(function() {
         .addClass('btn-pink');
       $item.addClass('btn-info');
       allWells.hide();
-      $target.show();
-      $target
-        .find('input:eq(0)')
-        .focus();
+      $target.fadeIn(500);
     }
   });
 
