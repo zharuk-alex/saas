@@ -9,10 +9,16 @@ $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $co
         background-color: nth($colors, $i);
     }
 }
-
+//
+.counterup-section{
+  background-color: rgba(0,0,0,.7);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 .counterup-block {
+  cursor: pointer;
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   overflow: hidden;
   border-radius: 0;
   padding: 10px;

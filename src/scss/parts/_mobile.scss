@@ -1,0 +1,16 @@
+#mobile-section{
+  background-color: #f5f5f5;
+
+  .btn-download{
+    max-width: 200px;
+    margin-bottom: 0; 
+    svg{
+      width: 32px;
+      height: 32px;
+      path{
+        fill:rgb(165, 202, 56);
+        stroke:rgb(165, 202, 56);
+      }
+    }
+  }
+}

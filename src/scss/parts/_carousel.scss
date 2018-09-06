@@ -17,7 +17,7 @@
     &:hover{
       .owl-next,.owl-prev{
         opacity: 1;
-            transition: all .6s linear 0;
+        transition: all .6s linear 0;
       }
     }
   }
@@ -33,13 +33,13 @@
 
     button{
       @extend .btn;
-      @extend .btn-primary;
       @extend .waves-effect;
       @extend .waves-light;
       padding: auto;
       width: 50px;
       height: 50px;
-      border-radius: 50%!important;
+      background: #364150;
+      // border-radius: 50%!important;
     }
 
   }

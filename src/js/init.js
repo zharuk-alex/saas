@@ -4,20 +4,25 @@ $(document).ready(function() {
 
   //
   //scrollTop
-  function scrollToElements(cont, event) {
-    event.preventDefault();
-    var id = cont.attr('href'),
-      top = $(id).offset().top - $('#menu').height();
-    $('body,html').animate({
-      scrollTop: top
-    }, 1500);
-  }
-
-  $("#menu").on("click", "a", function(e) {
-    scrollToElements($(this), e)
-  });
+  // function scrollToElements(cont, event) {
+  //   event.preventDefault();
+  //   var id = cont.attr('href'),
+  //     top = $(id).offset().top - $('#menu').height();
+  //   $('body,html').animate({
+  //     scrollTop: top
+  //   }, 1500);
+  // }
   //
-
+  // $("#menu").on("click", "a", function(e) {
+  //   scrollToElements($(this), e)
+  // });
+  //
+  $(".slide-to-next-wrapper").on("click","a", function (e) {
+    e.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 500);
+  });
   // counterup
   $('.counter').counterUp({delay: 10, time: 1000});
   // /counterup
@@ -55,11 +60,11 @@ $(document).ready(function() {
     $('#web-section').find('.active').removeClass('active');
     $(this).parent('.nav-item').addClass('active');
   })
-
+  // addActive
   $('#web-section').find('.nav-item').first().addClass('active');
   // temp Usage lowerCase + text-capitalize
-  $('.usage-description').find('li').each(function () {
-    $(this).text().toLowerCase();
-  })
+  $('#capabilities').find('.nav-link').first().addClass('active');
+  $('#capabilities').find('.tab-pane').first().addClass('active');
+
   // Close $
 })

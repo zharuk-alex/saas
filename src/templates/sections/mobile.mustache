@@ -1,13 +1,30 @@
 <section id="mobile-section" class="py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-5 my-5 mx-auto text-center">
         {{#mobile}}
-        <h2 class="h2 mt-5 mb-2">{{heading}}</h2>
-          {{#item}}
-          <div class="blue-text">{{title}}</p>
-          {{/item}}
+          <h2 class="h2 mb-2">{{heading}}</h2>
+          <hr class="header-divider">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7 mb-4">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iUigshdj9aE" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-5 mb-4 d-flex flex-column">
+        {{#item}}
+        <div class="mobile_description_holder my-1">
+          <h6 class="">{{title}}</h6>
+          <p>{{description}}</p>
+        </div>
+        {{/item}}
         {{/mobile}}
+        <a href="#" target="_blank" class="btn btn-elegant btn-download mt-auto mx-0">Скачать
+          <img src="./img/icons/android-social-outlined-logo.svg" class="ml-2 svg" alt="...">
+        </a>
+        </div>
       </div>
     </div>
   </div>

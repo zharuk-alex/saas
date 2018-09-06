@@ -36,8 +36,27 @@ body{
 // h1, h2, h3, h4, h5, h6 {
 //   color: #3C4858!important;
 // }
+
+$main_color:#f6b601;
 .btn-demo{
-  background-color: #e12330;
+  background-color: $main_color;
+}
+.btn-outline-demo{
+  border-color: $main_color!important;
+  background-color: transparent!important;
+  color: $main_color!important;
+  border: 1px solid $main_color!important;
+}
+
+.header-divider{
+  margin: 30px auto;
+  border: 0;
+  height: 3px;
+  color: $main_color;
+  background-color: $main_color;
+  width: 5rem;
+  opacity: .5;
+  transition: all .3s ease-in-out 0s;
 }
 //
 @import "../../node_modules/mdbootstrap/scss/mdb.scss";
@@ -52,3 +71,4 @@ body{
 @import "parts/web";
 @import "parts/universal";
 @import "parts/intro";
+@import "parts/mobile";

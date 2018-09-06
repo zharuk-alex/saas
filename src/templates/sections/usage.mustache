@@ -1,48 +1,55 @@
 <!-- <section id="usage" class="py-5 wow fadeIn parallax-window" data-parallax="scroll" data-image-src="img/backgrounds/chart-infographics-abstract_2.png"> -->
 <section id="usage" class="py-5">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-md-5 my-5 mx-auto text-center">
         {{#usage}}
-        <h2 class="h2 mb-2">{{heading}}</h2>
+          <h2 class="h2 mb-2">{{heading}}</h2>
         {{/usage}}
-        <h6 class="h6">Most of the world has been left out of today's data revolution. Traditional data solutions focus on data visualization and advanced analytics. But in emerging markets, data solutions must first overcome the challenges of dirty data before they can generate insights or drive better decisions.</h6>
+        <h6 class="h6">Most of the world has been left out of today's data revolution. </h6>
+        <hr class="header-divider">
       </div>
     </div>
-    <div class="card-deck">
+    <div class="card-deck pb-5">
       <!-- block -->
-    {{#usage}}
-      {{#item}}
-      <div class="col-12 col-sm-6 col-lg-3 card mb-4 wow slideInUp">
-        <div class="usage-item-wrapper ">
-          <div class="usage-title">
-            <h4 class="h4 my-4 text-center">{{title}}</h4>
-            <hr>
-          </div>
-          <div class="usage-item-card p-2">
-            <div class="usage-icon">
-              <i class="fa {{icon}} fa-5x"></i>
+      {{#usage}}
+        {{#item}}
+          <div class="card wow slideInUp" data-wow-delay="{{show_delay}}s">
+            <div class="view overlay">
+              <img class="card-img-top" src="./img/{{icon}}" alt="{{title}}" style="max-height: 130px;">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
             </div>
-            <div class="usage-description">
-              <ul class="list-unstyled">
-                {{#usage_item}}
-                <li class="mb-3">
-                  {{title}}
-                  <ul>
-                  {{#sub_usage_item}}
-                    <li>{{sub_usage_item_title}}</li>
-                  {{/sub_usage_item}}
-                  </ul>
-                </li>
-                {{/usage_item}}
-              </ul>
+            <div class="usage-item-wrapper card-body d-flex flex-column">
+              <h4 class="h4 text-center card-title">{{title}}</h4>
+              <div class="usage-item-card">
+                <!-- <div class="usage-icon">
+                  <i class="fa {{icon}} fa-5x"></i>
+                </div> -->
+
+              </div>
+              <div class="usage-description card-text">
+                <ul class="list-unstyled">
+                  {{#usage_item}}
+                    <li class="mb-3 grey-text"><i class="fa fa-mail-forward indigo-text"></i> {{title}}
+                      <!-- <ul>
+                        {{#sub_usage_item}}
+                          <li class="grey-text">{{sub_usage_item_title}}</li>
+                        {{/sub_usage_item}}
+                        {{^sub_usage_item}}
+
+                        {{/sub_usage_item}}
+                      </ul> -->
+                    </li>
+                  {{/usage_item}}
+                </ul>
+              </div>
+              <a href="#" class="btn btn-demo mx-auto d-block mt-auto mb-2">Детальнее</a>
             </div>
-            <a href="#" class="btn btn-demo mx-auto d-block my-auto">Детальнее</a>
           </div>
-        </div>
-      </div>
-      {{/item}}
-    {{/usage}}
+        {{/item}}
+      {{/usage}}
     </div>
   </div>
 </section>

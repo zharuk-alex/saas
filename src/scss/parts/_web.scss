@@ -9,18 +9,18 @@
       font-weight: 500;
       color: #495057;
       &.active{
-        color:#007bff;
+        color:$main-color;
       }
     }
     &.col-first{
       .nav-item.active{
-        border-right: 2px solid #3598dc!important;
+        border-right: 2px solid darken($main-color, 5%)!important;
         border-radius: none;
       }
     }
     &.col-second{
       .nav-item.active{
-        border-left: 2px solid #3598dc!important;
+        border-left: 2px solid darken($main-color, 5%)!important;
         border-radius: none;
       }
     }

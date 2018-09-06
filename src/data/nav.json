@@ -1,14 +1,11 @@
 
   [{
-    "href": "#about-project",
-    "displayName": "О проекте"
-  }, {
-    "href": "#usage",
+    "href": "usage.html",
     "displayName": "Возможности"
   }, {
-    "href": "#clients",
-    "displayName": "Наши клиенты"
+    "href": "capabilities.html",
+    "displayName": "Решения"
   }, {
-    "href": "#contacts",
+    "href": "contacts.html",
     "displayName": "Контакты"
   }]

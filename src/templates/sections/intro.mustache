@@ -2,8 +2,8 @@
 <section id="intro" class="view full-page-intro">
 
   <!--Video source-->
-  <video class="video-intro" autoplay loop>
-    <source src="/video/charts.mp4" type="video/mp4" />
+  <video class="video-intro" autoplay loop muted>
+    <source src="./video/charts.mp4" type="video/mp4" />
   </video>
   <!-- {{> ./democarousel }} -->
 
@@ -21,7 +21,7 @@
         {{#intro}}
           <h1 class="display-4 font-weight-bold">{{heading}}</h1>
           <hr class="hr-light">
-          <p>
+          <p class="sub-header">
             <strong>{{description}}</strong>
           </p>
           <p class="mb-4 d-none d-md-block">
@@ -44,7 +44,16 @@
 
       </div>
       <!--Grid row-->
-
+      <!-- Slide next -->
+      <div class="col d-flex justify-content-center">
+        <div class="slide-to-next-wrapper">
+          <a href="#usage" class="slide-to-next white-text">
+            <!-- <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i> -->
+            <img src="./img/icons/mouse.png" alt="">
+          </a>
+        </div>
+      </div>
+      <!-- Slide next -->
     </div>
     <!-- Content -->
 

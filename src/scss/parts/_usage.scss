@@ -1,12 +1,17 @@
 #usage{
   background-color: rgba(255,255,255,.3);
   li{
-    line-height: 1.4;
+    // line-height: 1.4;
+    font-size: .925rem;
+  }
+  .view{
+    height: auto;
   }
   .card{
-    
+    transition: box-shadow .15s ease-in-out;
     &:hover{
-
+      box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     }
+    cursor: pointer;
   }
 }
