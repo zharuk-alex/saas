@@ -8,8 +8,7 @@
     </a>
 
     <!-- Collapse -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -17,17 +16,29 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <!-- Left -->
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto d-md-flex align-items-md-center">
         {{#nav}}
           <li class="nav-item">
             <a class="nav-link" href="{{ href }}">{{displayName}}</a>
           </li>
         {{/nav}}
+        <li class="nav-item locales">
+          <div class="btn-group">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/img/icons/russia.png" alt=""></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#"><img src="/img/icons/russia.png" alt=""><span class="pl-2">Ru</span></a>
+              <a class="dropdown-item" href="#"><img src="/img/icons/united-kingdom.png" alt=""><span class="pl-2">Eng</span></a>
+              <a class="dropdown-item" href="#"><img src="/img/icons/ukraine.png" alt=""><span class="pl-2">Ukr</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" href="http://mmcs.com.ua/" class="btn btn-demo m-0">Demo
+            <i class="fa fa-sign-in ml-2"></i>
+          </a>
+        </li>
       </ul>
-
       <!-- Right -->
-
-
     </div>
 
   </div>

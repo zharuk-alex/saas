@@ -1,0 +1,21 @@
+#intro {
+  /* Half Page Carousel itself*/
+  .carousel {
+    height: 100%;
+  }
+
+  .carousel .carousel-inner {
+    height: 100%;
+  }
+
+  .carousel .carousel-inner .active,
+  .carousel .carousel-inner .carousel-item {
+    height: 100%;
+  }
+  .mask , .mask :after {
+    background-color: rgba(14, 14, 14, 0.55);
+  }
+  h1{
+    color: #fff;
+  }
+}

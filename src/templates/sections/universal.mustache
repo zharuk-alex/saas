@@ -1,0 +1,39 @@
+<section class="py-5 wow fadeIn universal-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{#universal}}
+          <h2 class="h2 text-center">{{heading}}</h2>
+        {{/universal}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+      {{#universal}}
+        {{#item_col_1}}
+            <div class="universal-holder media my-4 pr-4">
+              <div class="media-body text-right">
+                <h5 class="mt-0 font-weight-bold">{{title}}</h5>
+                <p class="mb-0">{{description}}</p>
+              </div>
+              <img class="d-flex align-self-center ml-3 svg" src="/img/icons/{{icon}}.svg" >
+            </div>
+        {{/item_col_1}}
+      {{/universal}}
+      </div>
+      <div class="col-sm-6">
+      {{#universal}}
+        {{#item_col_2}}
+            <div class="universal-holder media my-4 pl-4">
+              <img class="d-flex align-self-center mr-3 svg" src="/img/icons/{{icon}}.svg">
+              <div class="media-body">
+                <h5 class="mt-0 font-weight-bold">{{title}}</h5>
+                <p class="mb-0">{{description}}</p>
+              </div>
+            </div>
+        {{/item_col_2}}
+      {{/universal}}
+      </div>
+    </div>
+  </div>
+</section>

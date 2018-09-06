@@ -1,29 +1,32 @@
-<section id="usage" class="pt-5 pb-5 wow fadeIn parallax-window" data-parallax="scroll" data-image-src="img/backgrounds/chart-infographics-abstract_2.png">
+<!-- <section id="usage" class="py-5 wow fadeIn parallax-window" data-parallax="scroll" data-image-src="img/backgrounds/chart-infographics-abstract_2.png"> -->
+<section id="usage" class="py-5">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-5 my-5 mx-auto text-center">
         {{#usage}}
-        <h2 class="h2 mt-5 white-text text-center">{{heading}}</h2>
+        <h2 class="h2 mb-2">{{heading}}</h2>
         {{/usage}}
+        <h6 class="h6">Most of the world has been left out of today's data revolution. Traditional data solutions focus on data visualization and advanced analytics. But in emerging markets, data solutions must first overcome the challenges of dirty data before they can generate insights or drive better decisions.</h6>
       </div>
     </div>
-    <div class="row">
+    <div class="card-deck">
       <!-- block -->
-      {{#usage}}
-        {{#item}}
-      <div class="col-12 col-sm-6 col-lg-3 mb-4 white-text">
-        <div class="usage-item-wrapper wow slideInUp">
+    {{#usage}}
+      {{#item}}
+      <div class="col-12 col-sm-6 col-lg-3 card mb-4 wow slideInUp">
+        <div class="usage-item-wrapper ">
           <div class="usage-title">
-            <h4 class="h4 white-text my-4 text-center">{{title}}</h4>
+            <h4 class="h4 my-4 text-center">{{title}}</h4>
+            <hr>
           </div>
-          <div class="usage-item-card mdb-color z-depth-2 p-2">
+          <div class="usage-item-card p-2">
             <div class="usage-icon">
               <i class="fa {{icon}} fa-5x"></i>
             </div>
             <div class="usage-description">
               <ul class="list-unstyled">
                 {{#usage_item}}
-                <li class="my-2">
+                <li class="mb-3">
                   {{title}}
                   <ul>
                   {{#sub_usage_item}}
@@ -34,6 +37,7 @@
                 {{/usage_item}}
               </ul>
             </div>
+            <a href="#" class="btn btn-demo mx-auto d-block my-auto">Детальнее</a>
           </div>
         </div>
       </div>

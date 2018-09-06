@@ -3,19 +3,14 @@ html,
 body,
 .view {
   height: 100%; }
-
+body{
+  font-family: "Roboto";
+}
 @media (max-width: 740px) {
   .full-page-intro {
     height: 1000px; } }
 
-/* Half Page Carousel itself*/
-.carousel {
-  height: 50%; }
-  .carousel .carousel-inner {
-    height: 100%; }
-    .carousel .carousel-inner .carousel-item,
-    .carousel .carousel-inner .active {
-      height: 100%; }
+
 
 /* Adjustment for mobile devices*/
 @media (max-width: 776px) {
@@ -38,16 +33,22 @@ body,
 .page-footer {
   background-color: #1C2331; }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #3C4858!important;
+// h1, h2, h3, h4, h5, h6 {
+//   color: #3C4858!important;
+// }
+.btn-demo{
+  background-color: #e12330;
 }
-
 //
-
+@import "../../node_modules/mdbootstrap/scss/mdb.scss";
+@import "../../node_modules/mdbootstrap/scss/style.scss" ;
 @import "parts/navbar";
 @import "parts/counterup";
 @import "parts/carousel";
 @import "parts/capabilities";
 @import "parts/usage";
 @import "parts/reports";
+@import "parts/carousel";
 @import "parts/web";
+@import "parts/universal";
+@import "parts/intro";

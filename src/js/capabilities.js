@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
   });
 
-  
+
 
   $('div.setup-panel-3 div a.btn-info').trigger('click');
 });

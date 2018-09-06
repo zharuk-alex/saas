@@ -5,6 +5,12 @@
     .nav-link{
       border: none;
       border-radius: none;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #495057;
+      &.active{
+        color:#007bff;
+      }
     }
     &.col-first{
       .nav-item.active{

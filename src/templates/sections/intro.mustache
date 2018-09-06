@@ -3,11 +3,12 @@
 
   <!--Video source-->
   <video class="video-intro" autoplay loop>
-    <source src="/video/animation-intro.mp4" type="video/mp4" />
+    <source src="/video/charts.mp4" type="video/mp4" />
   </video>
+  <!-- {{> ./democarousel }} -->
 
   <!-- Mask & flexbox options-->
-  <div id="intro-mask" class="mask rgba-blue-light d-flex justify-content-center align-items-center">
+  <div id="intro-mask" class="mask d-flex justify-content-center align-items-center">
 
     <!-- Content -->
     <div class="container">
@@ -26,7 +27,7 @@
           <p class="mb-4 d-none d-md-block">
             <strong>{{sub_description}}</strong>
           </p>
-          <a target="_blank" href="{{button_link}}" class="btn btn-outline-white m-0">{{button_title}}
+          <a target="_blank" href="{{button_link}}" class="btn btn-demo m-0">{{button_title}}
             <i class="fa fa-sign-in ml-2"></i>
           </a>
         {{/intro}}

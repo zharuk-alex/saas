@@ -1,6 +1,7 @@
 $(document).ready(function() {
   new WOW().init();
 
+
   //
   //scrollTop
   function scrollToElements(cont, event) {
@@ -40,14 +41,25 @@ $(document).ready(function() {
     dots: false,
     autoplay: true,
     autoplayTimeout: 3000,
-    navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    navText : [
+      '<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>',
+      '<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>'
+    ],
     autoWidth:false,
   })
-
+  $('#intro .carousel').carousel({
+  interval: 4000
+})
   // Web-tabs
   $('#web-section').on('click', '.nav-link', function () {
     $('#web-section').find('.active').removeClass('active');
     $(this).parent('.nav-item').addClass('active');
+  })
+
+  $('#web-section').find('.nav-item').first().addClass('active');
+  // temp Usage lowerCase + text-capitalize
+  $('.usage-description').find('li').each(function () {
+    $(this).text().toLowerCase();
   })
   // Close $
 })
