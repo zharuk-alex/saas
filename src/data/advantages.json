@@ -1,0 +1,32 @@
+[
+  {
+    "title":"24/7",
+    "icon":"24-hours.png",
+    "description":"доступ к ресурсу"
+  },
+  {
+    "title":"Online",
+    "icon":"data.png",
+    "description":"обработка данных"
+  },
+  {
+    "title":"Dashboard",
+    "icon":"dashboard.png",
+    "description":"с аналитикой"
+  },
+  {
+    "title":"Mobile",
+    "icon":"mobile_app.png",
+    "description":"приложения для Android"
+  },
+  {
+    "title":"GPS",
+    "icon":"check_in.png",
+    "description":"фиксация работ"
+  },
+  {
+    "title":"Отчеты",
+    "icon":"reports.png",
+    "description":"в режиме реального времени"
+  }
+]

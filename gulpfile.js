@@ -50,11 +50,17 @@ gulp.task('create-dist', function() {
     fs.mkdirSync('./dist')
 });
 
-gulp.task('watch', ['fonts', 'image-copy', 'sass', 'scripts', 'libs', 'mustache', 'browser-sync'], function() {
+gulp.task('video-copy', function() {
+  return gulp.src('src/video/**/*')
+  .pipe(gulp.dest('dist/video/'));
+});
+
+gulp.task('watch', ['image-copy', 'sass', 'scripts', 'mustache', 'browser-sync'], function() {
+	gulp.watch('src/img/**/*.*', ['image-copy']);
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('src/data/**/*.json', ['mustache']);
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
 });
 
-gulp.task('default', ['create-dist','watch']);
+gulp.task('default', ['create-dist','db-json','fonts','libs','video-copy','watch']);

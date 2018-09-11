@@ -14,15 +14,16 @@
       <!-- block -->
       {{#usage}}
         {{#item}}
-          <div class="card wow slideInUp" data-wow-delay="{{show_delay}}s">
+          <div class="card wow fadeInUp" data-wow-delay="{{show_delay}}s">
             <div class="view overlay">
-              <img class="card-img-top" src="./img/{{icon}}" alt="{{title}}" style="max-height: 130px;">
+              <img class="card-img-top" src="img/{{icon}}" alt="{{title}}">
               <a href="#!">
                 <div class="mask rgba-white-slight"></div>
               </a>
             </div>
             <div class="usage-item-wrapper card-body d-flex flex-column">
               <h4 class="h4 text-center card-title">{{title}}</h4>
+              <hr class="header-divider">
               <div class="usage-item-card">
                 <!-- <div class="usage-icon">
                   <i class="fa {{icon}} fa-5x"></i>
@@ -32,7 +33,9 @@
               <div class="usage-description card-text">
                 <ul class="list-unstyled">
                   {{#usage_item}}
-                    <li class="mb-3 grey-text"><i class="fa fa-mail-forward indigo-text"></i> {{title}}
+                    <li class="mb-3">
+                      <!-- <i class="fa fa-mail-forward indigo-text"></i>  -->
+                      {{title}}
                       <!-- <ul>
                         {{#sub_usage_item}}
                           <li class="grey-text">{{sub_usage_item_title}}</li>
@@ -45,7 +48,8 @@
                   {{/usage_item}}
                 </ul>
               </div>
-              <a href="#" class="btn btn-demo mx-auto d-block mt-auto mb-2">Детальнее</a>
+              <!-- <a href="#" class="btn btn-demo mx-auto d-block mt-auto mb-2">Детальнее</a> -->
+              <a href="#" class="btn btn-outline-demo mx-auto d-block mt-auto mb-2">Детальнее</a>
             </div>
           </div>
         {{/item}}

@@ -13,10 +13,10 @@
       cursor: pointer;
       svg{
         filter: drop-shadow(1px 2px 3px rgba(0,0,0,.5));
-        path{
-          fill:$main_color;
-          stroke:$main_color;
-        }
+        // path{
+        //   fill:$main_color;
+        //   stroke:$main_color;
+        // }
       }
     }
   }

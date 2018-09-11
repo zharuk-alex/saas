@@ -2,8 +2,8 @@
 <section id="intro" class="view full-page-intro">
 
   <!--Video source-->
-  <video class="video-intro" autoplay loop muted>
-    <source src="./video/charts.mp4" type="video/mp4" />
+  <video class="video-intro wow fadeIn animated" autoplay loop muted>
+    <source src="video/charts.mp4" type="video/mp4" />
   </video>
   <!-- {{> ./democarousel }} -->
 
@@ -14,46 +14,64 @@
     <div class="container">
 
       <!--Grid row-->
-      <div class="row d-flex h-100 justify-content-center align-items-center wow fadeIn">
+      <div class="row d-flex h-100 justify-content-center align-items-center">
 
         <!--Grid column-->
-        <div class="col-md-6 mb-4 white-text text-center text-md-left">
+        <div class="col-md-12 mb-4 white-text text-center text-md-left">
         {{#intro}}
-          <h1 class="display-4 font-weight-bold">{{heading}}</h1>
+          <h1 class="display-4 font-weight-bold text-center">
+            {{heading}}
+          </h1>
           <hr class="hr-light">
           <p class="sub-header">
             <strong>{{description}}</strong>
           </p>
-          <p class="mb-4 d-none d-md-block">
+          <p class="my-4 d-none d-md-block sub-description text-center">
             <strong>{{sub_description}}</strong>
           </p>
-          <a target="_blank" href="{{button_link}}" class="btn btn-demo m-0">{{button_title}}
-            <i class="fa fa-sign-in ml-2"></i>
-          </a>
+
         {{/intro}}
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-md-6 col-xl-5 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
-
+        <div class="row">
+          <div class="col">
+            {{#intro}}
+            <a class="btn btn-outline-demo waves-effect waves-light ml-auto"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">{{button_title}}
+              <i class="fa fa-sign-in ml-2"></i>
+            </a>
+            {{/intro}}
+          </div>
         </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <!-- <div class="col-md-6 col-xl-5 mb-4"> -->
+
+          <!-- <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid"> -->
+          <!-- <img src="/img/Plan-Call-on-iphone.jpg" alt="" class="img-fluid"> -->
+
+        <!-- </div> -->
         <!--Grid column-->
 
       </div>
       <!--Grid row-->
+
       <!-- Slide next -->
-      <div class="col d-flex justify-content-center">
+      <!-- <div class="col d-flex justify-content-center">
         <div class="slide-to-next-wrapper">
-          <a href="#usage" class="slide-to-next white-text">
+          <a href="#usage" class="slide-to-next white-text"> -->
             <!-- <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i> -->
-            <img src="./img/icons/mouse.png" alt="">
+            <!-- <img src="./img/icons/mouse.png" alt="">
           </a>
         </div>
-      </div>
+      </div> -->
       <!-- Slide next -->
+
+      <div class="top-logo-holder">
+        <div class="col-12 d-flex flex-row justify-content-between">
+          {{#top_clients}}
+          <img class="top_clients_logo" src="./img/top-clients/{{logo}}" alt="">
+          {{/top_clients}}
+        </div>
+      </div>
     </div>
     <!-- Content -->
 

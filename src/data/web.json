@@ -1,13 +1,49 @@
 [
   {
-    "heading":"WEB приложение",
-    "item":[
-      {"title":"Интуитивная панель управления"},
-      {"title":"Информативные графики"},
-      {"title":"Интерактивные карты"},
-      {"title":"Система уведомлений (оценки, комментарии)"},
-      {"title":"Гибкая фильтрация данных"},
-      {"title":"Экспорт данных (*.csv, Excel)"}
+    "heading":"WEB-ВЕРСИЯ",
+    "sub_desc":"Powered by Google Chrome",
+    "end_desc":"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+    "button_title":"Обзор",
+    "items_col1":[
+      {
+        "title":"Интуитивная панель управления",
+        "id": "web_dashboard",
+        "image":"mmcs/index.png",
+        "active":"active",
+        "selected":"true",
+        "show":"show"
+      },
+      {
+        "title":"Информативные графики",
+        "id": "web_charts",
+        "image":"mmcs/charts.png",
+        "selected":"false"
+      },
+      {
+        "title":"Интерактивные карты",
+        "id": "web_maps",
+        "image":"mmcs/maps.png",
+        "selected":"false"
+      }],
+    "items_col2":[
+      {
+        "title":"Система уведомлений (оценки, комментарии)",
+        "id": "web_msg",
+        "image":"mmcs/comments.png",
+        "selected":"false"
+      },
+      {
+        "title":"Гибкая фильтрация данных",
+        "id": "web_filter",
+        "image":"mmcs/filters.png",
+        "selected":"false"
+      },
+      {
+        "title":"Экспорт данных (*.csv, Excel)",
+        "id": "web_exports",
+        "image":"mmcs/export.png",
+        "selected":"false"
+      }
     ]
 
   }

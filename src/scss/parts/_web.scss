@@ -5,30 +5,42 @@
     .nav-link{
       border: none;
       border-radius: none;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 500;
-      color: #495057;
+      color: $text-muted;
+      padding: 0;
       &.active{
-        color:$main-color;
+        color:$text-contrast;
+        transition: color .3s linear;
       }
     }
     &.col-first{
+      .nav-item{
+        border-right: 0 solid $main-color!important;
+      }
       .nav-item.active{
-        border-right: 2px solid darken($main-color, 5%)!important;
+        border-right: 3px solid $main-color!important;
+        padding-right: .25rem;
         border-radius: none;
+        transition: border-right .3s linear;
       }
     }
     &.col-second{
+      .nav-item{
+        border-left: 0px solid $main-color!important;
+      }
       .nav-item.active{
-        border-left: 2px solid darken($main-color, 5%)!important;
+        border-left: 3px solid $main-color!important;
         border-radius: none;
+        padding-left: .25rem;
+        transition: border-left .3s linear;
       }
     }
   }
   .tab-content-inner{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%,-50%);
   }
 }

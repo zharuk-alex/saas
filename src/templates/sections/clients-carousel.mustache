@@ -1,13 +1,13 @@
-<section id="clients" class="pt-5 pb-5 wow slideInUp clients">
+<section id="clients" class="pt-5 wow fadeIn clients">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 my-5">
-        <h2 class="h2 mb-2 text-center">Наши клиенты</h2>
+      <div class="col-md-12">
+        <h2 class="h2 mb-2 text-center">НАШИ КЛИЕНТЫ</h2>
         <hr class="header-divider mb-5">
-        <div id="clients-carousel" class="owl-carousel owl-theme mt-2 mb-5">
+        <div id="clients-carousel" class="owl-carousel owl-theme mt-2 mb-5 wow fadeInRight">
           {{#clients}}
           <div class="item">
-            <img src="./img/clients/{{ id }}-logo.jpg" alt="{{ name }}" class="img-fluid">
+            <img src="img/clients/{{ id }}-logo.jpg" alt="{{ name }}" class="img-fluid">
           </div>
           {{/clients}}
         </div>

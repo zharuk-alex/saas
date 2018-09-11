@@ -58,13 +58,40 @@ $(document).ready(function() {
   // Web-tabs
   $('#web-section').on('click', '.nav-link', function () {
     $('#web-section').find('.active').removeClass('active');
+    $('#web-section').find('.tab-pane').removeClass('show');
+    var tab_pane = $(this).prop('href');
     $(this).parent('.nav-item').addClass('active');
+    // $(tab_pane).addClass(show)
   })
   // addActive
   $('#web-section').find('.nav-item').first().addClass('active');
-  // temp Usage lowerCase + text-capitalize
-  $('#capabilities').find('.nav-link').first().addClass('active');
-  $('#capabilities').find('.tab-pane').first().addClass('active');
 
+  // $('#capabilities').find('.nav-link').first().addClass('active');
+  // $('#capabilities').find('.tab-pane').first().addClass('active');
+
+  $('#capabilities').find('.carousel-item').first().addClass('active');
+  $('#capabilities .carousel-indicators').find('li').first().addClass('active');
+
+//testimonials
+$('.testimonials-holder').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    autoplay: true,
+    autoplayHoverPause:true,
+    autoplayTimeout: 4000,
+
+})
+// testimonials2
+$('#carouselTestimonials2').carousel({
+  interval: 4000,
+  pause: false
+})
+// testimonials2 end
+$('#carouselCapabilities').carousel({
+  pause: false,
+  interval: 4000
+})
   // Close $
 })

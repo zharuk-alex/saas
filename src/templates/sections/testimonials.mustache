@@ -1,7 +1,18 @@
-<section class="testimonials">
+<section id="testimonials-section" class="py-5 parallax-window" data-parallax="scroll" data-image-src="./img/backgrounds/testimonials.png">
   <div class="container">
     <div class="row">
-      
+      <div class="testimonials-holder owl-carousel owl-theme my-5">
+        {{#testimonials}}
+        <div class="item testimonial-item text-center">
+          <img src="img/testimonials/{{user_image}}" alt="">
+          <blockquote>
+            <p>{{testimonial}}</p>
+          </blockquote>
+          <hr class="header-divider my-2">
+          <h5>{{position}}</h5>
+        </div>
+        {{/testimonials}}
+      </div>
     </div>
   </div>
 </section>

@@ -1,7 +1,11 @@
-$counterup_color_blue: #3598dc;
-$counterup_color_red: #e7505a;
-$counterup_color_cyan: #32c5d2;
-$counterup_color_green: #00e676;
+$counterup_color_blue: #E1E5EC;
+$counterup_color_red: #E1E5EC;
+$counterup_color_cyan: #E1E5EC;
+$counterup_color_green: #E1E5EC;
+// $counterup_color_blue: #3598dc;
+// $counterup_color_red: #e7505a;
+// $counterup_color_cyan: #32c5d2;
+// $counterup_color_green: #00e676;
 
 $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $counterup_color_green;
 @for $i from 1 through length($colors) {
@@ -11,9 +15,11 @@ $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $co
 }
 //
 .counterup-section{
-  background-color: rgba(0,0,0,.7);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  // background-color: rgba(0,0,0,.7);
+  // border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  z-index: 99;
+  background-color: #fff;
 }
 .counterup-block {
   cursor: pointer;
@@ -41,7 +47,8 @@ $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $co
   }
 
   i {
-    color: #FFF;
+    // color: #FFF;
+    color: #524f4f;
     opacity: 0.1;
     margin-left: -35px;
     font-size: 110px;

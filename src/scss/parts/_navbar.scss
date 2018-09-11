@@ -1,10 +1,30 @@
-.navbar.scrolling-navbar{
-  padding: 6px;
-  .navbar-brand{
-    padding: 0;
-    .logo{
-      max-width: 70px;
+$navbar-padding: 6px;
+.navbar {
+
+    padding: $navbar-padding;
+
+    .navbar-brand {
       padding: 0;
+
+      .logo {
+        max-width: 70px;
+        padding: 0;
+      }
+    }
+
+
+
+    .locales{
+      .dropdown-menu {
+        background-color: rgba(0,0,0,.2);
+
+        border: none;
+        border-radius: 0;
+        // top: $navbar-padding;
+        .dropdown-item span{
+          color: #fff;
+          text-transform: uppercase;
+        }
     }
   }
 }

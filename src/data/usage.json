@@ -3,7 +3,7 @@
   "item": [
     {
       "title": "Мерчендайзинг",
-      "icon":"merchandising.jpg",
+      "icon":"merchandising.png",
       "show_delay":"0.25",
       "usage_item":[
         {"title":"Выполнение работ по графику и заполнение отчета по каждой тт"},
@@ -14,7 +14,7 @@
     },
     {
       "title": "Аудит",
-      "icon":"analytics.jpg",
+      "icon":"analitics.png",
       "show_delay":"0.5",
       "usage_item":[
         {"title":"Полевые аудиты для контроля качества выполненных работ по тт"},
@@ -28,19 +28,19 @@
       "icon":"content-audit.png",
       "show_delay":"0.75",
       "usage_item":[
-        {"title":"MUST STOCK LIST"},
+        {"title":"Must Stock List"},
         {"title":"Контроль стандартов выкладки"},
         {"title":"Мониторинг конкурентов"},
         {"title":"Замер долей полки"}
       ]
     },
     {
-      "title": "Отчетность",
-      "icon":"reports.jpg",
+      "title": "Доп. задачи",
+      "icon":"reports.png",
       "show_delay":"1",
       "usage_item":[
         {
-          "title":"Регламентированные отчеты",
+          "title":"Контроль промо-активностей",
           "sub_usage_item":[
             {"sub_usage_item_title":"OUT OF STOCK"},
             {"sub_usage_item_title":"Текущие отчеты"},
@@ -48,15 +48,14 @@
           ]
         },
         {
-          "title":"Аналитические отчеты",
+          "title":"Мониторинг POSm",
           "sub_usage_item":[
             {"sub_usage_item_title":"Динамика OOS"},
             {"sub_usage_item_title":"Динамика MSL"},
             {"sub_usage_item_title":"Price Index"}
           ]
         },
-        {"title":"Фотоотчеты"},
-        {"title":"Отчет по персоналу"}
+        {"title":"Контроль размещения доп. оборудования"}
       ]
     }
   ]

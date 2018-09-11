@@ -1,96 +1,77 @@
 <section id="web-section" class="py-5">
-  <div class="container-fluid">
+  {{#web}}
+  <div class="container">
     <div class="row">
       <div class="col-md-12 my-5  text-center">
-        {{#web}}
+
           <h2 class="h2 mb-2">{{heading}}</h2>
-        {{/web}}
-        <h6 class="h6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </h6>
+
+        <h6 class="h6">{{sub_desc}}</h6>
+
         <hr class="header-divider">
-        <!-- {{#item}}
-          <div class="col-3">
-            <h4 class="h4">{{title}}</h4>
-          </div>
-          {{/item}} -->
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-sm-3">
+      <!-- Col 1 -->
+      <div class="col">
         <ul class="nav nav-tabs d-flex justify-content-between flex-column h-100 py-4 col-first text-right" role="tablist">
-          <li class="nav-item wow fadeInLeft">
-            <a class="nav-link active" id="web_dashboard-tab" data-toggle="tab" href="#web_dashboard" role="tab" aria-controls="web_dashboard" aria-selected="true">Интуитивная панель управления</a>
-          </li>
-          <li class="nav-item wow fadeInLeft">
-            <a class="nav-link" id="web_charts-tab" data-toggle="tab" href="#web_charts" role="tab" aria-controls="web_charts" aria-selected="false">Информативные графики</a>
-          </li>
-          <li class="nav-item wow fadeInLeft">
-            <a class="nav-link" id="web_maps-tab" data-toggle="tab" href="#web_maps" role="tab" aria-controls="web_maps" aria-selected="false">Интерактивные карты</a>
-          </li>
+
+            {{#items_col1}}
+              <li class="nav-item wow fadeInLeft">
+                <a class="nav-link {{active}}" id="{{id}}-tab" data-toggle="tab" href="#{{id}}" role="tab" aria-controls="{{id}}" aria-selected="{{selected}}">{{title}}</a>
+              </li>
+            {{/items_col1}}
+
         </ul>
       </div>
-      <!--  -->
-      <div class="col-12 col-sm-6 d-flex align-items-center justify-content-center">
-        <div class="tab-content wow fadeIn" id="myTabContent">
-          <div class="tab-pane show active" id="web_dashboard" role="tabpanel" aria-labelledby="web_dashboard-tab">
-            <div class="tab-content-inner">
-              <h3>Скриншот Дашборда</h3>
+      <!-- /Col 1  -->
+      <!-- Content Tabs Inner -->
+      <div class="col-sm-7 d-flex align-items-center justify-content-center">
+        <div class="tab-content wow fadeIn" id="webTabContent">
+
+            {{#items_col1}}
+              <div class="tab-pane {{show}} {{active}}" id="{{id}}" role="tabpanel" aria-labelledby="{{id}}-tab">
+                <div class="tab-content-inner">
+                  <img src="/img/{{image}}" class="img-fluid" alt="{{title}}">
+                </div>
+              </div>
+            {{/items_col1}}
+
+            <!--  -->
+
+            {{#items_col2}}
+            <div class="tab-pane" id="{{id}}" role="tabpanel" aria-labelledby="{{id}}-tab">
+              <div class="tab-content-inner">
+                <img src="/img/{{image}}" class="img-fluid" alt="{{title}}">
+              </div>
             </div>
-            <img src="/img/desktop.png" class="img-fluid" alt="">
-          </div>
-          <div class="tab-pane" id="web_charts" role="tabpanel" aria-labelledby="web_charts-tab">
-            <div class="tab-content-inner">
-              <h3>Скриншот Чарта</h3>
-            </div>
-            <img src="/img/desktop.png" class="img-fluid" alt="">
-          </div>
-          <div class="tab-pane" id="web_maps" role="tabpanel" aria-labelledby="web_maps-tab">
-            <div class="tab-content-inner">
-              <h3>Скриншот Карты</h3>
-            </div>
-            <img src="/img/desktop.png" class="img-fluid" alt="">
-          </div>
-          <div class="tab-pane" id="web_msg" role="tabpanel" aria-labelledby="web_msg-tab">
-            <div class="tab-content-inner">
-              <h3>Скриншот Сообщений</h3>
-            </div>
-            <img src="/img/desktop.png" class="img-fluid" alt="">
-          </div>
-          <div class="tab-pane" id="web_filter" role="tabpanel" aria-labelledby="web_filter-tab">
-            <div class="tab-content-inner">
-              <h3>Скриншот Фильтров</h3>
-            </div>
-            <img src="/img/desktop.png" class="img-fluid" alt="">
-          </div>
-          <div class="tab-pane" id="web_exports" role="tabpanel" aria-labelledby="web_exports-tab">
-            <div class="tab-content-inner">
-              <h3>Скриншот Таблицы</h3>
-            </div>
-            <img src="/img/desktop.png" class="img-fluid" alt="">
-          </div>
+            {{/items_col2}}
+
         </div>
       </div>
-      <!--  -->
-      <div class="col-12 col-sm-3">
+      <!-- /Content Tabs Inner -->
+      <!-- Col 2 -->
+      <div class="col">
         <ul class="nav nav-tabs d-flex justify-content-between flex-column h-100 py-4 col-second" role="tablist">
-          <li class="nav-item wow fadeInRight">
-            <a class="nav-link" id="web_msg-tab" data-toggle="tab" href="#web_msg" role="tab" aria-controls="web_msg" aria-selected="false">Система уведомлений (оценки, комментарии)</a>
-          </li>
-          <li class="nav-item wow fadeInRight">
-            <a class="nav-link" id="web_filter-tab" data-toggle="tab" href="#web_filter" role="tab" aria-controls="web_filter" aria-selected="false">Гибкая фильтрация данных</a>
-          </li>
-          <li class="nav-item wow fadeInRight">
-            <a class="nav-link" id="web_exports-tab" data-toggle="tab" href="#web_exports" role="tab" aria-controls="web_exports" aria-selected="false">Экспорт данных (*.csv, Excel)</a>
-          </li>
+
+            {{#items_col2}}
+              <li class="nav-item wow fadeInRight">
+                <a class="nav-link {{active}}" id="{{id}}-tab" data-toggle="tab" href="#{{id}}" role="tab" aria-controls="{{id}}" aria-selected="{{selected}}">{{title}}</a>
+              </li>
+            {{/items_col2}}
+
         </ul>
       </div>
+      <!-- /Col 2 -->
     </div>
     <div class="row">
       <div class="col-5 mt-5 mx-auto text-center">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-        <button type="button" class="btn btn-outline-demo waves-effect">Обзор</button>
+        <p class="py-2">{{end_desc}}</p>
+        <button type="button" class="btn btn-outline-demo waves-effect">{{button_title}}</button>
       </div>
     </div>
     <hr class="hr-light">
   </div>
   </div>
+  {{/web}}
 </section>

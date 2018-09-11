@@ -6,23 +6,23 @@ var libs = {
     js: 'node_modules/popper.js/dist/umd/popper.js'
   },
   bootstrap: {
-    css: 'node_modules/bootstrap/dist/css/bootstrap.css',
+    // css: 'node_modules/bootstrap/dist/css/bootstrap.css',
     js: 'node_modules/bootstrap/dist/js/bootstrap.js'
   },
   // font_awesome: {
   //   css: 'node_modules/font-awesome/css/font-awesome.css',
   // },
   mdb: {
-    css: 'node_modules/mdbootstrap/css/mdb.css',
+    // css: 'node_modules/mdbootstrap/css/mdb.css',
     js: 'node_modules/mdbootstrap/js/mdb.js'
   },
   mdb_modules_chart:{
     js: 'node_modules/mdbootstrap/js/modules/chart.js'
   },
-  mdb_addons_datatables:{
-    css: 'node_modules/mdbootstrap/css/addons/datatables.css',
-    js: 'node_modules/mdbootstrap/js/addons/datatables.js'
-  },
+  // mdb_addons_datatables:{
+  //   // css: 'node_modules/mdbootstrap/css/addons/datatables.css',
+  //   js: 'node_modules/mdbootstrap/js/addons/datatables.js'
+  // },
   mdb_modules_enhanced_modals:{
     js: 'node_modules/mdbootstrap/js/modules/enhanced-modals.js'
   },
@@ -51,11 +51,11 @@ var libs = {
     js: 'node_modules/waypoints/lib/jquery.waypoints.js'
   },
   owl_carousel:{
-    css: 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+    // css: 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     js: 'node_modules/owl.carousel/dist/owl.carousel.js'
   },
   owl_carousel_theme:{
-    css: 'node_modules/owl.carousel/dist/assets/owl.theme.default.css'
+    // css: 'node_modules/owl.carousel/dist/assets/owl.theme.default.css'
   },
   parallax:{
     js: 'node_modules/jquery-parallax.js/parallax.js'

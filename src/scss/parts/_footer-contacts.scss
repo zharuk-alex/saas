@@ -1,0 +1,26 @@
+footer{
+  .btn-outline-demo{
+    width: 280px;
+  }
+}
+.footer-contacts-wrapper{
+  text-align: left;
+  a{
+    vertical-align: middle;
+    font-size: 1.275rem;
+  }
+  i{
+    font-size: 2rem;
+    margin-right: 1.25rem;
+  }
+  .media{
+    color: #fff;
+    transition: color .3s linear;
+    p{
+      font-size: 0.925rem;
+    }
+    &:hover{
+      color:$main_color;
+    }
+  }
+}

@@ -37,9 +37,13 @@ body{
 //   color: #3C4858!important;
 // }
 
-$main_color:#f6b601;
+// Colors
+$main_color: #f6b601;
+$text-muted: #9e9e9e;
+$text-contrast: #4e4b4a;
+// Colors End
 .btn-demo{
-  background-color: $main_color;
+  background-color: grey;
 }
 .btn-outline-demo{
   border-color: $main_color!important;
@@ -58,17 +62,3 @@ $main_color:#f6b601;
   opacity: .5;
   transition: all .3s ease-in-out 0s;
 }
-//
-@import "../../node_modules/mdbootstrap/scss/mdb.scss";
-@import "../../node_modules/mdbootstrap/scss/style.scss" ;
-@import "parts/navbar";
-@import "parts/counterup";
-@import "parts/carousel";
-@import "parts/capabilities";
-@import "parts/usage";
-@import "parts/reports";
-@import "parts/carousel";
-@import "parts/web";
-@import "parts/universal";
-@import "parts/intro";
-@import "parts/mobile";
