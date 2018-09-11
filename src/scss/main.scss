@@ -1,19 +1,14 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import "../../node_modules/mdbootstrap/scss/mdb.scss";
-@import "../../node_modules/mdbootstrap/scss/style.scss" ;
-@import "../../node_modules/font-awesome/scss/font-awesome.scss";
-@import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
-@import "../../node_modules/owl.carousel/src/scss/owl.theme.default.scss";
 
 @import "base";
 @import "inline";
-@import "parts/testimonials";
 @import "parts/testimonials2";
 @import "parts/advantages";
 @import "parts/navbar";
 @import "parts/counterup";
 @import "parts/carousel";
-@import "parts/capabilities";
+// @import "parts/capabilities";
 @import "parts/capabilities3";
 @import "parts/usage";
 @import "parts/reports";
@@ -26,3 +21,4 @@
 @import "parts/cards";
 @import "parts/scrollToTop";
 @import "parts/callToAction";
+$roboto-font-path:            "../fonts/roboto/" !default;

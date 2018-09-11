@@ -4,6 +4,6 @@ module.exports = function(gulp, plugins) {
     .pipe(plugins.jsonConcat('db.json',function(data){
       return new Buffer(JSON.stringify(data));
     }))
-    .pipe(gulp.dest("dist/"));
+    .pipe(gulp.dest("src/"));
   }
 };

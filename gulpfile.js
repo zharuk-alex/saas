@@ -18,6 +18,7 @@ var notify = require("gulp-notify");
 var plumber = require('gulp-plumber');
 var pngquant = require('imagemin-pngquant')();
 var reload = browserSync.reload;
+var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
@@ -36,13 +37,15 @@ gulp.task('browser-sync', getTask('browser-sync'));
 gulp.task('fonts', getTask('fonts'));
 gulp.task('scripts', getTask('scripts'));
 gulp.task('sass', getTask('sass'));
+gulp.task('sass-libs', getTask('sass-libs'));
+gulp.task('js-libs', getTask('js-libs'));
 gulp.task('image-build', getTask('image-build'));
 gulp.task('image-copy', getTask('image-copy'));
 gulp.task('clean-html', getTask('clean-html'));
 gulp.task('db-json', getTask('db-json'));
 gulp.task('mustache', ['clean-html','db-json'], getTask('mustache'));
 // gulp.task('html', getTask('html'));
-gulp.task('libs', getTask('libs'));
+
 
 
 gulp.task('create-dist', function() {
@@ -55,12 +58,12 @@ gulp.task('video-copy', function() {
   .pipe(gulp.dest('dist/video/'));
 });
 
-gulp.task('watch', ['image-copy', 'sass', 'scripts', 'mustache', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {
 	gulp.watch('src/img/**/*.*', ['image-copy']);
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('src/data/**/*.json', ['mustache']);
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
 });
-
-gulp.task('default', ['create-dist','db-json','fonts','libs','video-copy','watch']);
+gulp.task('once',['create-dist','db-json','fonts','sass-libs','js-libs','video-copy','image-build'])
+gulp.task('default', ['watch']);
