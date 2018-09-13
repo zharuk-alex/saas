@@ -11,6 +11,6 @@ module.exports = function(gulp, plugins) {
       ],
       use: [plugins.pngquant]
     })))
-    .pipe(gulp.dest('dist/img/'));
+    .pipe(gulp.dest('dist/assets/img/'));
   }
 }

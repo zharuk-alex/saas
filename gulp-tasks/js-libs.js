@@ -74,6 +74,6 @@ module.exports = function(gulp, plugins) {
     gulp.src(js_libs)
       .pipe(plugins.uglify())
       .pipe(plugins.concat('libs.min.js'))
-      .pipe(gulp.dest('dist/js/'));
+      .pipe(gulp.dest('dist/assets/js/'));
   }
 }

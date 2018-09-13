@@ -11,7 +11,7 @@ module.exports = function (gulp, plugins) {
           .pipe(plugins.concat('style.min.css'))
           .pipe(plugins.cssnano())
           // .pipe(plugins.sourcemaps.write('.'))
-          .pipe(gulp.dest('dist/css/'))
+          .pipe(gulp.dest('dist/assets/css/'))
           .pipe(plugins.browserSync.reload({ stream: true }))
           // .pipe(plugins.browserSync.stream());
     };
