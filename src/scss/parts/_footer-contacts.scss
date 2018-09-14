@@ -2,6 +2,8 @@ footer{
   .btn-outline-demo{
     width: 280px;
   }
+
+
 }
 .footer-contacts-wrapper{
   text-align: left;
@@ -22,5 +24,14 @@ footer{
     &:hover{
       color:$main_color;
     }
+  }
+
+
+}
+.footer-copyrights{
+  background-color: #364150;
+  font-size: 1rem;
+  a{
+    color: #fff;
   }
 }

@@ -1,0 +1,24 @@
+<div id="carouselTestimonials3"
+  class="carousel slide carousel-fade parallax-window"
+  data-ride="carousel"
+  data-parallax="scroll"
+  data-image-src="assets/img/backgrounds/testimonials.png">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="testimonials3-carousel" class="owl-carousel owl-theme py-3 wow fadeInRight">
+        {{#testimonials3}}
+        <div class="item testimonial-item">
+          <img src="assets/img/testimonials/{{user_image}}" alt="">
+          <blockquote>
+            <p>{{testimonial}}</p>
+          </blockquote>
+          <hr class="header-divider my-2">
+          <h5>{{position}}</h5>
+        </div>
+        {{/testimonials3}}
+      </div>
+    </div>
+  </div>
+</div>
+</div>

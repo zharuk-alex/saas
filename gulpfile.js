@@ -55,7 +55,7 @@ gulp.task('create-dist', function() {
 
 gulp.task('video-copy', function() {
   return gulp.src('src/video/**/*')
-  .pipe(gulp.dest('dist/video/'));
+  .pipe(gulp.dest('dist/assets/video/'));
 });
 
 gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {

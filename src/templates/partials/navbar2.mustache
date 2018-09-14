@@ -1,0 +1,50 @@
+<!-- Navbar -->
+<nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="index.html#intro" >
+      <img src="./assets/img/logo.png" alt="" class="logo">
+    </a>
+
+    <!-- Collapse -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Left -->
+      <ul class="navbar-nav ml-auto d-md-flex align-items-md-center">
+        {{#nav_landing}}
+          <li class="nav-item">
+            <a class="nav-link nav-link-innerer" href="{{ href }}">{{displayName}}</a>
+          </li>
+        {{/nav_landing}}
+        <li class="nav-item mx-2">
+          <a class="waves-light ml-auto contact-modal-link" data-toggle="modal" data-target="#contactModal" data-backdrop="true">
+            Контакты
+          </a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" target="_blank" href="http://mmcs.com.ua/">Demo
+            <i class="fa fa-sign-in ml-2"></i>
+          </a>
+        </li>
+        <li class="nav-item locales">
+          <div class="btn-group">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#"><span class="pl-2">Ru</span></a>
+              <a class="dropdown-item" href="#"><span class="pl-2">Eng</span></a>
+              <a class="dropdown-item" href="#"><span class="pl-2">Ukr</span></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- Right -->
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->

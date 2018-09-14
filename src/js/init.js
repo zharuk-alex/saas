@@ -4,18 +4,19 @@ $(document).ready(function() {
 
   //
   //scrollTop
-  // function scrollToElements(cont, event) {
-  //   event.preventDefault();
-  //   var id = cont.attr('href'),
-  //     top = $(id).offset().top - $('#menu').height();
-  //   $('body,html').animate({
-  //     scrollTop: top
-  //   }, 1500);
-  // }
-  //
-  // $("#menu").on("click", "a", function(e) {
-  //   scrollToElements($(this), e)
-  // });
+  function scrollToElements(cont, event) {
+    event.preventDefault();
+    var id = cont.attr('href'),
+      top = $(id).offset().top - $('#menu').height();
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  }
+
+  $("#menu").on("click", ".nav-link-innerer", function(e) {
+    scrollToElements($(this), e);
+    // $(this).addClass('active');
+  });
   //
   $(".slide-to-next-wrapper").on("click","a", function (e) {
     e.preventDefault();
@@ -52,9 +53,32 @@ $(document).ready(function() {
     ],
     autoWidth:false,
   })
+  // Testimonials
+  $('#testimonials3-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    },
+    dots: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    nav: false,
+    autoWidth:false,
+  });
+
   $('#intro .carousel').carousel({
-  interval: 4000
-})
+    interval: 4000
+  });
   // Web-tabs
   $('#web-section').on('click', '.nav-link', function () {
     $('#web-section').find('.active').removeClass('active');

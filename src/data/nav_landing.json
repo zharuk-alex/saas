@@ -1,0 +1,15 @@
+[
+  {
+    "href": "#usage",
+    "displayName": "Назначение"
+  }, {
+    "href": "#capabilities",
+    "displayName": "Возможности"
+  }, {
+    "href": "#web-section",
+    "displayName": "Платформа"
+  }, {
+    "href": "#clients",
+    "displayName": "Клиенты"
+  }
+]
