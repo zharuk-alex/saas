@@ -1,0 +1,20 @@
+// Colors
+$main_color: rgb(248, 159, 53);
+
+$text-muted: #9e9e9e;
+
+$text-contrast: #4e4b4a;
+
+$bgc-grey-light:#f5f5f5;
+
+$bgc-grey-darken:#eceff1;
+
+$bgc-modals:rgba($bgc-grey-darken, .98);
+.bgc-grey-darken{
+  background-color: $bgc-grey-darken;
+}
+// Colors End
+
+
+
+$transition-def: all .3s linear;

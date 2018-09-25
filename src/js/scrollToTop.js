@@ -1,9 +1,9 @@
 $(function () {
   $(window).scroll(function() {
     if ($(this).scrollTop() > ($('#intro .container').height()+$('#menu').height())) {
-      $('#scrollToTop').fadeIn(600);
+      $('.fixed-container').fadeIn(300);
     } else {
-      $('#scrollToTop').fadeOut(600);
+      $('.fixed-container').fadeOut(300);
     }
   });
 

@@ -1,5 +1,5 @@
 footer{
-  .btn-outline-demo{
+  .btn-main-outline{
     width: 280px;
   }
 
@@ -10,6 +10,9 @@ footer{
   a{
     vertical-align: middle;
     font-size: 1.275rem;
+    p:hover{
+      cursor: pointer;
+    }
   }
   i{
     font-size: 2rem;
@@ -23,6 +26,7 @@ footer{
     }
     &:hover{
       color:$main_color;
+      cursor: default;
     }
   }
 

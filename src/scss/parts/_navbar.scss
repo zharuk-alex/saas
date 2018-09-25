@@ -28,8 +28,9 @@ $navbar-padding: 6px;
       }
     }
   }
-  .nav-link-innerer.active{
+  .nav-item.active>.nav-link{
     color: $main_color!important;
+    background-color: transparent!important;
   }
   // .nav-link-innerer{
   //

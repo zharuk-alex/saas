@@ -1,0 +1,75 @@
+
+<section id="intro" class="view full-page-intro">
+  <video class="video-intro wow fadeIn animated" autoplay loop muted>
+    <source src="assets/video/charts.mp4" type="video/mp4" />
+  </video>
+  <!-- {{> ./democarousel }} -->
+
+  <div id="intro-mask" class="mask d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row d-flex h-100 justify-content-center align-items-center">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-4 white-text">
+
+          <!-- carousel-fade -->
+          <div id="introHeading" class="carousel slide" data-pause="false" data-ride="carousel" data-wrap="false" data-interval="1500">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h1 class="display-4 font-weight-bold text-center text-uppercase">Мерчендайзинг</h1>
+              </div>
+              <div class="carousel-item">
+                <h1 class="display-4 font-weight-bold text-center text-uppercase">Аудит</h1>
+              </div>
+              <div class="carousel-item">
+                <h1 class="display-4 font-weight-bold text-center text-uppercase">Розничный аудит</h1>
+              </div>
+              <div class="carousel-item">
+                <h1 class="display-4 font-weight-bold text-center text-uppercase">Доп. задачи</h1>
+              </div>
+              <div class="carousel-item text-center">
+                <h1 class="display-4 font-weight-bold text-center text-uppercase">MMCS</h1>
+              </div>
+            </div>
+          </div>
+
+        {{#intro}}
+
+          <hr class="hr-light">
+          <p class="sub-header">
+            <strong>{{description}}</strong>
+          </p>
+          <p class="my-4 d-none d-md-block sub-description text-center">
+            <strong>{{sub_description}}</strong>
+          </p>
+
+        {{/intro}}
+        </div>
+        <div class="row">
+          <div class="col">
+            {{#intro}}
+            <a class="btn btn-main-outline waves-effect waves-light ml-auto"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">{{button_title}}
+              <i class="fa fa-sign-in ml-2"></i>
+            </a>
+            {{/intro}}
+          </div>
+        </div>
+
+      </div>
+      <div class="top-logo-holder">
+        <div class="col-12 d-flex flex-row justify-content-between">
+          {{#top_clients}}
+          <img class="top_clients_logo" src="assets/img/top-clients/{{logo}}" alt="">
+          {{/top_clients}}
+        </div>
+        <!-- <div class="col d-flex justify-content-center">
+          <div class="slide-to-next-wrapper">
+            <a href="#usage" class="slide-to-next white-text">
+              <img src="assets/img/icons/mouse.png" alt="">
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>

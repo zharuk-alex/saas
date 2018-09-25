@@ -5,33 +5,46 @@
 <body>
   <header>
     {{> ./partials/navbar2 }}
-    {{> ./sections/intro }}
+    {{> ./sections/intro_headingSlider }}
   </header>
 
 
   <main>
       {{> ./sections/usage }}
+
       {{> ./sections/advantage }}
+
+      {{> ./sections/counterup_2 }}
 
       {{> ./sections/counterup }}
 
       {{> ./sections/capabilities3 }}
 
       {{> ./sections/web-section }}
-      {{> ./sections/mobile }}
 
       {{> ./sections/callToAction }}
 
       {{> ./sections/universal }}
+      <hr>
+      {{> ./sections/universal_fade }}
 
       {{> ./sections/clients3 }}
-      <a id="scrollToTop" class="btn-lg"><i class="fa fa-angle-up fa-2x"></i></a>
+      <!-- CTA RightSide -->
+
+
       {{> ./modals/presetation_modal_footer }}
+
       {{> ./modals/callToActionModal }}
+
       {{> ./modals/contact_modal_right }}
+
+      {{> ./modals/fixed_container_modal }}
+
   </main>
   <!-- ScrollToTop -->
   <!--  -->
+
+  {{> ./partials/fixedBottomRightContainer }}
   {{> ./partials/footer }}
 </body>
 

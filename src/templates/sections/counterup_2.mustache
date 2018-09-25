@@ -1,0 +1,26 @@
+<!--Section: CounterUp-->
+<!-- <section class="wow fadeIn counterup-section parallax-window" data-parallax="scroll" data-image-src="./img/backgrounds/chart-infographics-abstract_2.png"> -->
+<section id="counterup-section2" class="wow fadeIn py-4">
+  <div class="container">
+    <!-- <hr class="hr-lighten"> -->
+    <div class="row">
+      {{#counterUp2}}
+        <div class="col-md-3 my-2">
+          <div class="counterup-block">
+            <div class="visual">
+              <img class="svg" src="assets/img/counter_up/{{icon}}" alt="">
+            </div>
+            <div class="my-2">
+
+            </div>
+            <div class="number">
+              <span class="counter">{{ count }}</span>
+            </div>
+            <h5 class="h5">{{ title }}</h5>
+          </div>
+        </div>
+      {{/counterUp2}}
+    </div>
+  </div>
+</section>
+<!--/Section: CounterUp-->

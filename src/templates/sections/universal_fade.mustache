@@ -1,0 +1,41 @@
+<section id="unive-section" class="py-5 wow fadeIn universal-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 my-5 text-center">
+        {{#universal}}
+          <h2 class="h2 mb-2">{{heading}}</h2>
+        {{/universal}}
+        <h6 class="h6">Many desktop publishing packages and web page editors now use Lorem Ipsum</h6>
+        <hr class="header-divider">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 wow fadeInLeft">
+      {{#universal}}
+        {{#item_col_1}}
+            <div class="universal-holder media my-4 pr-4">
+              <div class="media-body text-right align-self-center">
+                <h5 class="mt-0 font-weight-bold">{{title}}</h5>
+                <p class="description mb-0">{{description}}</p>
+              </div>
+              <img class="d-flex align-self-center ml-3 svg" src="assets/img/icons/{{icon}}.svg" >
+            </div>
+        {{/item_col_1}}
+      {{/universal}}
+      </div>
+      <div class="col-sm-6 wow fadeInRight">
+      {{#universal}}
+        {{#item_col_2}}
+            <div class="universal-holder media my-4 pl-4">
+              <img class="d-flex align-self-center mr-3 svg" src="assets/img/icons/{{icon}}.svg">
+              <div class="media-body align-self-center">
+                <h5 class="mt-0 font-weight-bold">{{title}}</h5>
+                <p class="description mb-0">{{description}}</p>
+              </div>
+            </div>
+        {{/item_col_2}}
+      {{/universal}}
+      </div>
+    </div>
+  </div>
+</section>

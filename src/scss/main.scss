@@ -1,6 +1,7 @@
 
 @import "../../node_modules/mdbootstrap/scss/mdb.scss";
 
+@import "variables";
 @import "base";
 @import "inline";
 @import "parts/testimonials2";
@@ -19,7 +20,8 @@
 @import "parts/mobile";
 @import "parts/footer-contacts";
 @import "parts/cards";
-@import "parts/scrollToTop";
+@import "parts/fixedContainer";
 @import "parts/callToAction";
-@import "parts/_modal-contact-right";
+@import "parts/modal-contact-right";
+@import "parts/modal-CTA-right";
 $roboto-font-path:            "../assets/fonts/roboto/" !default;
