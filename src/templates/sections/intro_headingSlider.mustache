@@ -10,10 +10,17 @@
       <div class="row d-flex h-100 justify-content-center align-items-center">
 
         <!--Grid column-->
-        <div class="col-md-12 mb-4 white-text">
+        <div class="col-md-12 white-text">
 
           <!-- carousel-fade -->
-          <div id="introHeading" class="carousel slide" data-heading="MMCS" data-pause="false" data-ride="carousel" data-wrap="false" data-interval="1500">
+          <div id="introHeading"
+            class="carousel slide"
+            data-heading="MMCS"
+            data-pause="false"
+            data-ride="carousel"
+            data-wrap="false"
+            data-interval="2000">
+
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <h1 class="display-4 font-weight-bold text-center text-uppercase">Мерчендайзинг</h1>
@@ -27,32 +34,35 @@
               <div class="carousel-item">
                 <h1 class="display-4 font-weight-bold text-center text-uppercase">Доп. задачи</h1>
               </div>
-              
+
 
             </div>
           </div>
-
-        {{#intro}}
-
-          <hr class="hr-light">
-          <p class="sub-header">
-            <strong>{{description}}</strong>
-          </p>
-          <p class="my-4 d-none d-md-block sub-description text-center">
-            <strong>{{sub_description}}</strong>
-          </p>
-
-        {{/intro}}
         </div>
-        <div class="row">
-          <div class="col">
-            {{#intro}}
-            <a class="btn btn-main-outline waves-effect waves-light ml-auto"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">{{button_title}}
-              <i class="fa fa-sign-in ml-2"></i>
-            </a>
-            {{/intro}}
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9 mx-auto">
+          {{#intro}}
+
+            <hr class="hr-light">
+            <p class="sub-header white-text">
+              <strong>{{description}}</strong>
+            </p>
+            <p class="my-4 d-none d-md-block sub-description text-center white-text">
+              <strong>{{sub_description}}</strong>
+            </p>
+
+          {{/intro}}
         </div>
+
+      </div>
+      <div class="row justify-content-center">
+
+          {{#intro}}
+          <a class="btn btn-main-outline waves-effect waves-light"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">{{button_title}}
+            <i class="fa fa-sign-in ml-2"></i>
+          </a>
+          {{/intro}}
 
       </div>
       <div class="top-logo-holder">
