@@ -2,7 +2,7 @@
 	display: inline-block;
 	width: 1em;
 	height: 1em;
-	fill: currentColor;
+	fill: $main_color;
 }
 
 .icon-advantages_icons--24-hours {
@@ -84,6 +84,10 @@
 .icon-lightbox--default-skin {
 	font-size:(88/10)*1rem;
 	width:(264/88)*1em;
+}
+.icon-sprite--sprite {
+	font-size:(0/10)*1rem;
+	width:(0/0)*1em;
 }
 .icon-svg--arrow_left {
 	font-size:(36/10)*1rem;

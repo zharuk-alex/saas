@@ -4,6 +4,7 @@
     // background-repeat: no-repeat;
     // background-position: center;
     // background-size: cover;
+    filter: grayscale(100%);
   }
 
   .sub-header{
@@ -26,7 +27,8 @@
   .mask , .mask :after {
     // background-color: rgba(14, 14, 14, 0.55);
     // background-color:rgba(12, 46, 81, .5);
-    background-color:rgba(12, 46, 81, .7);
+    // background-color:rgba(12, 46, 81, .7);
+    background-color: rgba(49, 53, 58, 0.7);
   }
   h1{
     color: #fff;

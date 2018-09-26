@@ -33,6 +33,6 @@ module.exports = function (gulp, plugins) {
 				}
 			}
 		}))
-		.pipe(gulp.dest('src/img/sprite/'));
+		.pipe(gulp.dest('dist/assets/img/sprite/'));
   }
 }

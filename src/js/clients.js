@@ -23,5 +23,6 @@ $(function () {
       '<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>'
     ],
     autoWidth:false,
+    lazyLoad: true,
   })
 });

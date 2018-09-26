@@ -1,3 +1,6 @@
+var	cheerio = require('gulp-cheerio');
+var	replace = require('gulp-replace');
+var	svgmin = require('gulp-svgmin');
 var autoprefixer = require('gulp-autoprefixer');
 var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync');
@@ -20,15 +23,13 @@ var plumber = require('gulp-plumber');
 var pngquant = require('imagemin-pngquant')();
 var reload = browserSync.reload;
 var rename = require('gulp-rename');
+var resizer = require('gulp-images-resizer');
 var sass = require('gulp-sass');
-var strip = require('gulp-strip-comments');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
+var strip = require('gulp-strip-comments');
 var svgSprite = require('gulp-svg-sprite');
-var	svgmin = require('gulp-svgmin');
-var	cheerio = require('gulp-cheerio');
-var	replace = require('gulp-replace');
+var uglify = require('gulp-uglify');
 
 var plugins = require('gulp-load-plugins')({
   pattern: '*'
@@ -38,6 +39,7 @@ var plugins = require('gulp-load-plugins')({
 function getTask(task) {
     return require('./gulp-tasks/' + task)(gulp, plugins);
 }
+
 
 gulp.task('browser-sync', getTask('browser-sync'));
 gulp.task('fonts', getTask('fonts'));
@@ -53,7 +55,36 @@ gulp.task('db-json', getTask('db-json'));
 gulp.task('mustache', ['clean-html','db-json'], getTask('mustache'));
 // gulp.task('html', getTask('html'));
 
+var image_resize_dirs = [
+  'src/img/clients_logo/*.*',
+  'src/img/testimonials/*.*',
+  'src/img/header-logos/*.*'
+]
 
+gulp.task('image-resize-clients_logo', function() {
+    return gulp.src(['src/img/clients_logo/*.*'])
+  	.pipe(resizer({
+              format: "png",
+              height: 60
+          }))
+  	.pipe(gulp.dest('dist/assets/img/clients_logo/'));
+});
+gulp.task('image-resize-testimonials', function() {
+    return gulp.src(['src/img/testimonials/*.*'])
+  	.pipe(resizer({
+              format: "jpg",
+              height: 160,
+              width: 160
+          }))
+  	.pipe(gulp.dest('dist/assets/img/testimonials/'));
+});
+gulp.task('image-resize-header-logos', function() {
+    return gulp.src(['src/img/header-logos/*.*'])
+  	.pipe(resizer({
+              height: 50
+          }))
+  	.pipe(gulp.dest('dist/assets/img/header-logos/'));
+});
 
 gulp.task('create-dist', function() {
   if(!fs.existsSync('./dist'))
@@ -65,12 +96,15 @@ gulp.task('video-copy', function() {
   .pipe(gulp.dest('dist/assets/video/'));
 });
 
+gulp.task('image-resize',['image-resize-clients_logo','image-resize-testimonials','image-resize-header-logos']);
+
 gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {
-	gulp.watch('src/img/**/*.*', ['image-copy']);
+	gulp.watch(['src/img/**/*.*','!src/img/clients_logo/*.*'], ['image-copy','svg-sprites']);
+	gulp.watch(image_resize_dirs, ['image-resize']);
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('src/data/**/*.json', ['mustache']);
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
 });
-gulp.task('once',['create-dist','db-json','fonts','sass-libs','js-libs','video-copy','image-build'])
+gulp.task('once',['create-dist','db-json','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])
 gulp.task('default', ['watch']);
