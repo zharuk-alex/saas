@@ -1,9 +1,13 @@
 $(function () {
   $(window).scroll(function() {
-    if ($(this).scrollTop() > ($('#intro .container').height()+$('#menu').height())) {
+    if ($(this).scrollTop() > ($('#intro .container').height()+$('#menu').height()) && !($("#fixedContainerModal").data('bs.modal') || {})._isShown) {
+
       $('.fixed-container').fadeIn(300);
+      // console.log(($("#fixedContainerModal").data('bs.modal') || {})._isShown);
     } else {
       $('.fixed-container').fadeOut(300);
+      $('.popover').popover('hide');
+      // console.log(($("#fixedContainerModal").data('bs.modal') || {})._isShown);
     }
   });
 

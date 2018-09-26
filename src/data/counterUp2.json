@@ -1,25 +1,25 @@
 [{
     "count": "10",
     "title": "лет на рынке Украины",
-    "icon": "clock.svg",
+    "icon": "clock",
     "key": 1
   },
   {
     "count": "3000",
     "title": "пользователей",
-    "icon": "team.svg",
+    "icon": "team",
     "key": 2
   },
   {
     "count": "100000",
     "title": "отчетов в месяц",
-    "icon": "result.svg",
+    "icon": "result",
     "key": 3
   },
   {
     "count": "250000",
     "title": "фотоотчетов в месяц",
-    "icon": "two-polaroid-pictures.svg",
+    "icon": "two-polaroid-pictures",
     "key": 4
   }
 ]

@@ -17,7 +17,7 @@
   }
 
   #scrollToTop{
-
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
   }
   //
   // #show_dialog{
@@ -30,4 +30,39 @@
   //     color: #fff;
   //   }
   // }
+
+}
+
+#fixedContainerModal{
+  .btn{
+    width: 200px;
+  }
+  .modal-side{
+    max-width: 280px;
+  }
+  .modal-content {
+    // background-color: rgba(236,239,241,.98);
+    background-color: rgba(255,255,255,.4);
+  }
+  // .modal-scrolling {
+  //   position: fixed;
+  //   bottom: 20px;
+  //   right: 20px;
+  // }
+}
+
+.popover{
+  .btn-presentation,.btn-consultation{
+    width: 200px!important;
+  }
+  background-color: rgba(255,255,255,.4);
+}
+
+.popover-hide::before{
+  content: "\f0e7";
+
+}
+.popover-show::before{
+  content: "\f00d";
+
 }

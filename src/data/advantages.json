@@ -1,32 +1,32 @@
 [
   {
     "title":"24/7",
-    "icon":"24-hours.svg",
+    "icon":"24-hours",
     "description":"доступ к ресурсу"
   },
   {
     "title":"Online",
-    "icon":"data.svg",
+    "icon":"data",
     "description":"обработка данных"
   },
   {
     "title":"Dashboard",
-    "icon":"dashboard.svg",
+    "icon":"dashboard",
     "description":"с аналитикой"
   },
   {
     "title":"Mobile",
-    "icon":"mobile_app.svg",
+    "icon":"mobile_app",
     "description":"приложения для Android"
   },
   {
     "title":"GPS",
-    "icon":"check_in.svg",
+    "icon":"check_in",
     "description":"фиксация работ"
   },
   {
     "title":"Отчеты",
-    "icon":"reports.svg",
+    "icon":"reports",
     "description":"в режиме реального времени"
   }
 ]

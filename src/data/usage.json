@@ -3,7 +3,7 @@
   "item": [
     {
       "title": "Мерчендайзинг",
-      "icon":"usage_icons/storekeeper.svg",
+      "icon":"storekeeper",
       "show_delay":"0.25",
       "usage_item":[
         {"title":"Выполнение работ по графику и заполнение отчета по каждой тт"},
@@ -14,7 +14,7 @@
     },
     {
       "title": "Аудит",
-      "icon":"usage_icons/analysis.svg",
+      "icon":"analysis",
       "show_delay":"0.5",
       "usage_item":[
         {"title":"Полевые аудиты для контроля качества выполненных работ по тт"},
@@ -25,7 +25,7 @@
     },
     {
       "title": "Розничный аудит",
-      "icon":"usage_icons/content-audit.svg",
+      "icon":"content-audit",
       "show_delay":"0.75",
       "usage_item":[
         {"title":"Must Stock List"},
@@ -36,7 +36,7 @@
     },
     {
       "title": "Доп. задачи",
-      "icon":"usage_icons/reports.svg",
+      "icon":"reports",
       "show_delay":"1",
       "usage_item":[
         {

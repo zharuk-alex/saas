@@ -1,7 +1,7 @@
 <section id="unive-section" class="py-5 wow fadeIn universal-section">
   <div class="container">
     <div class="row">
-      <div class="col-12 mt-5 text-center">
+      <div class="col-12 my-5 text-center">
         {{#universal}}
           <h2 class="h2 mb-2">{{heading}}</h2>
         {{/universal}}
@@ -14,14 +14,11 @@
       {{#universal}}
         {{#item_col_1}}
             <div class="universal-holder media my-4 pr-4">
-              <div class="media-body text-right align-self-center mr-3">
+              <div class="media-body text-right align-self-center">
                 <h5 class="mt-0 font-weight-bold">{{title}}</h5>
                 <p class="description mb-0">{{description}}</p>
               </div>
-              <!-- <img class="d-flex align-self-center ml-3 svg" src="assets/img/icons/{{icon}}.svg" > -->
-              <svg class="icon icon-icons--{{icon}}">
-                  <use xlink:href="assets/img/sprite/sprite.svg#icons--{{icon}}"></use>
-              </svg>
+              <img class="d-flex align-self-center ml-3 svg" src="assets/img/icons/{{icon}}.svg" >
             </div>
         {{/item_col_1}}
       {{/universal}}
@@ -30,11 +27,8 @@
       {{#universal}}
         {{#item_col_2}}
             <div class="universal-holder media my-4 pl-4">
-              <!-- <img class="d-flex align-self-center mr-3 svg" src="assets/img/icons/{{icon}}.svg"> -->
-              <svg class="icon icon-icons--{{icon}} red_mod">
-                  <use xlink:href="assets/img/sprite/sprite.svg#icons--{{icon}}"></use>
-              </svg>
-              <div class="media-body align-self-center ml-3">
+              <img class="d-flex align-self-center mr-3 svg" src="assets/img/icons/{{icon}}.svg">
+              <div class="media-body align-self-center">
                 <h5 class="mt-0 font-weight-bold">{{title}}</h5>
                 <p class="description mb-0">{{description}}</p>
               </div>

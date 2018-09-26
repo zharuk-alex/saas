@@ -75,18 +75,23 @@ $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $co
 
 
 #counterup-section2{
-  background-color: $bgc-grey-darken;
+  background-color: $main_color;
   .counterup-block{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #fff;
     .counter{
       font-size: 2.25rem;
       font-weight: 700;
     }
   }
-  .svg{
-    width: 100px;
-    fill: darken($main_color, 10%);
+  .number{
+    margin-top: 20px;
+  }
+  svg{
+    width: 50px;
+    height: 50px;
+    fill: #fff;
   }
 }

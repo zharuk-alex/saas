@@ -7,6 +7,7 @@ var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
 var cssnano = require('gulp-cssnano');
+var decomment = require('gulp-decomment');
 var fs = require('fs');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -20,9 +21,14 @@ var pngquant = require('imagemin-pngquant')();
 var reload = browserSync.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var strip = require('gulp-strip-comments');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+var svgSprite = require('gulp-svg-sprite');
+var	svgmin = require('gulp-svgmin');
+var	cheerio = require('gulp-cheerio');
+var	replace = require('gulp-replace');
 
 var plugins = require('gulp-load-plugins')({
   pattern: '*'
@@ -41,6 +47,7 @@ gulp.task('sass-libs', getTask('sass-libs'));
 gulp.task('js-libs', getTask('js-libs'));
 gulp.task('image-build', getTask('image-build'));
 gulp.task('image-copy', getTask('image-copy'));
+gulp.task('svg-sprites', getTask('svg-sprites'));
 gulp.task('clean-html', getTask('clean-html'));
 gulp.task('db-json', getTask('db-json'));
 gulp.task('mustache', ['clean-html','db-json'], getTask('mustache'));

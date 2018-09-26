@@ -6,9 +6,10 @@ module.exports = function(gulp, plugins) {
       progressive: true,
       svgoPlugins: [
         {
-          removeViewBox: false
+          removeViewBox: true
         }
       ],
+      optimizationLevel: 3,
       use: [plugins.pngquant]
     })))
     .pipe(gulp.dest('dist/assets/img/'));
