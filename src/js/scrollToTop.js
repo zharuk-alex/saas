@@ -7,6 +7,7 @@ $(function () {
     } else {
       $('.fixed-container').fadeOut(300);
       $('.popover').popover('hide');
+      $('#show_dialog').find('i').removeClass('popover-show').addClass('popover-hide');
       // console.log(($("#fixedContainerModal").data('bs.modal') || {})._isShown);
     }
     var btn_position = $('#scrollToTop').offset().top; // position = { left: 42, top: 567 }

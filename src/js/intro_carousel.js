@@ -29,17 +29,17 @@ $(function () {
 
   $("#js-rotating").Morphext({
     animation: "flipInX",
-    loop:0,
+    // loop:0,
     complete: function () {
-      console.log($(this.element[0].children));
+      // console.log($(this.element[0].children));
       var container = this.element;
       if(this.phrases.length == this.position){
-        console.log(this.phrases[this.position-1]);
+        // console.log(this.phrases[this.position-1]);
         // morphext active
         this.stop();
 
         setTimeout(function () {
-          console.log(container);
+          // console.log(container);
           $.when($(container).find('span').animate({opacity:0},600))
                                .done(function() {
               $(container).find('span').html('<img class="img-fluid" src="assets/img/online_logo.png" alt="">').animate({opacity:1},600)

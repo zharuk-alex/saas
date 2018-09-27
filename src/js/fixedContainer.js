@@ -30,6 +30,7 @@ $(function () {
   });
   $('body').on('click','.popover .btn',function (e) {
     $(this).closest('.popover').popover('hide');
+    $('#show_dialog').find('i').removeClass('popover-show').addClass('popover-hide');
   });
 
   $('#show_dialog').on('click',  function (e) {

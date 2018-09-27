@@ -12,18 +12,18 @@
       {{#capabilities3}}
       <div class="carousel-item">
         <div class="view">
-          <img class="d-block w-100" src="assets/img/backgrounds/{{image}}" alt="{{title}}">
+          <img class="d-block" src="assets/img/backgrounds/{{image}}" alt="{{title}}">
           <div class="mask rgba-stylish-strong"></div>
         </div>
-        <div class="carousel-caption">
-          <h1 class="h1-responsive my-4">{{title}}</h3>
-            <ul class="list-unstyled">
+        <div class="carousel-caption d-flex flex-column justify-content-center">
+          <h1 class="h1-responsive my-4">{{title}}</h1>
+          <ul class="list-unstyled">
 
-              {{#list}}
-                <li class="capabilitie-item">{{description}}</li>
-              {{/list}}
+            {{#list}}
+              <li class="capabilitie-item">{{description}}</li>
+            {{/list}}
 
-            </ul>
+          </ul>
         </div>
       </div>
       {{/capabilities3}}

@@ -45,11 +45,15 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid $main_color;
   transition: $transition-def;
   i{
+    transition: $transition-def;
     color: $main_color;
   }
   &:hover{
     background-color: $main_color;
-    color: #ffffff!important;
+    color: #ffffff;
+    i{
+      color: #ffffff;
+    }
   }
 }
 .btn-filled{
