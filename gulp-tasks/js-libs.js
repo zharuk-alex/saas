@@ -62,7 +62,17 @@ var libs = {
   },
   parallax:{
     js: 'node_modules/jquery-parallax.js/parallax.js'
-  }
+  },
+  // simple_text_rotator:{
+  //   js: 'node_modules/jquery.simple-text-rotator/jquery.simple-text-rotator.js'
+  // }
+  morphext:{
+    js: 'node_modules/morphext/dist/morphext.js'
+  },
+  magnific_popup:{
+    js: 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+  },
+  //
 };
 
 var js_libs = Object.keys(libs).map(function(key, index) {

@@ -36,8 +36,8 @@
 }
 
 #carouselTestimonials3 {
-  background-color: #000000;
-
+  background: transparent;
+  opacity: 0;
   .owl-stage-outer {
     @include media-breakpoint-up(md) {
       padding-top: 100px;
@@ -86,10 +86,13 @@
     margin-left: 15%;
     list-style: none;
     //
+    button{
+      outline: none!important;
+    }
     .owl-dot {
+
       span {
         position: relative;
-        -ms-flex: 0 1 auto;
         flex: 0 1 auto;
         width: 1.5rem;
         height: 0.625rem;

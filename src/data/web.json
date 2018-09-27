@@ -8,7 +8,7 @@
       {
         "title":"Интуитивная панель управления",
         "id": "web_dashboard",
-        "image":"mmcs/index.png",
+        "image":"index",
         "active":"active",
         "selected":"true",
         "show":"show"
@@ -16,32 +16,32 @@
       {
         "title":"Информативные графики",
         "id": "web_charts",
-        "image":"mmcs/charts.png",
+        "image":"charts",
         "selected":"false"
       },
       {
         "title":"Интерактивные карты",
         "id": "web_maps",
-        "image":"mmcs/maps.png",
+        "image":"maps",
         "selected":"false"
       }],
     "items_col2":[
       {
         "title":"Система уведомлений (оценки, комментарии)",
         "id": "web_msg",
-        "image":"mmcs/comments.png",
+        "image":"comments",
         "selected":"false"
       },
       {
         "title":"Гибкая фильтрация данных",
         "id": "web_filter",
-        "image":"mmcs/filters.png",
+        "image":"filters",
         "selected":"false"
       },
       {
         "title":"Экспорт данных (*.csv, Excel)",
         "id": "web_exports",
-        "image":"mmcs/export.png",
+        "image":"export",
         "selected":"false"
       }
     ]

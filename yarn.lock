@@ -64,6 +64,14 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animate-scss@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animate-scss/-/animate-scss-3.2.1.tgz#1bb32331ea1233407f22007c8815011d2e342b03"
+
+animate.css@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.0.tgz#5de25d1ee5fba11ba6a1e2c4fa568f512eb7d4da"
+
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -3835,6 +3843,10 @@ jquery.counterup@^2.1.0:
     jquery ">=1.5.0"
     waypoints ">=3.0"
 
+jquery.simple-text-rotator@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/jquery.simple-text-rotator/-/jquery.simple-text-rotator-0.0.1.tgz#5a5158b8e32d7f4cc6f9008c34e77231445a31a7"
+
 jquery@>=1.5.0, jquery@>=1.7, jquery@>=1.8.3, jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
@@ -4445,6 +4457,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+magnific-popup@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/magnific-popup/-/magnific-popup-1.1.0.tgz#3e7362c5bd18f6785fe99e59d013e20af33d3049"
+
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -4712,6 +4728,10 @@ module-deps@~2.0.0:
     resolve "~0.6.3"
     stream-combiner "~0.1.0"
     through2 "~0.4.1"
+
+morphext@^2.4.7:
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/morphext/-/morphext-2.4.7.tgz#e0ce23b326ffc8871d58f91618e70426cb87673e"
 
 ms@2.0.0:
   version "2.0.0"

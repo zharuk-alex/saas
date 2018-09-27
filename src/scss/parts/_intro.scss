@@ -30,15 +30,11 @@
     // background-color:rgba(12, 46, 81, .7);
     background-color: rgba(49, 53, 58, 0.7);
   }
-  h1{
-    color: #fff;
-    font-size: 3rem!important;
-  }
-  #introHeading{
-    h1{
-      font-size: 4.5rem!important;
-    }
-  }
+  // h1{
+  //   color: #fff;
+  //   font-size: 3rem!important;
+  // }
+
   .sub-description{
     text-transform: uppercase;
 
@@ -60,4 +56,15 @@
       }
     }
   }
+}
+#introHeading{
+    font-size: 4.5rem!important;
+    color: $main_color;
+    height: 100px;
+    #js-rotating{
+      opacity:0;
+    }
+    #js-rotating.active{
+      opacity:1
+    }
 }

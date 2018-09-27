@@ -2,5 +2,17 @@
   .modal-content{
     border: none;
     border-radius: 0;
+    .close{
+      position: absolute;
+      top: 0;
+      background: $main_color;
+      color: #fff;
+      left: -50px;
+      z-index: 1100;
+      opacity: 1;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
   }
 }

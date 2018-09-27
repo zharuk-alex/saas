@@ -1,6 +1,9 @@
 $fa-font-path: "/assets/font" !default;
+// @import "../../node_modules/animate-scss/animate.scss";
+// @import "../../node_modules/morphext/dist/morphext";
 @import "../../node_modules/font-awesome/scss/font-awesome";
 // @import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../node_modules/magnific-popup/src/css/main.scss";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";

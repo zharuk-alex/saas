@@ -1,6 +1,7 @@
 $(function () {
   // Clients carousel
-  $('#clients-carousel').owlCarousel({
+  var clients_owl = $('#clients-carousel');
+  clients_owl.owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
@@ -24,5 +25,10 @@ $(function () {
     ],
     autoWidth:false,
     lazyLoad: true,
-  })
+    onInitialized: function (e) {
+      $('#clients').css({opacity:1});
+    }
+
+  });
+
 });

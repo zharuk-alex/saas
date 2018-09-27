@@ -28,29 +28,8 @@ $(document).ready(function() {
   $('.counter').counterUp({delay: 10, time: 1000});
   // /counterup
 
-  
-  // Testimonials
-  $('#testimonials3-carousel').owlCarousel({
-    loop: true,
-    margin: 30,
-    nav: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 3
-      }
-    },
-    dots: true,
-    autoplay: false,
-    autoplayTimeout: 3000,
-    nav: false,
-    autoWidth:false,
-  });
+
+
 
   $('#intro .carousel').carousel({
     interval: 4000
@@ -65,6 +44,20 @@ $(document).ready(function() {
   })
   // addActive
   $('#web-section').find('.nav-item').first().addClass('active');
+  $('#web-section').find('.image-popup').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
 
   // $('#capabilities').find('.nav-link').first().addClass('active');
   // $('#capabilities').find('.tab-pane').first().addClass('active');
