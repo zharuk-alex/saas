@@ -1,17 +1,16 @@
 <!-- Modal -->
 <div class="modal fade right" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true" data-backdrop='true'>
+  {{#contact_form}}
   <div class="modal-dialog modal-fluid modal-full-height modal-right" role="document">
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalPreviewLabel">Связаться с нами</h5>
-
+        <h5 class="modal-title" id="exampleModalPreviewLabel">{{heading}}</h5>
       </div>
       <div class="modal-body">
         <div class="row">
-
             <!--Grid column-->
             <div class="col-12 mb-md-0 mb-5">
                 <!-- <form id="contact-form" name="contact-form" action="mail.php" method="POST"> -->
@@ -24,21 +23,28 @@
                         <div class="col-12">
                             <div class="md-form mb-0">
                                 <input type="text" name="name" class="form-control">
-                                <label for="name" class="">Ваше имя</label>
+                                <label for="name" class="">{{name}}</label>
                             </div>
                         </div>
 
                         <div class="col-12">
                             <div class="md-form mb-0">
                                 <input type="text" name="email" class="form-control">
-                                <label for="email" class="">Ваш email</label>
+                                <label for="email" class="">{{email}}</label>
                             </div>
                         </div>
 
                         <div class="col-12">
                             <div class="md-form mb-0">
                                 <input type="text" name="phone" class="form-control">
-                                <label for="phone" class="">Ваш телефон</label>
+                                <label for="phone" class="">{{phone}}</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="md-form mb-0">
+                                <input type="text" name="company" class="form-control">
+                                <label for="company" class="">{{company}}</label>
                             </div>
                         </div>
 
@@ -46,7 +52,7 @@
 
                             <div class="md-form">
                                 <textarea type="text" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                <label for="message">Сообщение</label>
+                                <label for="message">{{msg}}</label>
                             </div>
 
                         </div>
@@ -55,7 +61,7 @@
                     <div class="text-center text-md-left">
                         <!-- <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Отправить</a> -->
                         <!-- <a class="btn btn-main-outline btn-submit" >Отправить</a> -->
-                        <a class="btn btn-filled btn-submit" >Отправить</a>
+                        <a class="btn btn-filled btn-submit">{{submit}}</a>
                     </div>
                 </form>
 
@@ -92,5 +98,6 @@
       </div>
     </div>
   </div>
+  {{/contact_form}}
 </div>
 <!-- Modal -->

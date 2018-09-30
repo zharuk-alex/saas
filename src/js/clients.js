@@ -4,16 +4,19 @@ $(function () {
   clients_owl.owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     responsive: {
       0: {
-        items: 1
+        items: 3,
+        slideBy:3
       },
       600: {
-        items: 3
+        items: 3,
+        slideBy:3
       },
       1000: {
-        items: 6
+        items: 6,
+        slideBy:6
       }
     },
     dots: false,
@@ -23,7 +26,7 @@ $(function () {
       '<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>',
       '<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>'
     ],
-    autoWidth:false,
+    autoWidth: false,
     lazyLoad: true,
     onInitialized: function (e) {
       $('#clients').css({opacity:1});

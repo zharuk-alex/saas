@@ -72,6 +72,9 @@ var libs = {
   magnific_popup:{
     js: 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
   },
+  svg4everybody:{
+    js: 'node_modules/svg4everybody/dist/svg4everybody.js'
+  },
   //
 };
 

@@ -13,12 +13,12 @@
         <div class="col-md-9">
           <div id="introHeading" class="display-4 font-weight-bold text-center text-white text-white text-uppercase">
             <div id="js-rotating">
-              Мерчендайзинг,Аудит,Розничный аудит,Задачи
+              Мерчендайзинг,Аудит,Розничный аудит,Задачи,<img class="" src="assets/img/online_logo.png" alt="">
             </div>
           </div>
 
         </div>
-        <div class="col-md-9 mx-auto text-center white-text">
+        <div class="col-md-9 text-center white-text">
           <hr class="hr-light">
           {{#intro}}
 
@@ -31,16 +31,19 @@
 
           {{/intro}}
           {{#intro}}
-          <button class="btn btn-main-outline waves-effect waves-light mx-0"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">{{button_title}}
+          <a class="btn btn-main-outline waves-effect waves-light mx-0">{{button_title}}
             <i class="fa fa-download ml-2"></i>
-          </button>
+          </a>
+          <!-- <button class="btn btn-main-outline waves-effect waves-light mx-0"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">{{button_title}}
+            <i class="fa fa-download ml-2"></i>
+          </button> -->
           {{/intro}}
         </div>
       </div>
       <div class="top-logo-holder">
         <div class="col-12 d-flex flex-row justify-content-between">
           {{#top_clients}}
-          <img class="top_clients_logo" src="assets/img/header-logos/{{logo}}" alt="">
+          <img class="top_clients_logo img-fluid" src="assets/img/header-logos/{{logo}}" alt="">
           {{/top_clients}}
         </div>
         <!-- <div class="col d-flex justify-content-center">

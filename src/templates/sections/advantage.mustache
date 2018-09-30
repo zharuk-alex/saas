@@ -1,26 +1,28 @@
-<section id="advantages" class="py-5">
+<section id="advantages" class="content-section">
+  {{#advantages}}
   <div class="container">
+    {{> ../partials/heading_main }}
     <div class="row">
-      <div class="col-md-5 my-5 mx-auto text-center">
-          <h2 class="h2 mb-2">Возможности</h2>
-        <h6 class="h6">Most of the world has been left out of today's data revolution. </h6>
-        <hr class="header-divider">
-      </div>
-    </div>
-    <div class="row">
-      {{#advantages}}
-      <div class="col py-2 text-center">
+
+      {{#item}}
+      <div class="col-4 col-lg py-2 text-center wow bounceIn">
         <!-- <img src="assets/img/advantages_icons/{{icon}}" alt="" class="d-block mx-auto svg"> -->
         <svg class="icon icon-advantages_icons--{{icon}}">
           <use xlink:href="assets/img/sprite/sprite.svg#advantages_icons--{{icon}}"></use>
         </svg>
         <div class="mask rgba-stylish-strong"></div>
-        <h6 class="h6 my-3">{{title}}</h6>
+        <h6 class="h6 mt-3">{{title}}</h6>
         <p class="advantage_description mb-0">{{description}}</p>
         <!-- Block end -->
       </div>
-      {{/advantages}}
+      {{/item}}
+
+
     </div>
   </div>
+  {{/advantages}}
 
+  {{> ./counterup_2 }}
+
+  {{> ./capabilities3 }}
 </section>

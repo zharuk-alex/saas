@@ -1,22 +1,19 @@
 <!--Section: CounterUp-->
 <!-- <section class="wow fadeIn counterup-section parallax-window" data-parallax="scroll" data-image-src="./img/backgrounds/chart-infographics-abstract_2.png"> -->
-<section id="counterup-section2" class="wow fadeIn py-4">
+<div id="counterup-section2" class="wow fadeIn">
   <div class="container">
     <!-- <hr class="hr-lighten"> -->
     <div class="row">
       {{#counterUp2}}
-        <div class="col-md-3 my-2">
-          <div class="counterup-block">
+        <div class="col-6 col-md-3 my-2">
+          <div class="counterup-block text-center">
             <div class="visual">
               <svg class="icon icon-counter_up--{{icon}}">
                 <use xlink:href="assets/img/sprite/sprite.svg#counter_up--{{icon}}"></use>
               </svg>
             </div>
-            <div class="my-2">
-
-            </div>
             <div class="number">
-              <span class="counter">{{ count }}</span>
+              <span class="counter">{{ count }}</span><span> {{more}}</span>
             </div>
             <h5 class="h5">{{ title }}</h5>
           </div>
@@ -24,5 +21,5 @@
       {{/counterUp2}}
     </div>
   </div>
-</section>
+</div>
 <!--/Section: CounterUp-->

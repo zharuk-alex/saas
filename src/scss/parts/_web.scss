@@ -4,10 +4,10 @@
     border-radius: none;
     .nav-link{
       border: none;
-      border-radius: none;
-      font-size: 1rem;
+      font-size: 1.25rem;
       font-weight: 500;
       color: $text-muted;
+      line-height: 1.1;
       padding: 0;
       &.active{
         color:$text-contrast;
@@ -36,11 +36,25 @@
         transition: border-left .3s linear;
       }
     }
+
+
   }
-  .tab-content-inner{
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%,-50%);
+
+  @include media-breakpoint-down(sm){
+    .nav-tabs{
+      .nav-item{
+        margin: 10px auto;
+      }
+      .nav-link{
+
+        font-size: .8rem;
+        line-height: 1.2;
+        padding: 0;
+      }
+    }
+  };
+  img {
+    width: auto;
+    max-width: 100%;
   }
 }

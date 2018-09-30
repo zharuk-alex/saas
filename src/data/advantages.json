@@ -1,32 +1,36 @@
-[
-  {
-    "title":"24/7",
-    "icon":"24-hours",
-    "description":"доступ к ресурсу"
-  },
-  {
-    "title":"Online",
-    "icon":"data",
-    "description":"обработка данных"
-  },
-  {
-    "title":"Dashboard",
-    "icon":"dashboard",
-    "description":"с аналитикой"
-  },
-  {
-    "title":"Mobile",
-    "icon":"mobile_app",
-    "description":"приложения для Android"
-  },
-  {
-    "title":"GPS",
-    "icon":"check_in",
-    "description":"фиксация работ"
-  },
-  {
-    "title":"Отчеты",
-    "icon":"reports",
-    "description":"в режиме реального времени"
-  }
-]
+[{
+  "heading":"Почему выбирают нас",
+  "sub_heading":"",
+  "item":[
+    {
+      "title":"24/7",
+      "icon":"24-hours",
+      "description":"доступ к ресурсу"
+    },
+    {
+      "title":"Online",
+      "icon":"data",
+      "description":"обработка данных"
+    },
+    {
+      "title":"Dashboard",
+      "icon":"dashboard",
+      "description":"с аналитикой"
+    },
+    {
+      "title":"Android",
+      "icon":"mobile_app",
+      "description":"мобильное приложения"
+    },
+    {
+      "title":"GPS",
+      "icon":"check_in",
+      "description":"контроль"
+    },
+    {
+      "title":"Отчеты",
+      "icon":"reports",
+      "description":"в режиме реального времени"
+    }
+  ]
+}]

@@ -3,6 +3,11 @@ module.exports = function (gulp, plugins) {
     gulp.src("src/templates/*.mustache")
     .pipe(plugins.mustache('src/db.json',{extension: '.html'},{}))
     .pipe(plugins.decomment({trim: true}))
+    .pipe(plugins.prettyHtml({
+          indent_size: 2,
+          indent_char: ' ',
+          unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br']
+      }))
     .pipe(gulp.dest("dist/"))
     .pipe(plugins.browserSync.reload({ stream: true }));
   }

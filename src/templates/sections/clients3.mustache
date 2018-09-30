@@ -1,17 +1,17 @@
-<section class="wow fadeIn">
+<div class="wow fadeIn">
   <div id="clients" class="clients">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
+
           <div id="clients-carousel" class="owl-carousel owl-theme">
             {{#clients_logo}}
-            <div class="item">
-              <img src="assets/img/clients_logo/{{image}}" alt="{{ name }}">
+            <div class="item col">
+              <img src="assets/img/clients_logo/{{image}}" class="img-fluid" alt="{{ name }}">
             </div>
             {{/clients_logo}}
           </div>
-        </div>
+
       </div>
     </div>
   </div>
-</section>
+</div>

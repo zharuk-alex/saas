@@ -4,9 +4,13 @@
   .owl-stage {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 30px;
   }
-
+.owl-item{
+  width: auto;
+  margin: 0 auto;
+}
   .owl-carousel .owl-item img {
     width: auto;
     // max-height: 100px;
@@ -15,8 +19,8 @@
     margin: 0 auto;
   }
   .owl-carousel{
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     &:hover{
       .owl-next,.owl-prev{
         opacity: 1;
@@ -25,14 +29,14 @@
     }
   }
   .owl-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position:  absolute;
-    top: 0;
-    width: 100%;
-    height:  100%;
-    margin:  0;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // position:  absolute;
+    // top: 0;
+    // width: 100%;
+    // height:  100%;
+    // margin:  0;
 
     button{
       @extend .btn-main-outline;

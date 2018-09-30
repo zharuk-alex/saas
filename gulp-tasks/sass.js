@@ -7,7 +7,10 @@ module.exports = function (gulp, plugins) {
           // .pipe(plugins.sourcemaps.init())
           // .pipe(plugins.sass().on('error', sass.logError))
           .pipe(plugins.sass().on('error', plugins.sass.logError))
-          .pipe(plugins.autoprefixer(['last 2 versions'], {cascade: true}))
+          .pipe(plugins.autoprefixer(['last 2 versions'], {
+            cascade: true,
+            grid: true
+          }))
 
           .pipe(plugins.concat('style.min.css'))
 

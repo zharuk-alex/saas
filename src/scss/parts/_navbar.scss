@@ -14,6 +14,7 @@ $navbar-padding: 6px;
 
   .contact-modal-link {
     @extend .nav-link;
+    padding: .5rem;
   }
 
   .locales {
@@ -55,4 +56,10 @@ $navbar-padding: 6px;
   //
   //   }
   // }
+  @include media-breakpoint-down(sm){
+    .logo{
+      height: 50px;
+    }
+
+  };
 }

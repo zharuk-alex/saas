@@ -13,8 +13,8 @@ $(function () {
     var btn_position = $('#scrollToTop').offset().top; // position = { left: 42, top: 567 }
     var counterUp_start = $('#counterup-section2').offset().top; // position = { left: 42, top: 567 }
     var counterUp_end = $('#counterup-section2').offset().top + $('#counterup-section2').height(); // position = { left: 42, top: 567 }
+
     if(btn_position > counterUp_start && btn_position < counterUp_end){
-      console.log('enter');
       $('#scrollToTop').css({backgroundColor:"#ffffff"})
     }else{
       $('#scrollToTop').css({backgroundColor:"transparent"})
@@ -22,7 +22,7 @@ $(function () {
 
   });
 
-  $('#scrollToTop').on('click', function(event) {
+  $(document).on('click','.navbar-brand, #scrollToTop', function(event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: 0

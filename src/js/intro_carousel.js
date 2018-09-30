@@ -42,9 +42,14 @@ $(function () {
           // console.log(container);
           $.when($(container).find('span').animate({opacity:0},600))
                                .done(function() {
-              $(container).find('span').html('<img class="img-fluid" src="assets/img/online_logo.png" alt="">').animate({opacity:1},600)
+              $(container).find('span').html('').append(
+                $('<img>',{
+                  src:"assets/img/online_logo.png",
+                  css: {width:'100%'}
+                })
+              ).animate({opacity:1},600)
           });
-        },2000)
+        },100)
 
       }
     }

@@ -21,12 +21,14 @@ var mustache = require("gulp-mustache");
 var notify = require("gulp-notify");
 var plumber = require('gulp-plumber');
 var pngquant = require('imagemin-pngquant')();
+var prettyHtml = require('gulp-pretty-html');
 var reload = browserSync.reload;
 var rename = require('gulp-rename');
 var resizer = require('gulp-images-resizer');
 var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
+var spritesmith = require('gulp.spritesmith');
 var strip = require('gulp-strip-comments');
 var svgSprite = require('gulp-svg-sprite');
 var uglify = require('gulp-uglify');
@@ -98,8 +100,18 @@ gulp.task('video-copy', function() {
 
 gulp.task('image-resize',['image-resize-clients_logo','image-resize-testimonials','image-resize-header-logos']);
 
+
+
+gulp.task('sprite:png', function () {
+  var spriteData = gulp.src('src/img/**/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss'
+  }));
+  return spriteData.pipe(gulp.dest('src/sprite/test/'));
+});
+
 gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {
-	gulp.watch(['src/img/**/*.*','!src/img/clients_logo/*.*'], ['image-copy','svg-sprites']);
+	gulp.watch(['src/img/**/*.*'], ['image-copy','svg-sprites']);
 	gulp.watch(image_resize_dirs, ['image-resize']);
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);

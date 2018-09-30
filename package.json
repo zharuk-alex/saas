@@ -30,6 +30,8 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
     "gulp-uglify": "^3.0.1",
+    "gulp-pretty-html": "^2.0.9",
+    "gulp.spritesmith": "^6.9.0",
     "gulplog": "^1.0.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^6.0.0",
@@ -50,6 +52,7 @@
     "morphext": "^2.4.7",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.4",
+    "svg4everybody": "^2.1.9",
     "waypoints": "^4.0.1"
   }
 }

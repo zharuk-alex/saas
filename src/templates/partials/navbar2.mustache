@@ -3,7 +3,7 @@
   <div class="container">
 
     <!-- Brand -->
-    <a class="navbar-brand" href="index.html#intro" >
+    <a class="navbar-brand" >
       <img src="./assets/img/logo.png" alt="" class="logo">
     </a>
 
@@ -16,13 +16,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <!-- Left -->
-      <ul class="navbar-nav ml-auto d-md-flex align-items-md-center">
+      <ul class="navbar-nav ml-auto d-md-flex align-items-md-center align-items-end">
         {{#nav_landing}}
-          <li class="nav-item">
-            <a class="nav-link nav-link-innerer" href="{{ href }}">{{displayName}}</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-innerer" href="{{ href }}">{{displayName}}</a>
+        </li>
         {{/nav_landing}}
-        <li class="nav-item mx-2">
+        <li class="nav-item">
           <a class="waves-light ml-auto contact-modal-link" data-toggle="modal" data-target="#contactModal" data-backdrop="true">
             Контакты
           </a>

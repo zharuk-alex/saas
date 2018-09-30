@@ -38,10 +38,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //Buttons
+
 .btn-main-outline{
   border-color: $main_color;
   background-color: transparent;
-  color: $main_color;
+  color: $main_color!important;
   border: 1px solid $main_color;
   transition: $transition-def;
   i{
@@ -50,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   &:hover{
     background-color: $main_color;
-    color: #ffffff;
+    color: #ffffff!important;
     i{
       color: #ffffff;
     }
@@ -106,4 +107,12 @@ h1, h2, h3, h4, h5, h6 {
 .carousel .carousel-control-next-icon {
   width: 40px;
   height: 40px;
+}
+
+
+#usage, #advantages, #web-section,#unive-section{
+  padding-top: 2rem;
+}
+#usage,#web-section, #unive-section{
+  padding-bottom: 2rem;
 }

@@ -1,6 +1,6 @@
 $(document).ready(function() {
   new WOW().init();
-
+  svg4everybody();
 
   //
   //scrollTop
@@ -31,9 +31,9 @@ $(document).ready(function() {
 
 
 
-  $('#intro .carousel').carousel({
-    interval: 4000
-  });
+  // $('#intro .carousel').carousel({
+  //   interval: 4000
+  // });
   // Web-tabs
   $('#web-section').on('click', '.nav-link', function () {
     $('#web-section').find('.active').removeClass('active');
@@ -76,15 +76,17 @@ $('.testimonials-holder').owlCarousel({
     autoplayTimeout: 4000,
 
 })
-// testimonials2
-$('#carouselTestimonials2').carousel({
-  interval: 4000,
-  pause: false
-})
-// testimonials2 end
+// // testimonials2
+// $('#carouselTestimonials2').carousel({
+//   interval: 4000,
+//   pause: false
+// })
+// // testimonials2 end
 $('#carouselCapabilities').carousel({
   pause: false,
-  interval: 4000
+  interval: 4000,
+  ride:"carousel",
+  wrap:true
 })
   // Close $
 })

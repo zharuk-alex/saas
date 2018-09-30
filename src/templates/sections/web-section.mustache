@@ -1,16 +1,7 @@
-<section id="web-section" class="py-5">
+<section id="web-section" class="content-section">
   {{#web}}
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 my-5  text-center">
-
-          <h2 class="h2 mb-2">{{heading}}</h2>
-
-        <h6 class="h6">{{sub_desc}}</h6>
-
-        <hr class="header-divider">
-      </div>
-    </div>
+    {{> ../partials/heading_main }}
     <div class="row">
       <!-- Col 1 -->
       <div class="col">
@@ -26,17 +17,17 @@
       </div>
       <!-- /Col 1  -->
       <!-- Content Tabs Inner -->
-      <div class="col-sm-7 d-flex align-items-center justify-content-center">
+      <div class="col-lg-7">
         <div class="tab-content wow fadeIn" id="webTabContent">
 
             {{#items_col1}}
-              <div class="tab-pane {{show}} {{active}}" id="{{id}}" role="tabpanel" aria-labelledby="{{id}}-tab">
-                <div class="tab-content-inner">
-                  <a class="image-popup" href="assets/img/mmcs/{{image}}2.png">
-                  	<img src="assets/img/mmcs/{{image}}.png" class="img-fluid" alt="{{title}}">
-                  </a>
-                </div>
+            <div class="tab-pane {{show}} {{active}}" id="{{id}}" role="tabpanel" aria-labelledby="{{id}}-tab">
+              <div class="tab-content-inner">
+                <a class="image-popup" href="assets/img/mmcs/{{image}}2.png">
+                	<img src="assets/img/mmcs/{{image}}.png" class="" alt="{{title}}">
+                </a>
               </div>
+            </div>
             {{/items_col1}}
 
             <!--  -->
@@ -55,7 +46,7 @@
       </div>
       <!-- /Content Tabs Inner -->
       <!-- Col 2 -->
-      <div class="col">
+      <div class="col order-lg-12">
         <ul class="nav nav-tabs d-flex justify-content-between flex-column h-100 py-4 col-second" role="tablist">
 
             {{#items_col2}}
@@ -69,12 +60,10 @@
       <!-- /Col 2 -->
     </div>
     <div class="row">
-      <div class="col-xl-5 col-12 mt-5 mx-auto text-center">
-        <p class="py-2">{{end_desc}}</p>
-        <button type="button" class="btn btn-main-outline waves-effect">{{button_title}}</button>
+      <div class="col text-center">
+        <button type="button" class="btn mx-auto btn-main-outline waves-effect">{{button_title}}</button>
       </div>
     </div>
-    <hr class="hr-light">
   </div>
   </div>
   {{/web}}

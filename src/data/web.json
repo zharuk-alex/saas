@@ -1,7 +1,7 @@
 [
   {
     "heading":"ПЛАТФОРМА",
-    "sub_desc":"Powered by Google Chrome",
+    "sub_heading":"Powered by Google Chrome",
     "end_desc":"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
     "button_title":"Обзор",
     "items_col1":[
@@ -27,7 +27,7 @@
       }],
     "items_col2":[
       {
-        "title":"Система уведомлений (оценки, комментарии)",
+        "title":"Система уведомлений",
         "id": "web_msg",
         "image":"comments",
         "selected":"false"
