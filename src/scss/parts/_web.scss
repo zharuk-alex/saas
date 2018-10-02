@@ -65,9 +65,22 @@
 }
 .platform-tabs{
 
-  margin: 3rem auto;
-  .nav-link, .nav-link.active{
-    border: 0;
-  }
+  font-size: 2rem;
+  margin: 2rem auto;
   border: 0;
+  line-height: 1;
+  .nav-link{
+    color: #495057;
+    border: 0;
+    border-bottom: 3px dashed transparent;
+    transition: border-bottom .3s linear;
+    &:hover, &:focus{
+      border: 0;
+    }
+  }
+  .nav-link.active{
+    font-weight: 600;
+    border-bottom: 3px dashed grey;
+  }
+
 }

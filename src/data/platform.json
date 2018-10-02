@@ -6,6 +6,7 @@
     "button_title":"Обзор",
     "web":{
       "title":"Web",
+      "content-class":"col-lg-8",
       "items_col1":[
         {
           "title":"Интуитивная панель управления",
@@ -50,11 +51,13 @@
     },
     "mobile":{
       "title":"Android",
+      "content-class":"col-lg-8",
       "items_col1":[
         {
           "title":"Описание 1",
           "id": "mobile_charts",
           "image":"mobile_1",
+          "active":"active",
           "selected":"true",
           "show":"show"
         },

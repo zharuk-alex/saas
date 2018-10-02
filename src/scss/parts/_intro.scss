@@ -59,6 +59,23 @@
       }
     }
   }
+  .intro-scroll-to-element{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -15px;
+    svg{
+      width: 30px;
+      height: 30px;
+      fill: #ffffff;
+      transition: $transition-def;
+    }
+    &:hover{
+      svg{
+        fill: $main_color;
+      }
+    }
+  }
 }
 #introHeading{
     font-size: 4.5rem;
