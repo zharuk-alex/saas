@@ -1,5 +1,12 @@
-#web-section{
-  background-color: #f5f5f5;
+#platform-section{
+  img {
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.platform-content{
   .nav-tabs{
     border: none;
     border-radius: none;
@@ -58,16 +65,4 @@
       }
     }
   };
-  img {
-    width: auto;
-    max-width: 100%;
-  }
-}
-.platform-tabs{
-
-  margin: 3rem auto;
-  .nav-link, .nav-link.active{
-    border: 0;
-  }
-  border: 0;
 }

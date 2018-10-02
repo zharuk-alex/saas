@@ -1,11 +1,11 @@
 <section id="web-section" class="content-section">
   {{#web}}
-  <div class="container">
+  <div class="container-fluid">
     {{> ../partials/heading_main }}
     <div class="row">
       <!-- Col 1 -->
       <div class="col">
-        <ul class="nav nav-tabs d-flex justify-content-between flex-column h-100 py-4 col-first text-right" role="tablist">
+        <ul class="nav nav-tabs d-flex justify-content-between flex-column col-first text-right" role="tablist">
 
             {{#items_col1}}
               <li class="nav-item wow fadeInLeft">
@@ -47,7 +47,7 @@
       <!-- /Content Tabs Inner -->
       <!-- Col 2 -->
       <div class="col order-lg-12">
-        <ul class="nav nav-tabs d-flex justify-content-between flex-column h-100 py-4 col-second" role="tablist">
+        <ul class="nav nav-tabs d-flex justify-content-between flex-column col-second" role="tablist">
 
             {{#items_col2}}
               <li class="nav-item wow fadeInRight">
@@ -61,7 +61,7 @@
     </div>
     <div class="row">
       <div class="col text-center">
-        <a class="popup-video btn mx-auto btn-main-outline waves-effect" href="http://www.youtube.com/watch?v=iUigshdj9aE">{{button_title}}</a>
+        <a class="popup-video btn btn-fill-tr mx-auto btn-main-outline waves-effect mt-4" href="http://www.youtube.com/watch?v=iUigshdj9aE">{{button_title}}</a>
 
       </div>
     </div>

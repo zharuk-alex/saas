@@ -1,55 +1,58 @@
 <!-- <section id="usage" class="py-5 wow fadeIn parallax-window" data-parallax="scroll" data-image-src="img/backgrounds/chart-infographics-abstract_2.png"> -->
-<section id="usage" class="content-section">
+<section id="usage_v2" class="content-section">
   {{#usage}}
-  <div class="container">
+  <div class="container-fluid">
     {{> ../partials/heading_main }}
-    <div class="card-deck">
-        {{#item}}
-          <div class="card wow fadeInUp" data-wow-delay="{{show_delay}}s">
-            <div class="view overlay">
-              <div class="card-img-wrapper d-flex align-items-center">
-                <svg class="icon icon-usage_icons--{{icon}}">
-                  <use xlink:href="assets/img/sprite/sprite.svg#usage_icons--{{icon}}"></use>
-                </svg>
+    <div class="row">
+      <div class="card-deck">
+          {{#item}}
+            <div class="card wow fadeInUp" data-wow-delay="{{show_delay}}s">
+              <div class="view overlay">
+                <div class="card-img-wrapper d-flex align-items-center">
+                  <svg class="icon icon-usage_icons--{{icon}}">
+                    <use xlink:href="assets/img/sprite/sprite.svg#usage_icons--{{icon}}"></use>
+                  </svg>
+                </div>
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
               </div>
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
+              <div class="usage-item-wrapper card-body d-flex flex-column">
+                <h4 class="h4 text-center card-title">{{title}}</h4>
+                <hr class="header-divider">
+                <div class="usage-item-card">
+                  <!-- <div class="usage-icon">
+                    <i class="fa {{icon}} fa-5x"></i>
+                  </div> -->
+
+                </div>
+                <div class="usage-description card-text">
+                  <ul class="list-unstyled">
+                    {{#usage_item}}
+                      <li class="mb-3">
+                        <!-- <i class="fa fa-mail-forward indigo-text"></i>  -->
+                        {{title}}
+                        <!-- <ul>
+                          {{#sub_usage_item}}
+                            <li class="grey-text">{{sub_usage_item_title}}</li>
+                          {{/sub_usage_item}}
+                          {{^sub_usage_item}}
+
+                          {{/sub_usage_item}}
+                        </ul> -->
+                      </li>
+                    {{/usage_item}}
+                  </ul>
+                </div>
+                <!-- <a href="#" class="btn btn-demo mx-auto d-block mt-auto mb-2">Детальнее</a> -->
+                <!-- <a href="#" class="btn btn-main-outline mx-auto d-block mt-auto mb-2">Детальнее</a> -->
+              </div>
             </div>
-            <div class="usage-item-wrapper card-body d-flex flex-column">
-              <h4 class="h4 text-center card-title">{{title}}</h4>
-              <hr class="header-divider">
-              <div class="usage-item-card">
-                <!-- <div class="usage-icon">
-                  <i class="fa {{icon}} fa-5x"></i>
-                </div> -->
+          {{/item}}
 
-              </div>
-              <div class="usage-description card-text">
-                <ul class="list-unstyled">
-                  {{#usage_item}}
-                    <li class="mb-3">
-                      <!-- <i class="fa fa-mail-forward indigo-text"></i>  -->
-                      {{title}}
-                      <!-- <ul>
-                        {{#sub_usage_item}}
-                          <li class="grey-text">{{sub_usage_item_title}}</li>
-                        {{/sub_usage_item}}
-                        {{^sub_usage_item}}
-
-                        {{/sub_usage_item}}
-                      </ul> -->
-                    </li>
-                  {{/usage_item}}
-                </ul>
-              </div>
-              <!-- <a href="#" class="btn btn-demo mx-auto d-block mt-auto mb-2">Детальнее</a> -->
-              <!-- <a href="#" class="btn btn-main-outline mx-auto d-block mt-auto mb-2">Детальнее</a> -->
-            </div>
-          </div>
-        {{/item}}
-
+      </div>
     </div>
+
   </div>
   {{/usage}}
 </section>
