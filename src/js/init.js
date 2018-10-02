@@ -17,6 +17,10 @@ $(document).ready(function() {
     scrollToElements($(this), e);
     // $(this).addClass('active');
   });
+  $('.scroll-to-element').on("click", function(e) {
+    scrollToElements($(this), e);
+    // $(this).addClass('active');
+  });
   //
   $(".slide-to-next-wrapper").on("click","a", function (e) {
     e.preventDefault();

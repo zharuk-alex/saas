@@ -1,0 +1,45 @@
+#usage{
+  .card{
+    box-shadow: none;
+    .card-title{
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .usage-description{
+      color: #212529;
+      line-height: 1.1;
+      transition: all .3s linear;
+    }
+    .card-img-wrapper{
+      height: 100px;
+      width: 100px;
+      display: flex;
+      // flex-direction: column;
+      background-color: transparent;
+      margin: 0 auto;
+      border: 2px solid $main-color;
+      border-radius: 50%;
+      transition: all .3s linear;
+      svg{
+        align-self: center;
+        height: 50px;
+        width: 50px;
+        fill: $main-color;
+        margin: 0 auto;
+        transition: all .3s linear;
+      }
+    }
+    &:hover{
+      .usage-description{
+        // color: red;
+      }
+      .card-img-wrapper{
+        background-color: $main-color;
+        svg{
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

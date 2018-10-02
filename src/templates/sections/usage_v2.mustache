@@ -1,0 +1,48 @@
+<!-- <section id="usage" class="py-5 wow fadeIn parallax-window" data-parallax="scroll" data-image-src="img/backgrounds/chart-infographics-abstract_2.png"> -->
+<section id="usage" class="content-section">
+  {{#usage}}
+  <div class="container-fluid">
+    {{> ../partials/heading_main }}
+    <div class="card-deck">
+        {{#item}}
+          <div class="card wow fadeInUp" data-wow-delay="{{show_delay}}s">
+            <div class="overlay">
+              <div class="card-img-wrapper">
+                <svg class="icon icon-usage_icons--{{icon}}">
+                  <use xlink:href="assets/img/sprite/sprite.svg#usage_icons--{{icon}}"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="usage-item-wrapper card-body text-center">
+              <h4 class="h5 card-title">{{title}}</h4>
+              <div class="usage-item-card">
+                <!-- <div class="usage-icon">
+                  <i class="fa {{icon}} fa-5x"></i>
+                </div> -->
+
+              </div>
+              <div class="usage-description">
+                <ul class="list-unstyled">
+                  {{#usage_item}}
+                    <li class="mb-3">
+                      {{title}}
+                    </li>
+                  {{/usage_item}}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {{/item}}
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <a href="#universal-section" class="btn btn-main-outline btn-fill-tr waves-effect waves-light scroll-to-element wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+          SEE SOME MORE SERVICES
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+  {{/usage}}
+</section>

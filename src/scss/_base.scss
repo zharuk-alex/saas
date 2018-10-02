@@ -108,9 +108,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
 }
+.btn-fill-tr{
+  background: linear-gradient(to right, $main_color 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  transition: all .5s ease-out;
+  &:hover{
+    background-position: left bottom;
+  }
+}
 
-
-#usage, #advantages, #web-section,#unive-section{
+#usage, #advantages, #web-section,#universal-section{
   padding-top: 2rem;
 }
 #usage,#web-section, #unive-section{

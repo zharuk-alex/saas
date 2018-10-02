@@ -24,6 +24,12 @@
         "id": "web_maps",
         "image":"maps",
         "selected":"false"
+      },
+      {
+        "title":"Новое поле 1",
+        "id": "web_new1",
+        "image":"new1",
+        "selected":"false"
       }],
     "items_col2":[
       {
@@ -42,6 +48,12 @@
         "title":"Экспорт данных (*.csv, Excel)",
         "id": "web_exports",
         "image":"export",
+        "selected":"false"
+      },
+      {
+        "title":"Новое поле 2",
+        "id": "web_new2",
+        "image":"new2",
         "selected":"false"
       }
     ]
