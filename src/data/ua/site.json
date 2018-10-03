@@ -1,0 +1,25 @@
+{
+  "site": {
+    "title": "Starter template",
+    "author": "Zzharuk",
+    "meta": {
+      "charset": "utf8",
+      "description": "Gulp-Bootstrap-Pug-Landing-Starter",
+      "keywords": "Gulp-Bootstrap-Pug-Landing-Starter",
+      "favicon": "favicon.ico"
+    }
+  },
+  "social": [{
+    "href": "#",
+    "name": "google"
+  }, {
+    "href": "#",
+    "name": "linkedin"
+  }, {
+    "href": "#",
+    "name": "facebook"
+  }, {
+    "href": "#",
+    "name": "twitter"
+  }]
+}

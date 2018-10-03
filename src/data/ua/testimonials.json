@@ -1,0 +1,24 @@
+[
+  {
+    "name":"Вадим Туткевич",
+    "testimonial":"Ресурс, который полностью удовлетворяет потребности нашей компании!",
+    "user_image":"user_33.jpg",
+    "position":"General Manager 'LexMarketing'",
+    "id":"0",
+    "active":"active"
+  },
+  {
+    "name":"Виталий Ткач",
+    "testimonial":"Ресурс, который полностью удовлетворяет потребности нашей компании!",
+    "user_image":"user_94.jpg",
+    "position":"Group KAM Henkel Beauty Care",
+    "id":"1"
+  },
+  {
+    "name":"Elon Musk",
+    "testimonial":"Система АГОНЬ!.",
+    "user_image":"user_70.jpg",
+    "position":"CEO",
+    "id":"2"
+  }
+]

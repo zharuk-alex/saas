@@ -1,14 +1,14 @@
-<section id="advantages" class="content-section">
+<section id="advantages" class="content-section pb-0">
   {{#advantages}}
-  <div class="container">
+  <div class="container-fluid">
     {{> ../partials/heading_main }}
     <div class="row">
 
       {{#item}}
       <div class="col-4 col-lg py-2 text-center wow bounceIn">
-        <!-- <img src="assets/img/advantages_icons/{{icon}}" alt="" class="d-block mx-auto svg"> -->
+        <!-- <img src="../assets/img/advantages_icons/{{icon}}" alt="" class="d-block mx-auto svg"> -->
         <svg class="icon icon-advantages_icons--{{icon}}">
-          <use xlink:href="assets/img/sprite/sprite.svg#advantages_icons--{{icon}}"></use>
+          <use xlink:href="../assets/img/sprite/sprite.svg#advantages_icons--{{icon}}"></use>
         </svg>
         <div class="mask rgba-stylish-strong"></div>
         <h6 class="h6 mt-3">{{title}}</h6>

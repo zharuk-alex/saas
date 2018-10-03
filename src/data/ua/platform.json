@@ -1,0 +1,98 @@
+[
+  {
+    "heading":"ПЛАТФОРМА",
+    "sub_heading":"Powered by Google Chrome",
+    "end_desc":"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+    "button_title":"Обзор",
+    "web":{
+      "title":"Web",
+      "content-class":"col-lg-8",
+      "items_col1":[
+        {
+          "title":"Dashboard",
+          "id": "web_dashboard",
+          "image":"index",
+          "active":"active",
+          "selected":"true",
+          "show":"show"
+        },
+        {
+          "title":"Графики",
+          "id": "web_charts",
+          "image":"charts",
+          "selected":"false"
+        },
+        {
+          "title":"Интерактивные карты",
+          "id": "web_maps",
+          "image":"maps",
+          "selected":"false"
+        }],
+      "items_col2":[
+        {
+          "title":"Система уведомлений",
+          "id": "web_msg",
+          "image":"comments",
+          "selected":"false"
+        },
+        {
+          "title":"Гибкая фильтрация данных",
+          "id": "web_filter",
+          "image":"filters",
+          "selected":"false"
+        },
+        {
+          "title":"Экспорт данных (*.csv, Excel)",
+          "id": "web_exports",
+          "image":"export",
+          "selected":"false"
+        }
+      ]
+    },
+    "mobile":{
+      "title":"Android",
+      "content-class":"col-lg-8",
+      "items_col1":[
+        {
+          "title":"Описание 1",
+          "id": "mobile_charts",
+          "image":"mobile_1",
+          "active":"active",
+          "selected":"true",
+          "show":"show"
+        },
+        {
+          "title":"Описание 2",
+          "id": "mobile_maps",
+          "image":"mobile_1",
+          "selected":"false"
+        },
+        {
+          "title":"Описание 3",
+          "id": "mobile_new1",
+          "image":"mobile_1",
+          "selected":"false"
+        }],
+      "items_col2":[
+        {
+          "title":"Описание 4",
+          "id": "mobile_msg",
+          "image":"mobile_1",
+          "selected":"false"
+        },
+        {
+          "title":"Описание 5",
+          "id": "mobile_filter",
+          "image":"mobile_1",
+          "selected":"false"
+        },
+        {
+          "title":"Описание 6",
+          "id": "mobile_exports",
+          "image":"mobile_1",
+          "selected":"false"
+        }
+      ]
+    }
+  }
+]

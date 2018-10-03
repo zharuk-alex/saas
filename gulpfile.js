@@ -32,6 +32,7 @@ var spritesmith = require('gulp.spritesmith');
 var strip = require('gulp-strip-comments');
 var svgSprite = require('gulp-svg-sprite');
 var uglify = require('gulp-uglify');
+var gulpMerge = require('gulp-merge');
 
 var plugins = require('gulp-load-plugins')({
   pattern: '*'
@@ -54,8 +55,35 @@ gulp.task('image-copy', getTask('image-copy'));
 gulp.task('svg-sprites', getTask('svg-sprites'));
 gulp.task('clean-html', getTask('clean-html'));
 gulp.task('db-json', getTask('db-json'));
-gulp.task('mustache', ['clean-html','db-json'], getTask('mustache'));
+gulp.task('mustache', ['clean-html','db-locales','mustache-eng','mustache-ru','mustache-ua']);
+gulp.task('mustache-eng', getTask('mustache-eng'));
+gulp.task('mustache-ru', getTask('mustache-ru'));
+gulp.task('mustache-ua', getTask('mustache-ua'));
+
 // gulp.task('html', getTask('html'));
+
+gulp.task('db-json:ru', function () {
+  return gulp.src("src/data/ru/**/*.json")
+    .pipe(jsonConcat('ru.json',function(data){
+      return new Buffer(JSON.stringify(data));
+    }))
+    .pipe(gulp.dest('src/locales/'));
+});
+gulp.task('db-json:eng', function () {
+  return gulp.src("src/data/eng/**/*.json")
+    .pipe(jsonConcat('eng.json',function(data){
+      return new Buffer(JSON.stringify(data));
+    }))
+    .pipe(gulp.dest('src/locales/'));
+});
+gulp.task('db-json:ua', function () {
+  return gulp.src("src/data/ua/**/*.json")
+    .pipe(jsonConcat('ua.json',function(data){
+      return new Buffer(JSON.stringify(data));
+    }))
+    .pipe(gulp.dest('src/locales/'));
+});
+gulp.task('db-locales', ['db-json:ua','db-json:ru','db-json:eng']);
 
 var image_resize_dirs = [
   'src/img/clients_logo/*.*',
@@ -118,5 +146,5 @@ gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {
 	gulp.watch('src/data/**/*.json', ['mustache']);
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
 });
-gulp.task('once',['create-dist','db-json','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])
+gulp.task('once',['create-dist','db-locales','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])
 gulp.task('default', ['watch']);

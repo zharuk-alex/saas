@@ -1,10 +1,11 @@
 <!-- Navbar -->
 <nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+  {{#nav_landing}}
   <div class="container">
 
     <!-- Brand -->
     <a class="navbar-brand" >
-      <img src="./assets/img/logo.png" alt="" class="logo">
+      <img src="../assets/img/logo.png" alt="" class="logo">
     </a>
 
     <!-- Collapse -->
@@ -17,18 +18,20 @@
 
       <!-- Left -->
       <ul class="navbar-nav ml-auto d-md-flex align-items-md-center align-items-end">
-        {{#nav_landing}}
+
+        {{#nav_link_innerer}}
         <li class="nav-item">
           <a class="nav-link nav-link-innerer" href="{{ href }}">{{displayName}}</a>
         </li>
-        {{/nav_landing}}
+        {{/nav_link_innerer}}
+
         <li class="nav-item">
           <a class="waves-light ml-auto contact-modal-link" data-toggle="modal" data-target="#contactModal" data-backdrop="true">
-            Контакты
+            {{contact_link}}
           </a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-filled" target="_blank" href="http://mmcs.com.ua/">Войти
+          <a class="btn btn-filled" target="_blank" href="http://mmcs.com.ua/">{{singin}}
             <i class="fa fa-sign-in ml-2 mr-0"></i>
           </a>
         </li>
@@ -46,5 +49,6 @@
       <!-- Right -->
     </div>
   </div>
+  {{/nav_landing}}
 </nav>
 <!-- Navbar -->

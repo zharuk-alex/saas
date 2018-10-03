@@ -44,12 +44,12 @@ $(function () {
                                .done(function() {
               $(container).find('span').html('').append(
                 $('<img>',{
-                  src:"assets/img/online_logo.png",
+                  src:"../assets/img/online_logo.png",
                   css: {width:'100%'}
                 })
               ).animate({opacity:1},600)
           });
-        },100)
+        },2000)
 
       }
     }

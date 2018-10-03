@@ -1,0 +1,22 @@
+<div class="modal fade top" id="localesModalTopRight"  tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true" data-backdrop='false'>
+  <div class="modal-dialog modal-side modal-top-right" role="document">
+
+    <!--Content-->
+    <div class="modal-content z-depth-2 ">
+      <!--Body-->
+      <div class="modal-body">
+        <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="row d-flex justify-content-center align-items-center">
+          {{#presentation_modal}}
+          <h4 class="pt-3 pr-2">{{title}}</h4>
+
+          {{> btn_presentation }}
+          {{/presentation_modal}}
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

@@ -1,10 +1,10 @@
 <section id="web-section" class="content-section">
   {{#web}}
-  <div class="container">
+  <div class="container-fluid">
     {{> ../partials/heading_main }}
     <div class="row">
       <!-- Col 1 -->
-      <div class="col">
+      <div class="col-3 pr-0 pt-4">
         <ul class="nav nav-tabs d-flex justify-content-between flex-column col-first text-right" role="tablist">
 
             {{#items_col1}}
@@ -17,15 +17,15 @@
       </div>
       <!-- /Col 1  -->
       <!-- Content Tabs Inner -->
-      <div class="col-lg-8">
+      <div class="col">
         <div class="tab-content wow fadeIn" id="webTabContent">
 
             {{#items_col1}}
             <div class="tab-pane {{show}} {{active}}" id="{{id}}" role="tabpanel" aria-labelledby="{{id}}-tab">
               <div class="tab-content-inner">
-                <a class="image-popup" href="assets/img/mmcs/{{image}}2.png">
-                	<img src="assets/img/mmcs/{{image}}.png" class="" alt="{{title}}">
-                </a>
+
+                	<img src="../assets/img/mmcs/{{image}}.png" class="img-fluid" alt="{{title}}">
+
               </div>
             </div>
             {{/items_col1}}
@@ -35,9 +35,9 @@
             {{#items_col2}}
             <div class="tab-pane" id="{{id}}" role="tabpanel" aria-labelledby="{{id}}-tab">
               <div class="tab-content-inner">
-                <a class="image-popup" href="assets/img/mmcs/{{image}}2.png">
-                	<img src="assets/img/mmcs/{{image}}.png" class="img-fluid" alt="{{title}}">
-                </a>
+
+                	<img src="../assets/img/mmcs/{{image}}.png" class="img-fluid" alt="{{title}}">
+
               </div>
             </div>
             {{/items_col2}}
@@ -46,7 +46,7 @@
       </div>
       <!-- /Content Tabs Inner -->
       <!-- Col 2 -->
-      <div class="col order-lg-12">
+      <div class="col-3 pl-0 pt-4 order-lg-12">
         <ul class="nav nav-tabs d-flex justify-content-between flex-column col-second" role="tablist">
 
             {{#items_col2}}
@@ -61,7 +61,12 @@
     </div>
     <div class="row">
       <div class="col text-center">
-        <a class="popup-video btn btn-fill-tr mx-auto btn-main-outline waves-effect mt-4" href="http://www.youtube.com/watch?v=iUigshdj9aE">{{button_title}}</a>
+        <!-- <a class="popup-video btn btn-fill-tr mx-auto btn-main-outline waves-effect mt-4" href="http://www.youtube.com/watch?v=iUigshdj9aE">{{button_title}}</a> -->
+        <a class="popup-video mx-auto waves-effect mt-4" href="http://www.youtube.com/watch?v=iUigshdj9aE">
+          <svg class="icon icon-icons--play-button">
+              <use xlink:href="../assets/img/sprite/sprite.svg#icons--play-button"></use>
+          </svg>
+        </a>
 
       </div>
     </div>

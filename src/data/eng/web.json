@@ -6,7 +6,7 @@
     "button_title":"Обзор",
     "items_col1":[
       {
-        "title":"Интуитивная панель управления",
+        "title":"Dashboard",
         "id": "web_dashboard",
         "image":"index",
         "active":"active",
@@ -14,7 +14,7 @@
         "show":"show"
       },
       {
-        "title":"Информативные графики",
+        "title":"Графики",
         "id": "web_charts",
         "image":"charts",
         "selected":"false"
@@ -26,34 +26,34 @@
         "selected":"false"
       },
       {
-        "title":"Новое поле 1",
-        "id": "web_new1",
-        "image":"new1",
+        "title":"Интерфейс",
+        "id": "web_interface",
+        "image":"interface",
         "selected":"false"
       }],
     "items_col2":[
       {
-        "title":"Система уведомлений",
+        "title":"Уведомления",
         "id": "web_msg",
         "image":"comments",
         "selected":"false"
       },
       {
-        "title":"Гибкая фильтрация данных",
+        "title":"Система фильтров",
         "id": "web_filter",
         "image":"filters",
         "selected":"false"
       },
       {
-        "title":"Экспорт данных (*.csv, Excel)",
+        "title":"Экспорт данных",
         "id": "web_exports",
         "image":"export",
         "selected":"false"
       },
       {
-        "title":"Новое поле 2",
-        "id": "web_new2",
-        "image":"new2",
+        "title":"Статистика",
+        "id": "web_stat",
+        "image":"stat",
         "selected":"false"
       }
     ]

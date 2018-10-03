@@ -1,0 +1,41 @@
+[
+  {
+    "heading": "What else we provide",
+    "item_col_1": [
+      {"title":"Анкетирование",
+        "icon":"form",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {"title":"Двойные визиты",
+        "icon":"visitor",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {"title":"Тайный покупатель",
+        "icon":"incognito",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {"title":"Полевые исследования",
+        "icon":"search",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      }
+    ],
+    "item_col_2": [
+      {"title":"Социологические опросы",
+        "icon":"interview",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {"title":"Мониторинг конкурентов",
+        "icon":"competitor-analysis",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {"title":"Контроль промо-активностей",
+        "icon":"promotion",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {"title":"Контроль размещения рекламных носителей",
+        "icon":"billboard",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      }
+    ]
+  }
+]

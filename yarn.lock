@@ -3122,6 +3122,12 @@ gulp-load-plugins@^1.5.0:
     micromatch "^2.3.8"
     resolve "^1.1.7"
 
+gulp-merge@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/gulp-merge/-/gulp-merge-0.1.1.tgz#a462ee01177a8ea7c460f0ea89ad542ec752ba37"
+  dependencies:
+    through2 "~1.1.1"
+
 gulp-mustache@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/gulp-mustache/-/gulp-mustache-3.0.1.tgz#642e5940b1a7162587e7685a9460ab7f725277a2"
@@ -6188,7 +6194,7 @@ read-pkg@^1.0.0:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readable-stream@^1.0.27-1, readable-stream@~1.1.10, readable-stream@~1.1.9:
+"readable-stream@>=1.1.13-1 <1.2.0-0", readable-stream@^1.0.27-1, readable-stream@~1.1.10, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -7383,6 +7389,13 @@ through2@~0.4.0, through2@~0.4.1:
   dependencies:
     readable-stream "~1.0.17"
     xtend "~2.1.1"
+
+through2@~1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-1.1.1.tgz#0847cbc4449f3405574dbdccd9bb841b83ac3545"
+  dependencies:
+    readable-stream ">=1.1.13-1 <1.2.0-0"
+    xtend ">=4.0.0 <4.1.0-0"
 
 through@*, "through@>=2.2.7 <3", through@^2.3.4, through@^2.3.6, through@^2.3.8, through@~2.3.4:
   version "2.3.8"

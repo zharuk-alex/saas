@@ -1,0 +1,19 @@
+[{
+  "nav_link_innerer":[
+    {
+      "href": "#usage",
+      "displayName": "Возможности"
+    }, {
+      "href": "#advantages",
+      "displayName": "Решения"
+    }, {
+      "href": "#web-section",
+      "displayName": "Платформа"
+    }, {
+      "href": "#clients",
+      "displayName": "Клиенты"
+    }
+  ],
+  "contact_link":"Контакты",
+  "singin":"Login"
+}]

@@ -1,0 +1,63 @@
+[{
+  "heading": "Возможности",
+  "button":"MORE SERVICES",
+  "item": [
+    {
+      "title": "Мерчендайзинг",
+      "icon":"storekeeper",
+      "show_delay":"0.25",
+      "usage_item":[
+        {"title":"Выполнение работ по графику и заполнение отчета по каждой тт"},
+        {"title":"Фотоотчеты"},
+        {"title":"Комментарии к отчетам и фотоотчетам"},
+        {"title":"Передача данных в режиме реального времени"}
+      ]
+    },
+    {
+      "title": "Аудит",
+      "icon":"analysis",
+      "show_delay":"0.5",
+      "usage_item":[
+        {"title":"Полевые аудиты для контроля качества выполненных работ по тт"},
+        {"title":"Online аудиты из просмотра отчетов и фотоотчетов"},
+        {"title":"Гибкие критерии оценивания"},
+        {"title":"Прозрачная система оценки и бонусирования полевых команд"}
+      ]
+    },
+    {
+      "title": "Розничный аудит",
+      "icon":"content-audit",
+      "show_delay":"0.75",
+      "usage_item":[
+        {"title":"Must Stock List"},
+        {"title":"Контроль стандартов выкладки"},
+        {"title":"Мониторинг конкурентов"},
+        {"title":"Замер долей полки"}
+      ]
+    },
+    {
+      "title": "Доп. задачи",
+      "icon":"reports",
+      "show_delay":"1",
+      "usage_item":[
+        {
+          "title":"Контроль промо-активностей",
+          "sub_usage_item":[
+            {"sub_usage_item_title":"OUT OF STOCK"},
+            {"sub_usage_item_title":"Текущие отчеты"},
+            {"sub_usage_item_title":"Фейсинг"}
+          ]
+        },
+        {
+          "title":"Мониторинг POSm",
+          "sub_usage_item":[
+            {"sub_usage_item_title":"Динамика OOS"},
+            {"sub_usage_item_title":"Динамика MSL"},
+            {"sub_usage_item_title":"Price Index"}
+          ]
+        },
+        {"title":"Контроль размещения доп. оборудования"}
+      ]
+    }
+  ]
+}]

@@ -1,0 +1,62 @@
+[
+  {
+    "heading":"ПЛАТФОРМА",
+    "sub_heading":"Powered by Google Chrome",
+    "end_desc":"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+    "button_title":"Обзор",
+    "items_col1":[
+      {
+        "title":"Dashboard",
+        "id": "web_dashboard",
+        "image":"index",
+        "active":"active",
+        "selected":"true",
+        "show":"show"
+      },
+      {
+        "title":"Графики",
+        "id": "web_charts",
+        "image":"charts",
+        "selected":"false"
+      },
+      {
+        "title":"Интерактивные карты",
+        "id": "web_maps",
+        "image":"maps",
+        "selected":"false"
+      },
+      {
+        "title":"Интерфейс",
+        "id": "web_interface",
+        "image":"interface",
+        "selected":"false"
+      }],
+    "items_col2":[
+      {
+        "title":"Уведомления",
+        "id": "web_msg",
+        "image":"comments",
+        "selected":"false"
+      },
+      {
+        "title":"Система фильтров",
+        "id": "web_filter",
+        "image":"filters",
+        "selected":"false"
+      },
+      {
+        "title":"Экспорт данных",
+        "id": "web_exports",
+        "image":"export",
+        "selected":"false"
+      },
+      {
+        "title":"Статистика",
+        "id": "web_stat",
+        "image":"stat",
+        "selected":"false"
+      }
+    ]
+
+  }
+]

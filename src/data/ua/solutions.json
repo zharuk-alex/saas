@@ -1,0 +1,26 @@
+[
+  {
+    "title": "24/7",
+    "description": "доступ к ресурсу"
+  },
+  {
+    "title": "Online",
+    "description": "обработка данных"
+  },
+  {
+    "title": "Интуитивная панель управления",
+    "description": "с аналитикой"
+  },
+  {
+    "title": "Android-app",
+    "description": "мобильное приложение"
+  },
+  {
+    "title": "Check-in",
+    "description": "с фискацией GPS-координат"
+  },
+  {
+    "title": "Отчеты",
+    "description": "в режиме реального времени"
+  }
+]

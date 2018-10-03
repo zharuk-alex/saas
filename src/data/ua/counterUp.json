@@ -1,0 +1,29 @@
+[{
+    "count": 11,
+    "title": "ЛЕТ НА РЫНКЕ УКРАИНЫ",
+    "icon": "fa-clock-o",
+    "more":"",
+    "key": 1
+  },
+  {
+    "count": 3000,
+    "title": "ПОЛЬЗОВАТЕЛЕЙ",
+    "icon": "fa-users ",
+    "more":"+",
+    "key": 2
+  },
+  {
+    "count": 100000,
+    "title": "ОТЧЕТОВ В МЕСЯЦ",
+    "icon": "fa-pencil-square-o",
+    "more":"+",
+    "key": 3
+  },
+  {
+    "count": 250000,
+    "title": "ФОТООТЧЕТОВ В МЕСЯЦ",
+    "icon": "fa-picture-o",
+    "more":"+",
+    "key": 4
+  }
+]

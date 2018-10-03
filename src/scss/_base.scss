@@ -70,9 +70,9 @@ h1, h2, h3, h4, h5, h6 {
 //End Buttons
 
 .header-divider{
-  margin: 30px auto;
+  margin: 20px auto;
   border: 0;
-  height: 3px;
+  height: 1px;
   color: $main_color;
   background-color: $main_color;
   width: 5rem;
@@ -119,11 +119,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#usage, #advantages, #web-section,#universal-section{
-  padding-top: 2rem;
-}
-#usage,#web-section, #unive-section{
-  padding-bottom: 2rem;
+// #usage, #advantages, #web-section,#universal-section{
+//   padding-top: 4rem;
+// }
+// #usage,#web-section, #unive-section{
+//   padding-bottom: 4rem;
+// }
+section {
+  padding: 5rem 0rem;
 }
 .container{
   max-width: 1200px;

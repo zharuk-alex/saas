@@ -8,7 +8,7 @@
           <div id="clients-carousel" class="owl-carousel owl-theme py-3 wow fadeInRight">
             {{#clients_logo}}
             <div class="item">
-              <img src="assets/img/clients_logo/{{image}}" alt="{{ name }}" class="img-fluid">
+              <img src="../assets/img/clients_logo/{{image}}" alt="{{ name }}" class="img-fluid">
             </div>
             {{/clients_logo}}
           </div>
@@ -16,13 +16,13 @@
       </div>
     </div>
   </div>
-  <div id="testimonials-section" class="parallax-window pt-5" data-parallax="scroll" data-image-src="assets/img/backgrounds/testimonials.png">
+  <div id="testimonials-section" class="parallax-window pt-5" data-parallax="scroll" data-image-src="../assets/img/backgrounds/testimonials.png">
     <div class="container">
       <div class="row">
         <div class="testimonials-holder owl-carousel owl-theme my-3">
           {{#testimonials}}
           <div class="item testimonial-item text-center">
-            <img src="assets/img/testimonials/{{user_image}}" alt="">
+            <img src="../assets/img/testimonials/{{user_image}}" alt="">
             <blockquote>
               <p>{{testimonial}}</p>
             </blockquote>

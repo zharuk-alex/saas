@@ -1,7 +1,7 @@
 
 <section id="intro" class="view full-page-intro">
   <video class="video-intro wow fadeIn animated" autoplay loop muted>
-    <source src="assets/video/charts.mp4" type="video/mp4" />
+    <source src="../assets/video/charts.mp4" type="video/mp4" />
   </video>
   <!-- {{> ./democarousel }} -->
 
@@ -13,7 +13,9 @@
         <div class="col-md-9">
           <div id="introHeading" class="display-4 font-weight-bold text-center text-white text-white text-uppercase">
             <div id="js-rotating">
-              Мерчендайзинг,Аудит,Розничный аудит,Задачи,<img class="" src="assets/img/online_logo.png" alt="">
+              {{#intro}}
+              {{items}}
+              {{/intro}}
             </div>
           </div>
 
@@ -43,15 +45,15 @@
       <div class="top-logo-holder">
         <div class="col-12 d-flex flex-row justify-content-between">
           {{#top_clients}}
-          <img class="top_clients_logo img-fluid" src="assets/img/header-logos/{{logo}}" alt="">
+          <img class="top_clients_logo img-fluid" src="../assets/img/header-logos/{{logo}}" alt="">
           {{/top_clients}}
         </div>
       </div>
       <div class="intro-scroll-to-element">
         <a href="#usage" class="scroll-to-element">
-          <!-- <img src="assets/img/icons/mouse.png" alt=""> -->
+          <!-- <img src="../assets/img/icons/mouse.png" alt=""> -->
           <svg class="icon icon-icons--down-arrow">
-            <use xlink:href="assets/img/sprite/sprite.svg#icons--down-arrow"></use>
+            <use xlink:href="../assets/img/sprite/sprite.svg#icons--down-arrow"></use>
           </svg>
         </a>
       </div>

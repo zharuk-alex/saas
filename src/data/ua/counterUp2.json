@@ -1,0 +1,29 @@
+[{
+    "count": "11",
+    "title": "лет на рынке Украины",
+    "icon": "clock",
+    "more":"",
+    "key": 1
+  },
+  {
+    "count": "3000",
+    "title": "пользователей",
+    "icon": "team",
+    "more":"+",
+    "key": 2
+  },
+  {
+    "count": "100000",
+    "title": "отчетов в месяц",
+    "icon": "result",
+    "more":"+",
+    "key": 3
+  },
+  {
+    "count": "250000",
+    "title": "фотоотчетов в месяц",
+    "icon": "two-polaroid-pictures",
+    "more":"+",
+    "key": 4
+  }
+]

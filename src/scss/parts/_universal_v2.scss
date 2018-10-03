@@ -4,12 +4,21 @@
     margin-left: 1.75rem;
   }
   .universal-holder{
-    height: 80px;
-    svg{
-      width: 70px;
-      height: 70px;
+
+    .img-wrapper{
+      border: 0.08rem solid $main_color;
+      background-color: transparent;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      padding: 25px;
       transition: all .3s ease-in-out 0s;
-      fill:$main_color;
+      svg{
+        width: 30px;
+        height: 30px;
+        transition: all .3s ease-in-out 0s;
+        fill:$main_color;
+      }
     }
     .description{
       display: none;
@@ -19,8 +28,13 @@
     // }
     &:hover{
       cursor: pointer;
+      .img-wrapper{
+
+        background-color: $main_color;
+      }
+
       svg{
-        fill: darken($main_color, 15%);
+        fill: #ffffff;
         // path{
         //   fill:$main_color;
         //   stroke:$main_color;

@@ -24,7 +24,7 @@ $(function () {
     onInitialized: function () {
       setTimeout(function () {
         $('#carouselTestimonials3').find('.parallax-window').parallax({
-          imageSrc: 'assets/img/backgrounds/testimonials.png'
+          imageSrc: '../assets/img/backgrounds/testimonials.png'
         });
         $('#carouselTestimonials3').animate({opacity:1}, 300);
       },500)

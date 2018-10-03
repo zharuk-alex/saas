@@ -9,7 +9,7 @@
       "content-class":"col-lg-8",
       "items_col1":[
         {
-          "title":"Интуитивная панель управления",
+          "title":"Dashboard",
           "id": "web_dashboard",
           "image":"index",
           "active":"active",
@@ -17,7 +17,7 @@
           "show":"show"
         },
         {
-          "title":"Информативные графики",
+          "title":"Графики",
           "id": "web_charts",
           "image":"charts",
           "selected":"false"

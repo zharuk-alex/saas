@@ -21,7 +21,7 @@ $(function () {
     },
     dots: false,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 5000,
     navText : [
       '<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>',
       '<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>'
