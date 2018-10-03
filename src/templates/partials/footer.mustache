@@ -1,5 +1,6 @@
 <!--Footer-->
 <footer class="page-footer text-center py-1">
+  {{#footer}}
   <div class="container footer-contacts-wrapper my-5">
     <!-- Contact info Row -->
     <div class="row">
@@ -10,7 +11,7 @@
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </div>
               <div class="media-body align-self-center">
-                <p>+38 093 327 72 32</p>
+                <p>{{phone}}</p>
               </div>
             </a>
           </div>
@@ -21,7 +22,7 @@
             <i class="fa fa-map-marker" aria-hidden="true"></i>
           </div>
           <div class="media-body align-self-center ">
-            <p>Киев, ул. Юрия Шумского, 1б <br/>2 этаж, LEX Marketing</p>
+            <p>{{address}}</p>
           </div>
         </div>
       </div>
@@ -32,7 +33,7 @@
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </div>
             <div class="media-body align-self-center">
-              <p>office@LexMarketing.com.ua</p>
+              <p>{{email}}</p>
             </div>
           </a>
         </div>
@@ -43,37 +44,26 @@
                 <i class="fa  fa-clock-o" aria-hidden="true"></i>
             </div>
             <div class="media-body align-self-center">
-              <p>Пн-Пт: 09:00 - 18:00 <br/>Сб-Вс: по согласованию</p>
+              <p>{{work}}</p>
             </div>
           </div>
       </div>
     </div>
-    <!-- Contact info Row END -->
-    <!-- CTA Row -->
-    <!-- <div class="row">
-      <div class="col-12 text-center">
-        <hr class="header-divider">
-        <a class="btn btn-main-outline waves-effect waves-light"  data-toggle="modal" data-target="#presentationModalBottom" data-backdrop="false">Презентация
-          <i class="fa fa-sign-in ml-2"></i>
-        </a>
-        <a class="btn btn-main-outline waves-effect waves-light"  data-toggle="modal" data-target="#callToActionModal" data-backdrop="true">Консультация
-          <i class="fa fa-phone ml-2" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div> -->
-    <!-- CTA Row END -->
   </div>
-</footer>
-<section class="footer-copyrights py-4">
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-6 text-center">
-        <a  class="text-white" href="http://lexmarketing.com.ua/">LexMarketing | Мерчандайзинг, Ритейл, Трейд-маркетинг</a>
-        <br><small class="text-white pt-1">© 2007-2018</small>
+
+  <div class="footer-copyrights py-4">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+          <a  class="text-white" href="http://lexmarketing.com.ua/">LexMarketing | Мерчандайзинг, Ритейл, Трейд-маркетинг</a>
+          <br><small class="text-white pt-1">© 2007-2018</small>
+        </div>
       </div>
     </div>
   </div>
-</section>
+  {{/footer}}
+</footer>
+
 <!--/.Footer-->
 <!-- scripts -->
 <script type="text/javascript" src="../assets/js/libs.min.js"></script>

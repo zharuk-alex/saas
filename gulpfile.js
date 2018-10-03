@@ -67,21 +67,21 @@ gulp.task('db-json:ru', function () {
     .pipe(jsonConcat('ru.json',function(data){
       return new Buffer(JSON.stringify(data));
     }))
-    .pipe(gulp.dest('src/locales/'));
+    .pipe(gulp.dest('src/data/locales/'));
 });
 gulp.task('db-json:eng', function () {
   return gulp.src("src/data/eng/**/*.json")
     .pipe(jsonConcat('eng.json',function(data){
       return new Buffer(JSON.stringify(data));
     }))
-    .pipe(gulp.dest('src/locales/'));
+    .pipe(gulp.dest('src/data/locales/'));
 });
 gulp.task('db-json:ua', function () {
   return gulp.src("src/data/ua/**/*.json")
     .pipe(jsonConcat('ua.json',function(data){
       return new Buffer(JSON.stringify(data));
     }))
-    .pipe(gulp.dest('src/locales/'));
+    .pipe(gulp.dest('src/data/locales/'));
 });
 gulp.task('db-locales', ['db-json:ua','db-json:ru','db-json:eng']);
 
@@ -95,7 +95,7 @@ gulp.task('image-resize-clients_logo', function() {
     return gulp.src(['src/img/clients_logo/*.*'])
   	.pipe(resizer({
               format: "png",
-              height: 60
+              height: 50
           }))
   	.pipe(gulp.dest('dist/assets/img/clients_logo/'));
 });
@@ -103,8 +103,8 @@ gulp.task('image-resize-testimonials', function() {
     return gulp.src(['src/img/testimonials/*.*'])
   	.pipe(resizer({
               format: "jpg",
-              height: 160,
-              width: 160
+              height: 100,
+              width: 100
           }))
   	.pipe(gulp.dest('dist/assets/img/testimonials/'));
 });
@@ -143,7 +143,7 @@ gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {
 	gulp.watch(image_resize_dirs, ['image-resize']);
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
-	gulp.watch('src/data/**/*.json', ['mustache']);
+	gulp.watch(['src/data/ru/*.json','src/data/ua/*.json','src/data/eng/*.json'], ['mustache']);
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
 });
 gulp.task('once',['create-dist','db-locales','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])

@@ -1,7 +1,7 @@
 module.exports = function (gulp, plugins) {
   return function () {
     gulp.src("src/templates/*.mustache")
-    .pipe(plugins.mustache('src/locales/ua.json',{extension: '.html'},{}))
+    .pipe(plugins.mustache('src/data/locales/ua.json',{extension: '.html'},{}))
     .pipe(plugins.decomment({trim: true}))
     .pipe(plugins.prettyHtml({
           indent_size: 2,
