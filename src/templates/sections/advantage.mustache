@@ -1,8 +1,11 @@
 <section id="advantages" class="content-section pb-0">
+
   {{#advantages}}
   <div class="container-fluid">
     {{> ../partials/heading_main }}
-    <div class="row">
+    {{> ./counterup }}
+
+    <div class="row advantages-holder">
 
       {{#item}}
       <div class="col-4 col-lg py-2 text-center wow bounceIn">
@@ -22,7 +25,7 @@
   </div>
   {{/advantages}}
 
-  {{> ./counterup_2 }}
+
 
   {{> ./capabilities3 }}
 </section>

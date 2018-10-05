@@ -7,17 +7,17 @@ $counterup_color_green: #E1E5EC;
 // $counterup_color_cyan: #32c5d2;
 // $counterup_color_green: #00e676;
 
-$colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $counterup_color_green;
-@for $i from 1 through length($colors) {
-    #counterup-block-#{$i} {
-        background-color: nth($colors, $i);
-    }
-}
+// $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $counterup_color_green;
+// @for $i from 1 through length($colors) {
+//     #counterup-block-#{$i} {
+//         background-color: nth($colors, $i);
+//     }
+// }
 //
 #counterup-section{
   // background-color: rgba(0,0,0,.7);
   // border-top: 1px grey solid;
-  border-bottom: 1px grey solid;
+  // border-bottom: 1px grey solid;
   z-index: 99;
   background-color: #fff;
   .counterup-block {
@@ -27,7 +27,8 @@ $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $co
     overflow: hidden;
     border-radius: 0;
     padding: 10px;
-
+    max-width: 90%;
+    margin: 0 auto;
     &::before {
       content: " ";
       display: table;
@@ -60,6 +61,7 @@ $colors: $counterup_color_blue, $counterup_color_red, $counterup_color_cyan, $co
       padding-right: 15px;
 
       .number {
+        color: $main_color;
         padding-top: 25px;
         text-align: right;
         font-size: 34px;
