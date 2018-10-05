@@ -12,14 +12,14 @@ $navbar-padding: 6px;
     }
   }
 
-  .contact-modal-link {
+  .contact-modal-link, .locales-modal-link {
     @extend .nav-link;
     padding: .5rem;
   }
 
   .locales {
     .dropdown-menu {
-      background-color: rgba(0,0,0,.2);
+      // background-color: rgba(0,0,0,.2);
       border: none;
       border-radius: 0;
       // top: $navbar-padding;

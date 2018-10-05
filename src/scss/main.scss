@@ -4,6 +4,7 @@
 @import "base";
 @import "inline";
 
+@import "parts/navbar";
 @import "parts/advantages";
 @import "parts/callToAction";
 @import "parts/capabilities3";
@@ -14,16 +15,16 @@
 @import "parts/footer-contacts";
 @import "parts/intro";
 @import "parts/mobile";
-@import "parts/modal-contact-right";
-@import "parts/modal-presetnation-bottom";
-@import "parts/modal-CTA-right";
-@import "parts/navbar";
 @import "parts/testimonials2";
 @import "parts/universal_v2";
 @import "parts/usage-v2";
 @import "parts/web";
 @import "parts/platform-section";
 
+@import "parts/modal-contact-right";
+@import "parts/modal-presetnation-bottom";
+@import "parts/modal-locales";
+@import "parts/modal-CTA-right";
 // @import "parts/capabilities";
 
 $roboto-font-path:            "../assets/fonts/roboto/" !default;
