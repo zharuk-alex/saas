@@ -1,38 +1,19 @@
 $(function () {
-  var locales_options = {
-    ru:{
-      image:"russia.png",
-      title:"RU",
 
-      selected:true
-    },
-    eng:{
-      image:"united-kingdom.png",
-      title:"ENG",
-
-      selected:false
-    },
-    ukr:{
-      image:"ukraine.png",
-      title:"UKR",
-
-      selected:false
-    }
-  }
 
 
   $('#menu').find('.dropdown').on('show.bs.dropdown',function (e) {
-    var menu = $('#menu').outerHeight();
+    var menu = ($('#menu').hasClass( "top-nav-collapse" ))?$(".top-nav-collapse").outerHeight():$('#menu').outerHeight();
     var link = $(this).height();
     var link_top = $(this).position();
     var top = (menu+link_top.top) - link;
     var menu_bgc = $('.navbar').css('background-color');
-    console.log(menu);
-    console.log(link);
-    console.log(top);
-    console.log(link_top.top);
+    console.log("menu height:"+ menu);
+    // console.log(link);
+    // console.log(top);
+    // console.log(link_top.top);
     $(this).find('.dropdown-menu').css({
-      'top':top,
+      'top':menu-link_top.top,
       'background-color':menu_bgc
     });
 
@@ -71,19 +52,19 @@ $(function () {
   // Проверяем локал стораж
   // редирект на версию
   // console.log(userLang);
-  // console.log(window.location.pathname);
+  console.log(window.location.pathname == "/ru/");
   // console.log(window.location);
   // console.log(userLang == "ru-RU" || userLang == "ru");
   // console.log(window.location.pathname !== "/ru/");
   // console.log((userLang == "ru-RU" || userLang == "ru") && window.location.pathname !== "/ru/");
   if((userLang == "ru-RU" || userLang == "ru") && window.location.pathname !== "/ru/"){
     var domen = document.location.origin;
-    // document.location.href = domen + "/ru/";
+    document.location.href = domen + "/ru/";
     // document.location.replace(domen + "/ru/");
     // document.location.reload(true);
-  }else if ((userLang == "ua-Ua" || userLang == "ua") && window.location.pathname !== "/ua/"){
+  }else if ((userLang == "ua-UA" || userLang == "ua") && window.location.pathname !== "/ua/"){
     var domen = document.location.origin;
-    // document.location.href = domen + "/ua/";
+    document.location.href = domen + "/ua/";
     // document.location.replace(domen + "/ua/");
     // document.location.reload(true);
   }

@@ -11,8 +11,8 @@ $(function () {
       // console.log(($("#fixedContainerModal").data('bs.modal') || {})._isShown);
     }
     var btn_position = $('#scrollToTop').offset().top; // position = { left: 42, top: 567 }
-    var counterUp_start = $('#counterup-section2').offset().top; // position = { left: 42, top: 567 }
-    var counterUp_end = $('#counterup-section2').offset().top + $('#counterup-section2').height(); // position = { left: 42, top: 567 }
+    var counterUp_start = $('.advantages-holder').offset().top; // position = { left: 42, top: 567 }
+    var counterUp_end = $('.advantages-holder').offset().top + $('.advantages-holder').height(); // position = { left: 42, top: 567 }
 
     if(btn_position > counterUp_start && btn_position < counterUp_end){
       $('#scrollToTop').css({backgroundColor:"#ffffff"})

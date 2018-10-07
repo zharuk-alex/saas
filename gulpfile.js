@@ -1,6 +1,6 @@
-var	cheerio = require('gulp-cheerio');
-var	replace = require('gulp-replace');
-var	svgmin = require('gulp-svgmin');
+var cheerio = require('gulp-cheerio');
+var replace = require('gulp-replace');
+var svgmin = require('gulp-svgmin');
 var autoprefixer = require('gulp-autoprefixer');
 var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync');
@@ -13,6 +13,9 @@ var cssnano = require('gulp-cssnano');
 var decomment = require('gulp-decomment');
 var fs = require('fs');
 var gulp = require('gulp');
+var gulpMerge = require('gulp-merge');
+var seo = require('gulp-seo');
+var i18nJsonTools = require('gulp-i18n-json-tools');
 var imagemin = require('gulp-imagemin');
 var jpegtran = require('imagemin-jpegtran');
 var jsonConcat = require('gulp-json-concat');
@@ -32,10 +35,12 @@ var spritesmith = require('gulp.spritesmith');
 var strip = require('gulp-strip-comments');
 var svgSprite = require('gulp-svg-sprite');
 var uglify = require('gulp-uglify');
-var gulpMerge = require('gulp-merge');
 
+// var plugins = require('gulp-load-plugins')();
 var plugins = require('gulp-load-plugins')({
-  pattern: '*'
+  camelize: true,
+  pattern: '*',
+  lazy:true
 });
 
 
@@ -59,6 +64,7 @@ gulp.task('mustache', ['clean-html','db-locales','mustache-eng','mustache-ru','m
 gulp.task('mustache-eng', getTask('mustache-eng'));
 gulp.task('mustache-ru', getTask('mustache-ru'));
 gulp.task('mustache-ua', getTask('mustache-ua'));
+gulp.task('seo', getTask('seo'));
 
 // gulp.task('html', getTask('html'));
 
@@ -148,3 +154,9 @@ gulp.task('watch', ['sass', 'scripts', 'mustache', 'browser-sync'], function() {
 });
 gulp.task('once',['create-dist','db-locales','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])
 gulp.task('default', ['watch']);
+
+
+// build
+gulp.task('build', function () {
+// seo
+});

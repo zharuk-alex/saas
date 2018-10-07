@@ -1,133 +1,162 @@
 /* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
-html,
+
+.view,
 body,
-.view {
-  height: 100%; }
-body{
+html {
+  height: 100%;
+}
+body,
+html {
+  overflowX: hidden;
+}
+
+body {
   font-family: "Roboto";
 }
 @media (max-width: 740px) {
   .full-page-intro {
-    height: 1000px; } }
-
-
-
+    height: 1000px;
+  }
+}
 /* Adjustment for mobile devices*/
 @media (max-width: 776px) {
   .carousel {
-    height: 100%; } }
-
+    height: 100%;
+  }
+}
 /* Navbar animation */
+
 .navbar {
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 .top-nav-collapse {
-  background-color: #1C2331; }
-
+  background-color: #1C2331;
+}
 /* Adding color to the Navbar on mobile */
 @media only screen and (max-width: 768px) {
   .navbar {
-    background-color: #1C2331; } }
-
+    background-color: #1C2331;
+  }
+}
 /* Footer color for sake of consistency with Navbar */
-.page-footer {
-  background-color: #1C2331; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+.page-footer {
+  background-color: #1C2331;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
 //Buttons
-
-.btn-main-outline{
+.btn-main-outline {
   border-color: $main_color;
   background-color: transparent;
   color: $main_color!important;
   border: 1px solid $main_color;
   transition: $transition-def;
-  i{
+
+  i {
     transition: $transition-def;
     color: $main_color;
   }
-  &:hover{
+
+  &:hover {
     background-color: $main_color;
     color: #ffffff!important;
-    i{
+
+    i {
       color: #ffffff;
     }
   }
 }
-.btn-filled{
+
+.btn-filled {
   background-color: $main_color!important;
   color: #ffffff!important;
-
   // border-radius: 0!important;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
-  i{
+
+  i {
     color: #fff;
   }
 }
 //End Buttons
 
-.header-divider{
+.header-divider {
   margin: 20px auto;
   border: 0;
   height: 1px;
   color: $main_color;
   background-color: $main_color;
   width: 5rem;
-  opacity: .5;
-  transition: all .3s ease-in-out 0s;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out 0s;
 }
 // modal
-  // html {
-  //   overflow: hidden;
-  //   height: 100%;
-  // }
-  // body {
-  //   overflow: auto;
-  //   height: 100%;
-  // }
+// html {
+//   overflow: hidden;
+//   height: 100%;
+// }
+// body {
+//   overflow: auto;
+//   height: 100%;
+// }
+/* unset bs3 setting */
+.modal-open {
+  overflow: auto;
+}
 
-  /* unset bs3 setting */
-  .modal-open {
-   overflow: auto;
-  }
-  .modal-content{
-    background-color: $bgc-modals;
-  }
+.modal-content {
+  background-color: $bgc-modals;
+}
 // Carousel indicators
+
 .carousel .carousel-indicators li {
   width: 1.5rem;
-  height: .625rem;
+  height: 0.625rem;
   border-radius: 0;
   cursor: pointer;
 }
-.carousel .carousel-control-prev-icon,
-.carousel .carousel-control-next-icon {
+
+.carousel .carousel-control-next-icon,
+.carousel .carousel-control-prev-icon {
   width: 40px;
   height: 40px;
 }
-.btn-fill-tr{
+
+.btn-fill-tr {
   background: linear-gradient(to right, $main_color 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   background-repeat: no-repeat;
-  transition: all .5s ease-out;
-  &:hover{
+  transition: all 0.5s ease-out;
+
+  &:hover {
     background-position: left bottom;
   }
 }
-
 // #usage, #advantages, #web-section,#universal-section{
 //   padding-top: 4rem;
 // }
 // #usage,#web-section, #unive-section{
 //   padding-bottom: 4rem;
 // }
+
 section {
-  padding: 5rem 0rem;
+  padding: 5rem 0;
 }
-.container{
+
+.container {
   max-width: 1200px;
+}
+.morphext {
+  .animated {
+    display: inline-block;
+  }
 }
