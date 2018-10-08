@@ -51,7 +51,7 @@ $(function() {
       type: "POST",
       data: formData,
       success: function(data, textStatus, jqXHR) {
-        console.log(data);
+        console.log("success ",data);
         $('#status').text(data.message);
         if (data.code) //If mail was sent successfully, reset the form.
           $('#contact-form')
@@ -61,6 +61,7 @@ $(function() {
         }
       ,
       error: function(jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR);
         $('#status').text(jqXHR);
       }
     });

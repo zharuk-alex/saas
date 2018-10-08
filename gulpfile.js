@@ -13,7 +13,8 @@ var cssnano = require('gulp-cssnano');
 var decomment = require('gulp-decomment');
 var fs = require('fs');
 var gulp = require('gulp');
-var gulpMerge = require('gulp-merge');
+// var mergeStream = require('merge-stream');
+// var merge = require('gulp-merge');
 var seo = require('gulp-seo');
 var i18nJsonTools = require('gulp-i18n-json-tools');
 var imagemin = require('gulp-imagemin');
@@ -60,36 +61,21 @@ gulp.task('image-copy', getTask('image-copy'));
 gulp.task('svg-sprites', getTask('svg-sprites'));
 gulp.task('clean-html', getTask('clean-html'));
 gulp.task('db-json', getTask('db-json'));
+
+// gulp.task('mustache', getTask('mustache'));
+gulp.task('mustache-en', getTask('mustache/mustache-en'));
+gulp.task('mustache-ru', getTask('mustache/mustache-ru'));
+gulp.task('mustache-ua', getTask('mustache/mustache-ua'));
 gulp.task('mustache', ['clean-html','db-locales','mustache-en','mustache-ru','mustache-ua']);
-gulp.task('mustache-en', getTask('mustache-en'));
-gulp.task('mustache-ru', getTask('mustache-ru'));
-gulp.task('mustache-ua', getTask('mustache-ua'));
+
 gulp.task('seo', getTask('seo'));
 
 // gulp.task('html', getTask('html'));
+gulp.task('db-json-ua', getTask('db/db-json-ua'));
+gulp.task('db-json-ru', getTask('db/db-json-ru'));
+gulp.task('db-json-en', getTask('db/db-json-en'));
 
-gulp.task('db-json:ru', function () {
-  return gulp.src("src/data/ru/**/*.json")
-    .pipe(jsonConcat('ru.json',function(data){
-      return new Buffer(JSON.stringify(data));
-    }))
-    .pipe(gulp.dest('src/data/locales/'));
-});
-gulp.task('db-json:en', function () {
-  return gulp.src("src/data/en/**/*.json")
-    .pipe(jsonConcat('en.json',function(data){
-      return new Buffer(JSON.stringify(data));
-    }))
-    .pipe(gulp.dest('src/data/locales/'));
-});
-gulp.task('db-json:ua', function () {
-  return gulp.src("src/data/ua/**/*.json")
-    .pipe(jsonConcat('ua.json',function(data){
-      return new Buffer(JSON.stringify(data));
-    }))
-    .pipe(gulp.dest('src/data/locales/'));
-});
-gulp.task('db-locales', ['db-json:ua','db-json:ru','db-json:en']);
+gulp.task('db-locales', ['db-json-ua','db-json-ru','db-json-en']);
 
 // copy php scripts
 gulp.task('php:copy', function () {

@@ -6,10 +6,11 @@ $(function () {
     {path: 'en', name:'en'},
   ]
 
-
   function checkCurrentLang() {
     var userLanguage = Cookies.get('lang');
-    var currentLocation = window.location.pathname.substr(1,2);
+    console.log(userLanguage);
+    var currentLocation = window.location.pathname.substr(-3,2);
+    console.log(currentLocation);
     $('#dropdownLocales').text(currentLocation);
     languages.forEach(function (lang, index) {
       if(currentLocation != lang.name){
@@ -21,12 +22,14 @@ $(function () {
         )
       }
     })
+
+    console.log();
   }
   checkCurrentLang();
 
   function checkBrowserLang(){
     var browserLang = window.navigator.language || window.navigator.userLanguage;
-    return console.log(window);
+    return console.log(window.location);
   }
 
   checkBrowserLang();
@@ -43,7 +46,7 @@ $(function () {
     // console.log(top);
     // console.log(link_top.top);
     $(this).find('.dropdown-menu').css({
-      'top':menu-link_top.top,
+      'top': (menu-link_top.top),
       'background-color':menu_bgc
     });
 
@@ -55,11 +58,14 @@ $(function () {
     //Show table
     e.preventDefault();
     var url_location = $(this).attr('data-url');
-    var href = window.location.origin + '/' + url_location + '/';
-    console.log(href);
-    console.log(window.location);
-    Cookies.set('lang',url_location,{ path: '' });
-    console.log($(this).attr('href'));
+    // var href = window.location.origin + '/' + url_location + '/';
+    var pathname = window.location.pathname.slice(0, -3);
+    // console.log(pathname);
+    var href = window.location.origin + pathname+ url_location + '/';
+    // console.log(href);
+    // console.log(window.location);
+    Cookies.set('lang',url_location,{ expires: 7, path: '/' });
+    // console.log($(this).attr('href'));
     window.location.href = href;
     // console.log(href);
     // return false;
