@@ -2,18 +2,18 @@
   "nav_link_innerer":[
     {
       "href": "#usage",
-      "displayName": "Возможности"
+      "displayName": "Можливості"
     }, {
       "href": "#advantages",
-      "displayName": "Решения"
+      "displayName": "Рішення"
     }, {
       "href": "#web-section",
       "displayName": "Платформа"
     }, {
       "href": "#clients",
-      "displayName": "Клиенты"
+      "displayName": "Клієнти"
     }
   ],
-  "contact_link":"Контакты",
-  "singin":"Login"
+  "contact_link":"Контакти",
+  "singin":"Увійти"
 }]

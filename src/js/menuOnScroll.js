@@ -9,8 +9,6 @@ $(function () {
 
   $(window).scroll(function(){
     var fromTop = $(this).scrollTop()+topMenuHeight;
-    // console.log(fromTop);
-    console.log(scrollItems);
     var cur = scrollItems.map(function(){
       if ($(this).offset().top < fromTop){
         return this

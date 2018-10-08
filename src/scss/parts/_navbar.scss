@@ -16,19 +16,17 @@ $navbar-padding: 6px;
     @extend .nav-link;
     padding: .5rem;
   }
-
-  .locales {
-    .dropdown-menu {
-      // background-color: rgba(0,0,0,.2);
-      border: none;
-      border-radius: 0;
-      // top: $navbar-padding;
-      .dropdown-item span {
-        color: #fff;
-        text-transform: uppercase;
-      }
+  .dropdown-menu {
+    // background-color: rgba(0,0,0,.2);
+    border: none;
+    border-radius: 0;
+    // top: $navbar-padding;
+    .dropdown-item {
+      color: #fff;
+      text-transform: uppercase;
     }
   }
+  
   .nav-item.active>.nav-link{
     color: $main_color!important;
     background-color: transparent!important;

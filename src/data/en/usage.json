@@ -5,6 +5,8 @@
     {
       "title": "Мерчендайзинг",
       "icon":"storekeeper",
+      "image":"merchandising.jpg",
+      "wow_class":"fadeInLeft",
       "show_delay":"0.25",
       "usage_item":[
         {"title":"Выполнение работ по графику и заполнение отчета по каждой тт"},
@@ -16,7 +18,9 @@
     {
       "title": "Аудит",
       "icon":"analysis",
+      "image":"analytics.jpg",
       "show_delay":"0.5",
+      "wow_class":"fadeInUp",
       "usage_item":[
         {"title":"Полевые аудиты для контроля качества выполненных работ по тт"},
         {"title":"Online аудиты из просмотра отчетов и фотоотчетов"},
@@ -27,7 +31,9 @@
     {
       "title": "Розничный аудит",
       "icon":"content-audit",
+      "image":"content-audit.png",
       "show_delay":"0.75",
+      "wow_class":"fadeInRight",
       "usage_item":[
         {"title":"Must Stock List"},
         {"title":"Контроль стандартов выкладки"},
@@ -38,6 +44,8 @@
     {
       "title": "Доп. задачи",
       "icon":"reports",
+      "image":"reports.jpg",
+      "wow_class":"fadeInUp",
       "show_delay":"1",
       "usage_item":[
         {
