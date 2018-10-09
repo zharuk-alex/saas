@@ -15,6 +15,8 @@ var fs = require('fs');
 var gulp = require('gulp');
 // var mergeStream = require('merge-stream');
 // var merge = require('gulp-merge');
+var gulpSequence = require('gulp-sequence');
+var runSequence = require('run-sequence');
 var seo = require('gulp-seo');
 var i18nJsonTools = require('gulp-i18n-json-tools');
 var imagemin = require('gulp-imagemin');
@@ -33,14 +35,18 @@ var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var spritesmith = require('gulp.spritesmith');
-var strip = require('gulp-strip-comments');
+// var strip = require('gulp-strip-comments');
 var svgSprite = require('gulp-svg-sprite');
 var uglify = require('gulp-uglify');
 
 // var plugins = require('gulp-load-plugins')();
 var plugins = require('gulp-load-plugins')({
   camelize: true,
-  pattern: '*',
+  // pattern: '*',
+  pattern: ['*', '!gulp'], // the glob(s) to search for
+    scope: ['devDependencies'],
+  // pattern: ['gulp-*', 'gulp.*'],
+  // replaceString: /\bgulp[\-.]/,
   lazy:true
 });
 
@@ -60,23 +66,31 @@ gulp.task('image-build', getTask('image-build'));
 gulp.task('image-copy', getTask('image-copy'));
 gulp.task('svg-sprites', getTask('svg-sprites'));
 gulp.task('clean-html', getTask('clean-html'));
-gulp.task('db-json', getTask('db-json'));
 
-// gulp.task('mustache', getTask('mustache'));
-gulp.task('mustache-en', getTask('mustache/mustache-en'));
-gulp.task('mustache-ru', getTask('mustache/mustache-ru'));
-gulp.task('mustache-ua', getTask('mustache/mustache-ua'));
-gulp.task('mustache', ['clean-html','db-locales','mustache-en','mustache-ru','mustache-ua']);
+gulp.task('db-json', getTask('db-json'));
+gulp.task('mustache', getTask('mustache'));
+
 
 gulp.task('seo', getTask('seo'));
 
 // gulp.task('html', getTask('html'));
-gulp.task('db-json-ua', getTask('db/db-json-ua'));
-gulp.task('db-json-ru', getTask('db/db-json-ru'));
-gulp.task('db-json-en', getTask('db/db-json-en'));
+// gulp.task('db-json-ua', getTask('db/db-json-ua'));
+// gulp.task('db-json-ru', getTask('db/db-json-ru'));
+// gulp.task('db-json-en', getTask('db/db-json-en'));
+//
+// gulp.task('db-locales', ['db-json-ua','db-json-ru','db-json-en']);
 
-gulp.task('db-locales', ['db-json-ua','db-json-ru','db-json-en']);
 
+
+
+// gulp.task('template', ['db-json','mustache']);
+// gulp.task('template', function() {
+//   gulpSequence(['db-json'], 'mustache');
+// });
+gulp.task('template', gulpSequence(['db-json'], 'mustache'))
+// gulp.task('template', function(done) {
+//   runSequence(['db-json'], 'mustache');
+// });
 // copy php scripts
 gulp.task('php:copy', function () {
   return gulp.src("src/php/**/*.php")
@@ -145,11 +159,13 @@ gulp.task('watch', ['sass', 'scripts', 'mustache', 'php:copy', 'browser-sync'], 
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
   gulp.watch('src/php/**/*.php', ['php:copy']);
 });
-gulp.task('once',['create-dist','db-locales','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])
+gulp.task('once',['create-dist','db-json','fonts','sass-libs','js-libs','video-copy','image-build', 'image-resize', 'svg-sprites'])
 gulp.task('default', ['watch']);
 
-
+// Tasks for build
+gulp.task('sass_build', getTask('build/sass_build'));
+gulp.task('scripts-build', getTask('build/scripts-build'));
 // build
-gulp.task('build', function () {
+gulp.task('build', ['sass_build', ''], function () {
 // seo
 });

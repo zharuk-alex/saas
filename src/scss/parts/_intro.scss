@@ -79,8 +79,6 @@
   }
 }
 #introHeading{
-    font-size: 4.5rem;
-    color: $main_color;
     height: 100px;
     #js-rotating{
       opacity:0;
@@ -89,6 +87,9 @@
       opacity:1
     }
     @include media-breakpoint-down(sm){
+      .display-4 {
+          font-size: 2.5rem;
+      }
       font-size: 2rem;
       height: 70px;
 

@@ -1,0 +1,103 @@
+<section id="contact">
+  {{#contactsSection}}
+  <div class="container">
+    <div class="row wow fadeInUp">
+
+      <div class="col-lg-4 col-md-4">
+        <div class="contact-about">
+          <h3>{{heading}}</h3>
+          <p>{{description}}</p>
+          <div class="social-links">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+
+        <div class="info">
+          {{#info}}
+          <div>
+            <i class="{{icon}}"></i>
+            <p>{{text}}</p>
+          </div>
+          {{/info}}
+
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-8">
+        {{#form}}
+        <div class="form">
+          <div id="sendmessage">{{sendmessage}}</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              {{#name}}
+              <div class="form-group col-lg-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="{{placeholder}}" data-rule="minlen:4" data-msg="{{msg}}" />
+                <div class="validation"></div>
+              </div>
+              {{/name}}
+
+              {{#email}}
+              <div class="form-group col-lg-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="{{placeholder}}" data-rule="email" data-msg="{{msg}}" />
+                <div class="validation"></div>
+              </div>
+              {{/email}}
+            </div>
+
+            <div class="form-row">
+              {{#phone}}
+              <div class="form-group col-lg-6">
+                <input type="text" name="phone" class="form-control" id="phone" placeholder="{{placeholder}}" data-rule="minlen:4" data-msg="{{msg}}" />
+                <div class="validation"></div>
+              </div>
+              {{/phone}}
+
+              {{#company}}
+              <div class="form-group col-lg-6">
+                <input type="text" class="form-control" name="company" id="company" placeholder="{{placeholder}}" data-rule="minlen:3" data-msg="{{msg}}" />
+                <div class="validation"></div>
+              </div>
+              {{/company}}
+            </div>
+
+            {{#subject}}
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="{{placeholder}}" data-rule="minlen:4" data-msg="{{msg}}" />
+              <div class="validation"></div>
+            </div>
+            {{/subject}}
+
+            {{#message}}
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="{{msg}}" placeholder="{{placeholder}}"></textarea>
+              <div class="validation"></div>
+            </div>
+            {{/message}}
+            <div class="form-group">
+              <figure class="post_image text-right">
+                <img class="d-block ml-auto img-fluid" src="../assets/img/nocaptcha.gif">
+                <small class="text-danger">* Это просто gif. Настоящая капча привязывается к домену</small>
+              </figure>
+
+            </div>
+            {{#button}}
+            <div class="text-center"><button class="btn btn-filled waves-effect waves-light" type="submit" title="{{title}}">{{name}}</button></div>
+            {{/button}}
+          </form>
+        </div>
+        {{/form}}
+      </div>
+
+    </div>
+
+  </div>
+  {{/contactsSection}}
+</section>

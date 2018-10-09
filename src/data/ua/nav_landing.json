@@ -12,6 +12,9 @@
     }, {
       "href": "#clients",
       "displayName": "Клієнти"
+    }, {
+      "href": "#contact",
+      "displayName": "Контакти_2"
     }
   ],
   "contact_link":"Контакти",

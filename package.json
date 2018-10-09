@@ -30,6 +30,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-seo": "^1.0.2",
+    "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-strip-comments": "^2.5.2",
     "gulp-svg-sprite": "^1.5.0",
@@ -40,6 +41,7 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^6.0.0",
     "merge-stream": "^1.0.1",
+    "run-sequence": "^2.2.1",
     "translate-json-object": "^2.3.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
@@ -53,6 +55,7 @@
     "jquery-parallax.js": "^1.5.0",
     "jquery.counterup": "^2.1.0",
     "jquery.simple-text-rotator": "^0.0.1",
+    "js-cookie": "^2.2.0",
     "magnific-popup": "^1.1.0",
     "mdbootstrap": "^4.5.9",
     "morphext": "^2.4.7",

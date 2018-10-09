@@ -1,0 +1,49 @@
+[{
+  "heading":"MMCS",
+  "description": "ИННОВАЦИОННАЯ ON-LINE СИСТЕМА УПРАВЛЕНИЯ И КОНТРОЛЯ МЕРЧЕНДАЙЗИНГОМ",
+  "info":[
+    {
+      "icon":"fa fa-map-marker",
+      "text":"Киев, ул. Юрия Шумского, 1б"
+    },
+    {
+      "icon":"fa fa-envelope",
+      "text":"office@LexMarketing.com.ua"
+    },
+    {
+      "icon":"fa fa-phone",
+      "text":"+38 093 327 72 32"
+    }
+  ],
+  "form":[{
+    "sendmessage":"Your message has been sent. Thank you!",
+    "name":{
+      "placeholder":"Имя",
+      "msg":"Please enter at least 4 chars"
+    },
+    "email":{
+      "placeholder":"Email",
+      "msg":"Please enter a valid email"
+    },
+    "phone":{
+      "placeholder":"Телефон",
+      "msg":"Please enter a valid phone"
+    },
+    "company":{
+      "placeholder":"Компания",
+      "msg":"Please enter at least 3 chars"
+    },
+    "subject":{
+      "placeholder":"Тема",
+      "msg":"Please enter at least 8 chars of subject"
+    },
+    "message":{
+      "placeholder":"Сообщение",
+      "msg":"Please write something for us"
+    },
+    "button":{
+      "name":"Отправить",
+      "title":"Send Message"
+    }
+  }]
+}]

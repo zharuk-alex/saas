@@ -69,12 +69,15 @@ var libs = {
   morphext:{
     js: 'node_modules/morphext/dist/morphext.js'
   },
-  magnific_popup:{
-    js: 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
-  },
+  // magnific_popup:{
+  //   js: 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+  // },
   svg4everybody:{
     js: 'node_modules/svg4everybody/dist/svg4everybody.js'
   },
+  cookie:{
+    js: 'node_modules/js-cookie/src/js.cookie.js'
+  }
   //
 };
 
