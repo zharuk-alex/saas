@@ -1,5 +1,5 @@
 module.exports = function(gulp, plugins) {
-  return function() {
+  return function(callback) {
     plugins.browserSync.init({
         // server: {
         //   baseDir: "./dist"

@@ -85,11 +85,16 @@ var js_libs = Object.keys(libs).map(function(key, index) {
   return (libs[key].hasOwnProperty('js'))?libs[key].js:'';
 },[]).concat(['src/libs/js/**/*.js']);
 
-module.exports = function(gulp, plugins) {
-  return function() {
-    gulp.src(js_libs)
-      .pipe(plugins.uglify())
+module.exports = function(gulp, plugins, dir) {
+  var isDist = (dir == 'dist');
+  var isBuild = (dir == 'build');
+  return function(callback) {
+    return gulp.src(js_libs)
+      .pipe(plugins.if(isDist, plugins.sourcemaps.init()))
+
+      .pipe(plugins.if(isBuild, plugins.uglify()))
       .pipe(plugins.concat('libs.min.js'))
-      .pipe(gulp.dest('dist/assets/js/'));
+      .pipe(plugins.if(isDist, plugins.sourcemaps.write('.')))
+      .pipe(gulp.dest(dir+'/assets/js/'));
   }
 }

@@ -1,7 +1,6 @@
-
-module.exports = function (gulp, plugins) {
-  return function () {
-	  gulp.src('src/img/**/*.svg')
+module.exports = function (gulp, plugins, dir) {
+  return function (callback) {
+	   return  gulp.src(['src/img/**/*.svg', '!src/img/sprite/sprite.svg'])
 	// minify svg
 		.pipe(plugins.svgmin({
 			js2svg: {
@@ -26,13 +25,15 @@ module.exports = function (gulp, plugins) {
 					sprite: "../sprite.svg",
 					render: {
 						scss: {
-							dest:'../../../scss/_sprite.scss',
+							dest:'../../../scss/_sprite-svg.scss',
 							template: "src/scss/_sprite_template.scss"
 						}
 					}
 				}
 			}
 		}))
-		.pipe(gulp.dest('dist/assets/img/sprite/'));
+		.pipe(gulp.dest('src/img/sprite/'))
+		.pipe(gulp.dest(dir+'/assets/img/sprite/'))
+    .pipe(plugins.browserSync.reload({stream: true}));
   }
 }
