@@ -1,7 +1,7 @@
 $(document).ready(function() {
   new WOW().init();
   svg4everybody();
-
+  console.log('Tes');
   //
   //scrollTop
   function scrollToElements(cont, event) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
   //   interval: 4000
   // });
 
-  
+
 
   // $('#capabilities').find('.nav-link').first().addClass('active');
   // $('#capabilities').find('.tab-pane').first().addClass('active');

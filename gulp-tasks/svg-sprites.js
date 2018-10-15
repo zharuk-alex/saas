@@ -25,15 +25,14 @@ module.exports = function (gulp, plugins, dir) {
 					sprite: "../sprite.svg",
 					render: {
 						scss: {
-							dest:'../../../scss/_sprite-svg.scss',
+							dest:'./_sprite-svg.scss',
 							template: "src/scss/_sprite_template.scss"
 						}
 					}
 				}
 			}
 		}))
-		.pipe(gulp.dest('src/img/sprite/'))
-		.pipe(gulp.dest(dir+'/assets/img/sprite/'))
-    .pipe(plugins.browserSync.reload({stream: true}));
+		.pipe(gulp.dest('temporary/sprite/'))
+		.pipe(gulp.dest(dir+'/assets/img/sprite/'));
   }
 }

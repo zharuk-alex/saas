@@ -1,9 +1,8 @@
 module.exports = function (gulp, plugins, dir) {
   var isDist = (dir == 'dist');
   var isBuild = (dir == 'build');
-  return function (callback) {
-    var smaps = plugins.sourcemaps;
-    gulp.src('src/js/**/*.js')
+  return function () {
+    return gulp.src('src/js/**/*.js')
       .pipe(plugins.plumber({
         errorHandler: plugins.notify.onError("Error: <%= error.message %>")
       }))
@@ -15,10 +14,11 @@ module.exports = function (gulp, plugins, dir) {
       //   debug: true
       // }))
       .pipe(plugins.if(isBuild, plugins.uglify()))
+      .pipe(plugins.if(isBuild, plugins.decomment({trim: true})))
       .pipe(plugins.rename('bundle.min.js'))
       .pipe(plugins.if(isDist, plugins.sourcemaps.write('.')))
-      .pipe(plugins.if(isBuild, plugins.decomment({trim: true})))
       .pipe(gulp.dest(dir+'/assets/js/'))
-      .pipe(plugins.browserSync.reload({ stream: true }))
+      .pipe(plugins.browserSync.stream());
+      // .pipe(plugins.browserSync.reload({ stream: true }))
   }
 };

@@ -1,7 +1,7 @@
 module.exports = function (gulp, plugins, dir) {
   var isDist = (dir == 'dist');
   var isBuild = (dir == 'build');
-    return function (callback) {
+    return function () {
         gulp.src('src/scss/libs.scss')
           .pipe(plugins.plumber({
             errorHandler: plugins.notify.onError("Error: <%= error.message %>"
@@ -12,6 +12,5 @@ module.exports = function (gulp, plugins, dir) {
           .pipe(plugins.if(isDist, plugins.sourcemaps.write('.')))
           .pipe(plugins.if(isBuild, plugins.cssnano()))
           .pipe(gulp.dest(dir+'/assets/css/'))
-          .pipe(plugins.if(isDist, plugins.browserSync.reload({stream: true})));
     };
 };

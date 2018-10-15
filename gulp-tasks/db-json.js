@@ -5,6 +5,6 @@ module.exports = function(gulp, plugins, data) {
       .pipe(plugins.jsonConcat(locale+'.json',function(data){
         return new Buffer(JSON.stringify(data));
       }))
-      .pipe(gulp.dest('src/data/locales/'));
+      .pipe(gulp.dest('temporary/data/locales/'));
   }
 };

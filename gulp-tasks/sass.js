@@ -19,6 +19,7 @@ module.exports = function(gulp, plugins,dir) {
       .pipe(plugins.if(isDist, plugins.sourcemaps.write('.')))
       .pipe(plugins.if(isBuild, plugins.cssnano()))
       .pipe(gulp.dest(dir+'/assets/css/'))
-      .pipe(plugins.if(isDist, plugins.browserSync.reload({stream: true})));
+      // .pipe(plugins.if(isDist, plugins.browserSync.reload({stream: true})));
+      .pipe(plugins.browserSync.stream());
   };
 };

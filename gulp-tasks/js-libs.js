@@ -69,9 +69,9 @@ var libs = {
   morphext:{
     js: 'node_modules/morphext/dist/morphext.js'
   },
-  // magnific_popup:{
-  //   js: 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
-  // },
+  magnific_popup:{
+    js: 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+  },
   svg4everybody:{
     js: 'node_modules/svg4everybody/dist/svg4everybody.js'
   },
@@ -88,7 +88,7 @@ var js_libs = Object.keys(libs).map(function(key, index) {
 module.exports = function(gulp, plugins, dir) {
   var isDist = (dir == 'dist');
   var isBuild = (dir == 'build');
-  return function(callback) {
+  return function() {
     return gulp.src(js_libs)
       .pipe(plugins.if(isDist, plugins.sourcemaps.init()))
 

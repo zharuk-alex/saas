@@ -1,10 +1,12 @@
+
+@import "../../temporary/sprite/symbol/_sprite-svg.scss";
+
 @import "../../node_modules/mdbootstrap/scss/mdb.scss";
 
 @import "variables";
 @import "base";
 @import "inline";
 
-@import "sprite-svg";
 
 @import "parts/navbar";
 @import "parts/advantages";

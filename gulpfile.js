@@ -1,46 +1,40 @@
-var cheerio = require('gulp-cheerio');
-var replace = require('gulp-replace');
-var svgmin = require('gulp-svgmin');
-var autoprefixer = require('gulp-autoprefixer');
-var browserify = require('gulp-browserify');
-var browserSync = require('browser-sync');
-var buffer = require('vinyl-buffer');
-var cache = require('gulp-cache');
-var clean = require('gulp-clean');
-var concat = require('gulp-concat');
-var cssmin = require('gulp-cssmin');
-var cssnano = require('gulp-cssnano');
-var decomment = require('gulp-decomment');
-var fs = require('fs');
-var gulp = require('gulp');
-var stripDebug = require('gulp-strip-debug'); // Strip console, alert, and debugger statements from JavaScript code
-var gulpIf = require('gulp-if');
-var gulpSequence = require('gulp-sequence');
-var runSequence = require('run-sequence');
-var seo = require('gulp-seo');
-var i18nJsonTools = require('gulp-i18n-json-tools');
-var imagemin = require('gulp-imagemin');
-var jpegtran = require('imagemin-jpegtran');
-var jsonConcat = require('gulp-json-concat');
-var log = require('gulplog');
-var mustache = require("gulp-mustache");
-var notify = require("gulp-notify");
-var plumber = require('gulp-plumber');
-var pngquant = require('imagemin-pngquant')();
-var prettyHtml = require('gulp-pretty-html');
-var reload = browserSync.reload;
-var rename = require('gulp-rename');
-var resizer = require('gulp-images-resizer');
-var sass = require('gulp-sass');
-var source = require('vinyl-source-stream');
-var sourcemaps = require('gulp-sourcemaps');
-var spritesmith = require('gulp.spritesmith');
-// var strip = require('gulp-strip-comments');
-var svgSprite = require('gulp-svg-sprite');
-var uglify = require('gulp-uglify');
+const autoprefixer = require('gulp-autoprefixer');
+const browserify = require('gulp-browserify');
+const browserSync = require('browser-sync');
+const buffer = require('vinyl-buffer');
+const cache = require('gulp-cache');
+const cheerio = require('gulp-cheerio');
+const concat = require('gulp-concat');
+const cssnano = require('gulp-cssnano');
+const decomment = require('gulp-decomment');
+const fs = require('fs');
+const gulp = require('gulp');
+const gulpIf = require('gulp-if');
+const imagemin = require('gulp-imagemin');
+const jpegtran = require('imagemin-jpegtran');
+const jsonConcat = require('gulp-json-concat');
+const mustache = require("gulp-mustache");
+const notify = require("gulp-notify");
+const plumber = require('gulp-plumber');
+const pngquant = require('imagemin-pngquant')();
+const prettyHtml = require('gulp-pretty-html');
+const reload = browserSync.reload;
+const rename = require('gulp-rename');
+const replace = require('gulp-replace');
+const resizer = require('gulp-images-resizer');
+const runSequence = require('run-sequence');
+const sass = require('gulp-sass');
+const seo = require('gulp-seo');
+const source = require('vinyl-source-stream');
+const sourcemaps = require('gulp-sourcemaps');
+const spritesmith = require('gulp.spritesmith');
+const svgmin = require('gulp-svgmin');
+const svgSprite = require('gulp-svg-sprite');
+const uglify = require('gulp-uglify');
+const del = require('del');
 
-// var plugins = require('gulp-load-plugins')();
-var plugins = require('gulp-load-plugins')({
+// const plugins = require('gulp-load-plugins')();
+const plugins = require('gulp-load-plugins')({
   camelize: true,
   pattern: '*',
   // scope: ['devDependencies'],
@@ -49,14 +43,16 @@ var plugins = require('gulp-load-plugins')({
   lazy: true
 });
 
-var params = {
+const params = {
   dirs: {
-    build: "build",
+    build: 'build',
     src: 'src',
-    dist: 'dist'
+    dist: 'dist',
+    temp: 'temporary'
   },
   locales: ['ru', 'en', 'ua']
 }
+
 function getTask(task, params) {
   return require('./gulp-tasks/' + task)(gulp, plugins, params);
 }
@@ -64,11 +60,11 @@ function getTask(task, params) {
 gulp.task('browser-sync', getTask('browser-sync'));
 
 gulp.task('db-locales', function(callback) {
-  var tasks = [];
+  const tasks = [];
   params
     .locales
     .map(function(locale) {
-      var data = {
+      const data = {
         dir: params.dirs.build,
         locale: locale
       }
@@ -79,11 +75,11 @@ gulp.task('db-locales', function(callback) {
 });
 
 gulp.task('mustache', function(callback) {
-  var tasks = [];
+  const tasks = [];
   params
     .locales
     .map(function(locale) {
-      var data = {
+      const data = {
         dir: params.dirs.dist,
         locale: locale
       }
@@ -94,9 +90,9 @@ gulp.task('mustache', function(callback) {
 });
 
 gulp.task('mustache:build', function(callback) {
-  var tasks = [];
+  const tasks = [];
   params.locales.map(function(locale) {
-      var data = {
+      const data = {
         dir: params.dirs.build,
         locale: locale
       }
@@ -166,35 +162,47 @@ gulp.task('php-copy:build', function(callback) {
     .pipe(gulp.dest('build/'));
 });
 
-// WATCH
-gulp.task('watch', [
-  'svg-sass-include',
-  'php-copy',
+gulp.task('images', getTask('images', params.dirs.dist));
+gulp.task('images:build', getTask('images', params.dirs.build));
+
+
+
+gulp.task('clean', function() {
+	return del.sync('dist/**'); // Удаляем папку dist перед сборкой
+});
+
+gulp.task('pre:watch', function(callback) {
+  runSequence(['svg-sass-include',
   'fonts',
-  'sass-libs',
+  'php-copy',
   'js-libs',
-  'mustache',
   'scripts',
-  'video-copy',
-  'browser-sync'
-], function() {
-  gulp.watch('src/scss/**/*.scss', ['sass']);
-  // watch json locale file then jsonConcat then mustache and reload
+  'sass-libs',
+  'sass',
+  'mustache',
+  'video-copy'], 'images','browser-sync', callback);
+});
+
+// WATCH
+gulp.task('watch', ['clean','pre:watch'], function() {
+  gulp.watch('src/scss/**/*.scss', ['sass'], reload);
+  gulp.watch('src/templates/**/*.mustache', ['mustache']);
+  gulp.watch('src/js/**/*.js', ['scripts'], reload);
+  // watch json locale file then compile json then mustache and reload
   params.locales.map(function(locale) {
     return gulp.watch('src/data/' + locale + '/*.json', ['compile:json-' + locale]);
   });
   //
-  gulp.watch('src/templates/**/*.mustache', ['mustache'], reload);
-  gulp.watch('src/js/**/*.js', ['scripts']);
-  gulp.watch('src/php/**/*.php', ['php-copy'], reload);
-  gulp.watch([
-    'src/img/**/*.svg', '!src/img/sprites/sprites.svg'
-  ], ['svg-sass-include'], reload);
+  // gulp.watch('src/php/**/*.php', ['php-copy'], reload);
+  // gulp.watch([
+  //   'src/img/**/*.svg', '!src/img/sprites/sprites.svg'
+  // ], ['svg-sass-include'], reload);
 });
 
 gulp.task('default', ['watch']);
 // Build
 gulp.task('build', [
+  'images:build',
   'svg-sass-include:build',
   'sass-libs:build',
   'mustache:build',
