@@ -1,0 +1,63 @@
+{{> ./partials/head }}
+
+<body>
+  {{> ./partials/navbar }}
+  <section id="intro" class="view full-page-intro">
+    <div id="intro-mask" class="mask">
+      <div class="container-fluid h-100">
+        <div class="row align-items-stretch view">
+          <!--Grid column-->
+          <div class="col-lg-5 m-0 d-flex">
+            <div id="introHeading" class=" align-self-center px-5">
+              <img class="img-fluid" src="../assets/img/online_logo.png" alt="">
+              <div class="white-text">
+                <hr class="hr-light">
+                {{#intro}}
+                  <p class="sub-header">
+                    <strong>{{description}}</strong>
+                  </p>
+                  <p class="my-4 d-md-block sub-description">
+                    <strong>{{sub_description}}</strong>
+                  </p>
+                <a class="btn btn-main-outline waves-effect waves-light btn-fill-tr mx-0">{{button_title}}
+                </a>
+                {{/intro}}
+              </div>
+            </div>
+          </div>
+          <div class="top-logo-holder">
+            <div class="col-12 d-flex flex-row justify-content-between">
+              {{#top_clients}}
+              <img class="top_clients_logo img-fluid" src="../assets/img/header-logos/{{logo}}" alt="">
+              {{/top_clients}}
+            </div>
+          </div>
+          <div class="intro-scroll-to-element">
+            <a href="#advantages" class="scroll-to-element">
+              <svg class="icon icon-icons--down-arrow">
+                <use xlink:href="../assets/img/sprite/sprite.svg#icons--down-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {{> ./partials/footer2 }}
+  <script type="text/javascript">
+    window.onload = function() {
+      $("#carouselExampleIndicators").backstretch([
+        "../assets/img/intro_slider/1.jpg","../assets/img/intro_slider/2.jpg","../assets/img/intro_slider/3.jpg"
+      ], {
+        fadeFirst: false,
+        duration: 3000,
+        transition: 'fade|push_right|push_up|fade|cover_down|push_left|cover_left',
+        transitionDuration: 500
+      });
+    }
+
+  </script>
+</body>
+
+</html>

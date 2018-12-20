@@ -19,6 +19,10 @@ var libs = {
     // css: 'node_modules/mdbootstrap/css/mdb.css',
     js: 'node_modules/mdbootstrap/js/mdb.js'
   },
+  "jquery-backstretch": {
+    // css: 'node_modules/mdbootstrap/css/mdb.css',
+    js: 'node_modules/jquery-backstretch/jquery.backstretch.js'
+  },
   // mdb_modules_chart:{
   //   js: 'node_modules/mdbootstrap/js/modules/chart.js'
   // },

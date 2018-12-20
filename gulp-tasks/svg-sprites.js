@@ -1,5 +1,6 @@
 module.exports = function (gulp, plugins, dir) {
   return function (callback) {
+    // ,'!src/img/intro_slider/macbook-hero.svg'
 	   return  gulp.src(['src/img/**/*.svg', '!src/img/sprite/sprite.svg'])
 	// minify svg
 		.pipe(plugins.svgmin({
