@@ -3,10 +3,11 @@
   "button":"MORE SERVICES",
   "item": [
     {
+      "id": "1",
       "title": "Мерчендайзинг",
       "icon":"storekeeper",
       "image":"merchandising.jpg",
-      "wow_class":"fadeInLeft",
+      "wow_class":"fadeInRight",
       "show_delay":"0.25",
       "usage_item":[
         {"title":"Выполнение работ по графику и заполнение отчета по каждой тт"},
@@ -16,11 +17,12 @@
       ]
     },
     {
+      "id": "2",
       "title": "Аудит",
       "icon":"analysis",
       "image":"analytics.jpg",
       "show_delay":"0.5",
-      "wow_class":"fadeInUp",
+      "wow_class":"fadeInRight",
       "usage_item":[
         {"title":"Полевые аудиты для контроля качества выполненных работ по тт"},
         {"title":"Online аудиты из просмотра отчетов и фотоотчетов"},
@@ -29,6 +31,7 @@
       ]
     },
     {
+      "id": "3",
       "title": "Розничный аудит",
       "icon":"content-audit",
       "image":"content-audit.png",
@@ -42,10 +45,11 @@
       ]
     },
     {
+      "id": "4",
       "title": "Доп. задачи",
       "icon":"reports",
       "image":"reports.jpg",
-      "wow_class":"fadeInUp",
+      "wow_class":"fadeInRight",
       "show_delay":"1",
       "usage_item":[
         {

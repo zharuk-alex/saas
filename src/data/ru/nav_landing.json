@@ -1,17 +1,17 @@
 [{
   "nav_link_innerer":[
-    {
-      "href": "#usage",
-      "displayName": "Возможности"
-    }, {
+   {
       "href": "#advantages",
-      "displayName": "Решения"
+      "displayName": "О нас"
     }, {
       "href": "#web-section",
       "displayName": "Платформа"
     }, {
+      "href": "#analitics",
+      "displayName": "Аналитика"
+    }, {
       "href": "#clients",
-      "displayName": "Клиенты"
+      "displayName": "Отзывы"
     }, {
       "href": "#contact",
       "displayName": "Контакты"

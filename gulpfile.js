@@ -184,7 +184,7 @@ gulp.task('pre:watch', function(callback) {
 });
 
 // WATCH
-gulp.task('watch', ['clean','pre:watch'], function() {
+gulp.task('watch', ['pre:watch'], function() {
   gulp.watch('src/scss/**/*.scss', ['sass'], reload);
   gulp.watch('src/templates/**/*.mustache', ['mustache']);
   gulp.watch('src/js/**/*.js', ['scripts'], reload);

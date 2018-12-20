@@ -1,0 +1,18 @@
+<section id="analitics">
+  {{#analitics}}
+  <div class="container">
+    {{> ../partials/heading_main }}
+
+    <div class="row p-3">
+      <div class="col-12 col-md-6">
+        <img src="../assets/img/{{image}}" alt="" class="img-fluid">
+      </div>
+      <div class="col-12 col-md-6 d-flex">
+        <div class="align-self-center text-right">
+          <p class="analitics-description">{{description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/analitics}}
+</section>

@@ -22,13 +22,13 @@ $(function () {
     nav: false,
     autoWidth:false,
     onInitialized: function () {
-      $('#carouselTestimonials3').css({opacity: 0});
-      setTimeout(function () {
-        $('#carouselTestimonials3').find('.parallax-window').parallax({
-          imageSrc: '../assets/img/backgrounds/testimonials.png'
-        });
-        $('#carouselTestimonials3').animate({opacity: 1}, 1000);
-      },1000)
+      // $('#carouselTestimonials3').css({opacity: 0});
+      // setTimeout(function () {
+      //   $('#carouselTestimonials3').find('.parallax-window').parallax({
+      //     imageSrc: '../assets/img/backgrounds/testimonials.png'
+      //   });
+      //   $('#carouselTestimonials3').animate({opacity: 1}, 1000);
+      // },1000)
     }
   });
 })

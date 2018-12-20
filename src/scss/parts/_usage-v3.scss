@@ -1,0 +1,22 @@
+#usage{
+  .card-header{
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: none;
+    transition: $transition-def;
+    &:hover{
+      cursor: pointer;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    }
+
+    .btn{
+      font-size: 1.25rem!important;
+      text-decoration: none;
+    }
+  }
+  .usage-description{
+    font-size: 14px;
+    line-height: 1.1;
+  }
+}

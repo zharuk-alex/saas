@@ -1,0 +1,57 @@
+<div id="usage" class="content-section w-100">
+  {{#usage}}
+  <div class="accordion w-100" id="accordionExample2">
+    {{#item}}
+    <div class="card z-depth-0 wow {{wow_class}}" data-wow-delay="{{show_delay}}s">
+      <div class="card-header d-flex waves-effect waves-light" id="headingThree{{id}}" data-toggle="collapse" data-target="#collapseThree{{id}}"
+        aria-expanded="false" aria-controls="collapseThree{{id}}">
+        <svg class="icon usage_icons--{{icon}}">
+            <use xlink:href="../assets/img/sprite/sprite.svg#usage_icons--{{icon}}"></use>
+        </svg>
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" >
+            {{title}}
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree{{id}}" class="collapse" aria-labelledby="headingThree{{id}}" data-parent="#accordionExample2">
+        <div class="card-body">
+
+            <ul class="list-unstyled">
+              {{#usage_item}}
+                <li class="mb-1">
+                  {{title}}
+                </li>
+              {{/usage_item}}
+            </ul>
+
+        </div>
+      </div>
+    </div>
+    {{/item}}
+  </div>
+    <!-- <ul class="list-unstyled">
+        {{#item}}
+          <li class="wow {{wow_class}} d-flex align-items-center">
+            <div class="usage-icon mr-3">
+              <svg class="icon usage_icons--{{icon}}">
+                  <use xlink:href="../assets/img/sprite/sprite.svg#usage_icons--{{icon}}"></use>
+              </svg>
+            </div>
+            <div class="usage-item-wrapper">
+              <h4 class="h6 mb-1">{{title}}</h4>
+              <div class="usage-description">
+                <ul class="list-unstyled">
+                  {{#usage_item}}
+                    <li class="mb-1">
+                      {{title}}
+                    </li>
+                  {{/usage_item}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        {{/item}}
+    </ul> -->
+  {{/usage}}
+</div>

@@ -1,6 +1,8 @@
+
+$t_color: #000;
 #carouselTestimonials2,
 #carouselTestimonials3 {
-  // background-color: #eceff1;
+
   .testimonial-item {
     text-align: center;
     align-self: center;
@@ -37,7 +39,8 @@
 
 #carouselTestimonials3 {
   background: transparent;
-  opacity: 0;
+  // background-color: #eceff1;
+  // opacity: 0;
   .owl-stage-outer {
     @include media-breakpoint-up(md) {
       padding-top: 100px;
@@ -62,6 +65,7 @@
   h5 {
     font-weight: 500;
     font-size: 0.925;
+    color:$t_color;
   }
 
   p {
@@ -69,6 +73,7 @@
     font-size: 1.2rem;
     font-style: italic;
     line-height: 1.2rem;
+    color:$t_color;
   }
 
   .owl-dots {
@@ -101,11 +106,13 @@
         margin-left: 3px;
         text-indent: -999px;
         cursor: pointer;
-        background-color: hsla(0,0%,100%,.5);
+        // background-color: hsla(0,0%,100%,.5);
+        background-color: $t_color;
       }
       &.active{
         span {
-          background-color: #fff;
+          // background-color: #fff;
+          background-color: #bbbbbb;
         }
       }
     }

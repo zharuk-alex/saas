@@ -1,20 +1,35 @@
 <section id="advantages" class="content-section pb-0">
 
   {{#advantages}}
-  <div class="container-fluid">
+  <div class="container">
     {{> ../partials/heading_main }}
+    <div class="row py-5">
+      <div class="col-12 col-md-6 about_us-wrapper wow fadeInLeft">
+        {{#about_us}}
+          <p class="about_us-description">{{{description}}}</p>
+        {{/about_us}}
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center">
+      {{> ./usage_v4 }}
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+
     {{> ./counterup }}
 
     <div class="row advantages-holder">
 
       {{#item}}
-      <div class="col-4 col-lg py-2 text-center wow bounceIn">
+      <div class="col-4 col-lg py-5 text-center wow bounceIn">
         <!-- <img src="../assets/img/advantages_icons/{{icon}}" alt="" class="d-block mx-auto svg"> -->
         <svg class="icon icon-advantages_icons--{{icon}}">
           <use xlink:href="../assets/img/sprite/sprite.svg#advantages_icons--{{icon}}"></use>
         </svg>
         <div class="mask rgba-stylish-strong"></div>
-        <h6 class="h6 mt-3">{{title}}</h6>
+        <h6 class="h5 mt-3">{{title}}</h6>
         <p class="advantage_description mb-0">{{description}}</p>
         <!-- Block end -->
       </div>

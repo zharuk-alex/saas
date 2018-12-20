@@ -1,0 +1,83 @@
+
+#counterup-section{
+  // background-color: rgba(0,0,0,.7);
+  // border-top: 1px grey solid;
+  // border-bottom: 1px grey solid;
+  z-index: 99;
+  background-color: #fff;
+  .counterup-block {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 10px 0;
+    margin: 0 auto;
+    &::before {
+      content: " ";
+      display: table;
+    }
+
+    .visual {
+      width: 80px;
+      height: 80px;
+      display: block;
+      float: left;
+      padding-top: 10px;
+      padding-left: 15px;
+      margin-bottom: 15px;
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    i {
+      // color: #FFF;
+      color: #524f4f;
+      opacity: 0.1;
+      margin-left: -35px;
+      font-size: 110px;
+      line-height: 110px;
+    }
+
+    .details {
+      position: absolute;
+      right: 15px;
+      padding-right: 15px;
+
+      .number {
+        color: $main_color;
+        padding-top: 25px;
+        text-align: right;
+        font-size: 34px;
+        line-height: 36px;
+        letter-spacing: -1px;
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
+
+
+#counterup-section2{
+  background-color: $main_color;
+  .counterup-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+  }
+  .number{
+    // margin-top: 20px;
+  }
+  svg{
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+  }
+}

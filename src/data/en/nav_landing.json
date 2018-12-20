@@ -1,17 +1,14 @@
 [{
   "nav_link_innerer":[
     {
-      "href": "#usage",
-      "displayName": "Capability"
-    }, {
       "href": "#advantages",
-      "displayName": "Solutions"
+      "displayName": "About Us"
     }, {
       "href": "#web-section",
       "displayName": "Platform"
     }, {
       "href": "#clients",
-      "displayName": "Clients"
+      "displayName": "Reviews"
     }, {
       "href": "#contact",
       "displayName": "Contacts"
